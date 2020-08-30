@@ -1,6 +1,8 @@
 ---
 title: "Deep Representation Learning in Speech Processing: Challenges, Recent Advances, and Future Trends"
 toc: true
+toc_sticky: true
+toc_label: "페이지 목차"
 categories: 
     - Paper Review
 tags: 
