@@ -14,6 +14,8 @@ tags:
     - Survey
 date: 2020-08-26
 ---
+논문 링크: [https://arxiv.org/abs/2001.00378](https://arxiv.org/abs/2001.00378)
+-----
 
 ## 들어가며
 딥러닝의 발전으로 더 유용하고 사람의 지식에 크게 의존적이지 않은 표현을 학습하는 것이 가능해졌다. 이 논문에서는 특히 Speech 분야에서 이루어지고 있는 표현학습(Representation Learning) 연구들을 정리할 것이며 크게 Automatic Speech Recognition(ASR), Speaker Recognition(SR), Speaker Emotion Recognition(SER)의 범주로 나뉘어 있다.
