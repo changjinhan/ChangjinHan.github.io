@@ -104,5 +104,8 @@ DNN, CNN, RNN, Autoencoder(AE), Deep Generative Models
 
 - 프라이버시를 지켜주는 표현학습 방식 연구가 뜬다. 한 가지 방법으로 다양한 컴퓨팅 기기에서 데이터를 공유하며 한 가지 글로벌 모델을 학습시키는 federated learning이 있다.
 
+## TO STUDY
+- federated learning
+- ASR 모델
 
 

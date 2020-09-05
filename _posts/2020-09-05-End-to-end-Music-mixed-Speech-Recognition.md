@@ -38,7 +38,7 @@ Speech data로는 일본의 학회 발표 데이터셋인 Corpus of Spontaneous 
 실험 결과로 제시된 두 표를 보면 time domain separation model과 speech-music mixture data로 학습한 mixture ASR을 결합하여 두 모델을 모두 fine tuing 했을 때 WER과 SDR 성능이 가장 높은 것을 확인할 수 있다. Table 2 에서 popular music에 대한 WER 성능을 보면 classical이나 jazz에 비해 안좋은 것을 알 수 있는데 이는 popular music이 가사를 포함하고 있어서 딥러닝 모델이 사람의 음성과 구분하기가 어려워지기 때문이다. 그럼에도 불구하고 joint model을 사용했을 때가 아닐 때보다 성능이 나아진 것을 보아 vocal music과 섞인 데이터에서의 음성 인식에도 본 모델이 효과적임을 알 수 있다. 
 
 
-## To Study
+## TO STUDY
 - WER, SDR
 - Conv-TasNet
 
