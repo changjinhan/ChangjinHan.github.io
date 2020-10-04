@@ -46,6 +46,6 @@ feature selection은 가장 최적화된 피쳐를 고르는 작업으로 stock 
 # 결론
 본 서베이 논문을 요약하자면, 주식 시장을 예측하기 위해서는 technical indicator를 입력 변수로 사용하고 적절한 pre-processing과 feature selection을 거쳐서 예측 모델에 넣어주면 된다는 것이다. 그리고 평가지표는 워낙 다양하기 때문에 여러 평가지표의 조합을 사용해 모델을 평가해보고 계속 개선해나가야 한다.  
 
-## TO STUDY
+# TO STUDY
 - Genetic Algorithm
 - Google trend
