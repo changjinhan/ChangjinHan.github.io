@@ -14,7 +14,7 @@ tags:
 date: 2020-11-01
 ---
 
-Bryan Lim, [Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting](https://arxiv.org/abs/1912.09363), 2020  
+Bryan Lim, [Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting](https://arxiv.org/abs/1912.09363), 2019  
 
 ## 들어가며
 시계열 예측에서 multi-horizon(여러 time step)을 예측하는 문제는 복잡한 입력 변수들을 포함하고 있다. 예를 들어, 과거 정보 중 시간에 따라 변하는 정보도 있고 변하지 않는 정보도 있으며 미래의 정보 중 우리가 알고 있는 정보(e.g. day of week, month)도 존재한다. 예측 모델에 입력으로 주어지는 많은 정보들이 타겟과 어떤 관계를 갖고 있는지 알아내는 것은 쉽지 않은 문제이며 최근 제안되고 있는 딥러닝 모델들은 소위 black-box라 불리는 단점을 갖고 있기 때문에 이 문제를 해결해주지 못한다. 반면, Temporal Fusion Transformer(이하 TFT)는 해석 가능한 구조를 장점으로 내세워 여러 dataset에 대해서 state-of-the-art의 성능을 기록했는데 어떤 방법을 사용했는지 살펴보자. 
