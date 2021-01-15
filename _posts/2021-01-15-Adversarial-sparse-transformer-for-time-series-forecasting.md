@@ -1,6 +1,7 @@
 ---
 title: "Adversarial sparse transformer for time series forecasting"
 excerpt: GAN을 활용한 Transformer 훈련
+use_math: true
 toc: true
 toc_sticky: true
 toc_label: "페이지 목차"
