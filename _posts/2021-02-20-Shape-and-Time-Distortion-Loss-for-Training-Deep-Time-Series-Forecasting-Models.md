@@ -39,7 +39,7 @@ DILATE(DIstortion Loss including shApe and TimE)
 
 ## 예측 성능
 ![forecasting result](/assets/images/0008/forecasting_result.jpg){: .align-center}  
-10번의 반복실험을 통해 평균을 낸 결과이고, Student t-test($\alpha$)를 통해 best 성능을 bold로 표시하였다.  
+10번의 반복실험을 통해 평균을 낸 결과이고, Student t-test($\alpha=0.05$)를 통해 best 성능을 bold로 표시하였다.  
 
 ![qualitative result](/assets/images/0008/qualitative_result.jpg){: .align-center}  
 예측 그래프를 통한 정성적 평가는 위와 같다. DILATE를 적용한 Seq2Seq 모델의 경우 time delay 없이 shape을 정확하게 예측한 것을 볼 수 있다.
