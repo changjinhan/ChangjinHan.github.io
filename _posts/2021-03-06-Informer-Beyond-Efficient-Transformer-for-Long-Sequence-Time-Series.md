@@ -4,11 +4,11 @@ excerpt: 긴 시계열 예측에 특화된 트랜스포머 모델
 header:
     teaser: "/assets/images/0009/model_structure.jpg"
     overlay_image: "/assets/images/0009/model_structure.jpg"
-    # overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+    overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
     # caption: 
-    # actions:
+    actions:
         # - label: "More Info"
-        # url: "https://arxiv.org/abs/2012.07436"
+        url: "https://arxiv.org/abs/2012.07436"
 use_math: true
 toc: true
 toc_sticky: true
