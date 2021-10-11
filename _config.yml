@@ -15,10 +15,10 @@ remote_theme             : mmistakes/minimal-mistakes
 minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
+locale                   : "en-US" #"ko-KR"
 title                    : "뭐라도 끄적끄적"
 title_separator          : "-"
-subtitle                 : Blog # site tagline that appears below site title in masthead
+subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Changjin Han"
 description              : ""
 url                      : "https://ChangjinHan.github.io"
