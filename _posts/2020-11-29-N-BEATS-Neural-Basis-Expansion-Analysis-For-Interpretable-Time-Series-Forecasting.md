@@ -1,6 +1,8 @@
 ---
 title: "N-BEATS: Neural Basis Expansion Analysis for Interpretable Time Series Forecasting"
 excerpt: 오직 딥러닝 아키텍처만을 이용한 TS모델
+header:
+    teaser: "/assets/images/0005/nbeats_model.jpg"
 toc: true
 toc_sticky: true
 toc_label: "페이지 목차"

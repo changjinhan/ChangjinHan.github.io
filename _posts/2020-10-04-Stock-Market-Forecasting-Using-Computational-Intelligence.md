@@ -1,6 +1,8 @@
 ---
 title: "Stock Market Forecasting Using Computational Intelligence: A Survey"
 excerpt: 주식 시장 예측 서베이 논문
+header:
+    teaser: "/assets/images/0003/forecasting.jpg"
 toc: true
 toc_sticky: true
 toc_label: "페이지 목차"

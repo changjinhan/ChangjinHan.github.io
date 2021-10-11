@@ -1,6 +1,8 @@
 ---
 title: "Deep Representation Learning in Speech Processing: Challenges, Recent Advances, and Future Trends"
 excerpt: 음성처리 서베이 논문
+header:
+    teaser: "/assets/images/0001/application.jpg"
 toc: true
 toc_sticky: true
 toc_label: "페이지 목차"
