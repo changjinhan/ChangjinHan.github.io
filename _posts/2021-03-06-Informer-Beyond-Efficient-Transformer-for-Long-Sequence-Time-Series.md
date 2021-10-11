@@ -7,7 +7,7 @@ header:
     overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
     # caption: 
     actions:
-        # - label: "More Info"
+        - label: "Learn more"
         url: "https://arxiv.org/abs/2012.07436"
 use_math: true
 toc: true
