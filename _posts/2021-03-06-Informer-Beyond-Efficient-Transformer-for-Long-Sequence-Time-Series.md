@@ -8,7 +8,7 @@ header:
     # caption: 
     actions:
         - label: "More Info"
-        url: "https://arxiv.org/abs/2012.07436"
+        - url: "https://arxiv.org/abs/2012.07436"
 use_math: true
 toc: true
 toc_sticky: true
