@@ -18,7 +18,7 @@ Boris N.Oreshkin et al., [N-BEATS: Neural Basis Expansion Analysis for Interpret
 ## 들어가며
 시계열 예측에 딥러닝이 쓰이고 있긴 하지만 통계 기반 모델과 함께 쓰이는 경우가 많았다. 그러나 N-BEATS 모델은 오직 딥러닝 아키텍처로 기존 시계열 예측 컴피티션에서 통계 기반 모델과 하이브리드 모델(통계+딥러닝)의 성능을 뛰어넘는 결과를 보여주었다. 또한 해석 가능한 특징까지 가지고 있어 실무에 적용하기 적합한 모델이라고 할 수 있다. 어떤 아이디어가 숨어 있을지 살펴보자. 
 
-### 핵심 특징
+### 핵심 요약
 - 딥러닝 아키텍처로 통계적 접근법을 뛰어 넘은 첫 번째 사례이다.
 - 전통적인 시계열 분석 방법인 seasonality-trend level 분석법을 이 모델로 구현할 수 있어서 해석 가능하다.
 - 기본적인 fully connected layer로 구성된 network가 backcast, forecast 두 개의 예측값을 내뱉고 이들이 한 블록을 이룬다. 여러 블록이 쌓여 한 stack을 구성하고 여러 stack을 쌓은 것이 모델의 최종 구조다.

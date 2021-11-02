@@ -22,7 +22,7 @@ Sifan Wu et al., [Adversarial sparse transformer for time series forecasting](ht
 시계열 예측에 많은 딥러닝 모델들이 사용되어 왔지만 두 가지 문제점이 있었다. 첫째, 오직 정확한 값 예측에 초점을 맞춘 나머지,
 데이터의 무작위성을 고려하지 못했다. 둘째, auto-regressive 모델들(논문에서는 iterative model을 한정지어 말하는 것 같다.)은 훈련 시에는 target 값이 주어지지만, 추론 단계에서는 모델의 예측값이 이를 대체하기 때문에 오차가 누적되는 결과가 초래되어 긴 시간 간격의 값을 예측하는 것이 어렵다. 그렇기 때문에 이를 해결하고자 하는 노력의 필요성이 대두되었고 이 논문에서는 Sparse Transformer와 GAN의 조합으로 그 문제를 풀었다.
 
-### 핵심 특징
+### 핵심 요약
 - 시계열 예측 모델에 GAN을 사용한 최초 사례이다.(timeGAN은 시계열 데이터에 GAN을 적용한 최초 사례이나, 이는 예측에 초점을 두지 않고 과거 데이터 모델링에 초점을 뒀다는 것에 차이가 있다.)
 - Sparse Transformer를 이용해 예측 구간과 관련 있는 시간 간격의 데이터에 더 큰 가중치를 주는 모델을 구현했고 이를 통해 예측 성능을 향상시킴.
 - 시계열 예측 모델에 Adversarial training을 적용하면 기존 모델에 규제 효과가 생겨 sequence-level의 예측 성능이 높아짐.
