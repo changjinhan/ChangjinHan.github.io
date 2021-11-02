@@ -26,7 +26,7 @@ Haoyi Zhou et al., [Informer: Beyond Efficient Transformer for Long Sequence Tim
 ## 들어가며
 실세계에서 시계열 예측은 전력 수요 예측과 같이 장기간의 미래를 예측하는 문제 상황에 자주 직면하게 된다. 긴 시퀀스 예측은 모델의 높은 capacity를 요구하기 때문에 최근에 트랜스포머 모델이 시계열 예측에 많이 적용되기 시작했으며 높은 정확도를 보여주고 있다. 그러나 트랜스포머 모델에도 여러 한계점이 존재하는데 예측해야 하는 시계열의 길이 증가에 따른 시간 복잡도와 메모리 사용량 증가가 바로 그것이고, 인코더-디코더 구조 상의 한계점도 존재한다. Informer는 위의 문제들을 해결하기 위해 새로운 어텐션 메커니즘과 변형된 디코더 구조를 적용했다고 하는데 구체적으로 살펴보도록 하자.
 
-### short summary
+### 핵심 특징
 - Long Sequence Time-Series Forecasting(LSTF) 문제에서 예측 성능을 향상시켰고, 트랜스포머류의 모델들이 긴 시퀀스의 입력과 출력의 의존도를 잘 잡아내는 것을 입증했다.
 - ProbSparse self-attention 메커니즘을 제시해서 time complexity와 memory usage를 모두 $O(LlogL)$ 수준으로 감소시켰다.
 - Self-attention Distilling 과정을 통해 지배적인 어텐션 스코어들을 걸러냈고 이를 통해 total space complexity를 $O((2-\epsilon)LlogL)$ 수준으로 줄였다.
