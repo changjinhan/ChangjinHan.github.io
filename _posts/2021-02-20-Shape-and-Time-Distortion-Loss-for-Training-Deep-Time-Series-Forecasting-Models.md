@@ -21,7 +21,7 @@ Vincent Le Guen et al., [Shape and Time Distortion Loss for Training Deep Time S
 ## 들어가며
 대부분의 시계열 예측은 MSE나 MAPE와 같이 예측 값과 실제 값의 차이를 정량적으로 평가하며 예측 모델을 만들고는 한다. 그러나 non-stationary 성질을 가진 데이터에 대해서 multi-step을 예측하는 경우에는 이런 방법이 최선은 아니다. 왜냐하면 loss가 원하는 수준으로 낮게 측정되더라도 예측 그래프의 경향성이 실제와 많이 다를 수 있기 때문이다. 이 논문에서는 그러한 경향성을 shape, temporal distortion 의 두 가지로 나누어 설명하고 이를 모두 고려하여 새로운 loss function을 제시하고 있다.  
 
-### short summary
+### 핵심 특징
 - Dynamic Time Warping(DTW)에 기반한 shape loss와 temporal loss를 정의하고 두 term을 합쳐 DILATE라는 새로운 loss function을 제시하였다.
 - DTW loss가 미분 불가능하다는 성질을 극복하기 위해 smoothing 기법을 적용하였다.
 - loss의 forward pass, backward pass를 customize해서 pytorch의 기본적인 자동 미분보다 빠른 속도로 계산을 할 수 있도록 코드를 짰다.  
