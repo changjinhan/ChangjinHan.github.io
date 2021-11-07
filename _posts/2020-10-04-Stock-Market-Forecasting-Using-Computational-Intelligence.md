@@ -3,6 +3,11 @@ title: "Stock Market Forecasting Using Computational Intelligence: A Survey"
 excerpt: 주식 시장 예측 서베이 논문
 header:
     teaser: "/assets/images/0003/forecasting.jpg"
+    overlay_image: "/assets/images/0003/forecasting.jpg"
+    overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+    # caption: 
+    actions:
+        - url: "https://link.springer.com/article/10.1007/s11831-020-09413-5"
 toc: true
 toc_sticky: true
 toc_label: "페이지 목차"

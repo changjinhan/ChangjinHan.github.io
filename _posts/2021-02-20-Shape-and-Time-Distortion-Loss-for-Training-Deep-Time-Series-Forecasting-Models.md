@@ -3,6 +3,11 @@ title: "Shape and Time Distortion Loss for Training Deep Time Series Forecasting
 excerpt: 비정상성을 가진 시계열 데이터를 위한 새로운 Loss function 제안
 header:
     teaser: "/assets/images/0008/limitation_of_mse.jpg"
+    overlay_image: "/assets/images/0008/limitation_of_mse.jpg"
+    overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+    # caption: 
+    actions:
+        - url: "https://arxiv.org/abs/1909.09020"
 use_math: true
 toc: true
 toc_sticky: true

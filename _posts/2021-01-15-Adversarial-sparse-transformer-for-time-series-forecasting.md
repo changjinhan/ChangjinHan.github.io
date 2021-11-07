@@ -3,6 +3,11 @@ title: "Adversarial sparse transformer for time series forecasting"
 excerpt: GAN을 활용한 Transformer 훈련
 header:
     teaser: "/assets/images/0006/AST_architecture.jpg"
+    overlay_image: "/assets/images/0006/AST_architecture.jpg"
+    overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+    # caption: 
+    actions:
+        - url: "https://proceedings.neurips.cc/paper/2020/file/c6b8c8d762da15fa8dbbdfb6baf9e260-Paper.pdf"
 use_math: true
 toc: true
 toc_sticky: true

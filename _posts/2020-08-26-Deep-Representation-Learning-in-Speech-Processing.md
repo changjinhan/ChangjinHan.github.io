@@ -3,6 +3,11 @@ title: "Deep Representation Learning in Speech Processing: Challenges, Recent Ad
 excerpt: 음성처리 서베이 논문
 header:
     teaser: "/assets/images/0001/application.jpg"
+    overlay_image: "/assets/images/0001/application.jpg"
+    overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+    # caption: 
+    actions:
+        - url: "https://arxiv.org/abs/2001.00378"
 toc: true
 toc_sticky: true
 toc_label: "페이지 목차"
@@ -16,7 +21,7 @@ tags:
     - Survey
 date: 2020-08-26
 ---
-- 논문 링크: [https://arxiv.org/abs/2001.00378](https://arxiv.org/abs/2001.00378)
+- 논문 링크: [https://arxiv.org/abs/2001.00378](https://arxiv.org/pdf/2001.00378.pdf)
 
 
 ## 들어가며

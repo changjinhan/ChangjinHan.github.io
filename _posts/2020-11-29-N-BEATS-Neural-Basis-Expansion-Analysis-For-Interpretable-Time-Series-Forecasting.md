@@ -3,6 +3,11 @@ title: "N-BEATS: Neural Basis Expansion Analysis for Interpretable Time Series F
 excerpt: 오직 딥러닝 아키텍처만을 이용한 TS모델
 header:
     teaser: "/assets/images/0005/nbeats_model.jpg"
+    overlay_image: "/assets/images/0005/nbeats_model.jpg"
+    overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+    # caption: 
+    actions:
+        - url: "https://arxiv.org/abs/1905.10437"
 toc: true
 toc_sticky: true
 toc_label: "페이지 목차"
@@ -13,7 +18,7 @@ tags:
 date: 2020-11-29
 ---
 
-Boris N.Oreshkin et al., [N-BEATS: Neural Basis Expansion Analysis for Interpretable Time Series Forecasting](https://arxiv.org/abs/1905.10437), 2019  
+Boris N.Oreshkin et al., [N-BEATS: Neural Basis Expansion Analysis for Interpretable Time Series Forecasting](https://arxiv.org/pdf/1905.10437.pdf), 2019  
 
 ## 들어가며
 시계열 예측에 딥러닝이 쓰이고 있긴 하지만 통계 기반 모델과 함께 쓰이는 경우가 많았다. 그러나 N-BEATS 모델은 오직 딥러닝 아키텍처로 기존 시계열 예측 컴피티션에서 통계 기반 모델과 하이브리드 모델(통계+딥러닝)의 성능을 뛰어넘는 결과를 보여주었다. 또한 해석 가능한 특징까지 가지고 있어 실무에 적용하기 적합한 모델이라고 할 수 있다. 어떤 아이디어가 숨어 있을지 살펴보자. 
