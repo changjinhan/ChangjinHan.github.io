@@ -2,8 +2,8 @@
 title: "Deep Representation Learning in Speech Processing: Challenges, Recent Advances, and Future Trends"
 excerpt: 음성처리 서베이 논문
 header:
-    teaser: "/assets/images/0001/application.jpg"
-    overlay_image: "/assets/images/0001/application.jpg"
+    teaser: "/assets/images/20200826/application.jpg"
+    overlay_image: "/assets/images/20200826/application.jpg"
     overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
     # caption: 
     actions:
@@ -35,7 +35,7 @@ Speech feature로 log-mel spectrogram이 많이 쓰이지만 몇몇의 연구에
 
 
 ### 데이터셋
-![speech corpora](/assets/images/0001/speech_corpora.jpg){: .align-center}  
+![speech corpora](/assets/images/20200826/speech_corpora.jpg){: .align-center}  
 Vision 분야와 다르게 Speech 연구는 작은 데이터셋에 대한 DNN 연구로부터 시작되었다.
 
 
@@ -47,7 +47,7 @@ Vision 분야와 다르게 Speech 연구는 작은 데이터셋에 대한 DNN �
 
 
 ## Representation Learning의 적용분야
-![application of deep representation learning](/assets/images/0001/application.jpg){: .align-center}  
+![application of deep representation learning](/assets/images/20200826/application.jpg){: .align-center}  
 
 noise의 분포가 항상 알려져 있는 것이 아니기 때문에 data augmentation이 항상 도움이 되는 것은 아니다.
 
@@ -89,11 +89,11 @@ DNN, CNN, RNN, Autoencoder(AE), Deep Generative Models
 - Multi-Task Learning: main task 뿐만 아니라 auxiliary task를 사용해 다양한 loss function을 optimizing 한다. 이를 통해 main task 성능을 향상시킬 수 있고, 추가적인 데이터를 얻지 않고 성능을 향상시키는 방식이다. ASR에서는 gender, speaker adaptation 등을 auxiliary task로 활용한다.
 - Self-Taught Learning: semi-supervised 와 transfer learning을 합친 방식이다.  **audio 분야 연구는 아직 거의 없다.**
 
-![technics](/assets/images/0001/technics.jpg){: .align-center}  
+![technics](/assets/images/20200826/technics.jpg){: .align-center}  
 
 
 ## 도전과제
-![challenges](/assets/images/0001/challenge.jpg){: .align-center}  
+![challenges](/assets/images/20200826/challenge.jpg){: .align-center}  
 - unsupervised 방식은 매우 어렵다.
 - GAN에서 minmax loss, Wasserstein loss 사용하면 vasnishing gradient, mode collapse 등의 문제를 해결할 수 있다.
 - 언어에 상관없는 표현학습은 여전히 어렵다.
@@ -101,7 +101,7 @@ DNN, CNN, RNN, Autoencoder(AE), Deep Generative Models
 
 ## 성과 및 트렌드
 - 오픈소스 데이터셋과 툴킷이 있다.
-![toolkits](/assets/images/0001/toolkit.jpg){: .align-center}  
+![toolkits](/assets/images/20200826/toolkit.jpg){: .align-center}  
 
     무료 데이터셋: VoxForge, OpenSLR
 

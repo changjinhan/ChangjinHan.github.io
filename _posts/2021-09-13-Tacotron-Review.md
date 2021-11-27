@@ -2,8 +2,8 @@
 title: "All about Tacotron 1,2"
 excerpt: Tacotron 1,2 리뷰
 header:
-    teaser: "/assets/images/0010/tacotron1.jpg"
-    overlay_image: "/assets/images/0010/tacotron1.jpg"
+    teaser: "/assets/images/20210913/tacotron1.jpg"
+    overlay_image: "/assets/images/20210913/tacotron1.jpg"
     overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
     # caption: 
     actions:
