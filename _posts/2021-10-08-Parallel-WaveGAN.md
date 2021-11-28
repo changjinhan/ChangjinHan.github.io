@@ -47,7 +47,7 @@ GAN이므로 생성자와 판별자로 이루어져 있다. 생성자는 WaveNet
 
 ## 학습 방식
 
-![training framework](/assets/images/20211008/01_training_framework.jpg)
+![training framework](/assets/images/20211008/01_training_framework.jpg){: .align-center}  
 
 기본적인 GAN 학습 방식에 STFT loss를 보조 손실 함수로 추가한 형태이다. 여기서 STFT loss는 STFT 파라미터를 다양하게 조정해가면서 구한 뒤 합친 다중 해상도 손실 함수(multi-resolution loss)이며 GAN의 학습이 안정적이고 효율적으로 이루어지도록 돕는다고 한다.  
 
