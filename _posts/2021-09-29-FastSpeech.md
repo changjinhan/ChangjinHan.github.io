@@ -1,5 +1,5 @@
 ---
-title: "Fastspeech: Fast, robust and controllable text to speech"
+title: "FastSpeech: Fast, robust and controllable text to speech"
 excerpt: Transformer 기반의 빠르고 조절 가능한 TTS 모델
 header:
     teaser: "/assets/images/20210929/01_model_structure.jpg"
@@ -39,7 +39,7 @@ date: 2021-09-29
 
 FastSpeech는 autoregressive한 구조를 버리고 feed forward network 구조를 채택한다.
 
-![model structure](/assets/images/20210929/01_model_structure.jpg)
+![model structure](/assets/images/20210929/01_model_structure.jpg){: .align-center}  
 
 기본적인 구조는 self attention과 Conv1D로 이루어진 FFT(Feed-Forward Transformer)가 phoneme에서 멜 스펙트로그램으로 가는 변환을 수행하고 이 둘 사이의 길이 차이를 보정하기 위해서 length regulator가 끼어 들어간 형태이다. length regulator 내부의 duration predictor를 학습시키기 위해 autoregressive teacher TTS model(Transformer TTS model)로부터 phoneme duration을 추출하는 방법을 사용한다.
 
@@ -58,39 +58,39 @@ FastSpeech는 autoregressive한 구조를 버리고 feed forward network 구조�
 
 ### 음성 품질 평가
 
-![speech quality](/assets/images/20210929/02_speech_quality.jpg)
+![speech quality](/assets/images/20210929/02_speech_quality.jpg){: .align-center}  
 
 보코더는 pre-training된 WaveGlow 를 사용했고, 역시 MOS로 품질을 평가한다. FastSpeech로 합성한 음성이 Baseline으로 쓰인 모델들과 비슷한 수준의 품질을 나타내는 것을 알 수 있다.
 
 ### 추론 속도 증가
 
-![speedup](/assets/images/20210929/03_speedup.jpg)
+![speedup](/assets/images/20210929/03_speedup.jpg){: .align-center}  
 
 추론 스텝에서 멜 스펙트로그램을 만들기까지의 시간과 최종 오디오를 만들기까지의 시간 두 가지 모두를 측정해 봤을 때, 두 경우 모두 FastSpeech가 baseline인 Transformer TTS(파라미터 수가 FastSpeech와 비슷하도록 세팅)보다 짧게 걸리므로 훨씬 빠른 모델이라 판단된다.
 
-![inference time](/assets/images/20210929/04_inference_time.jpg)
+![inference time](/assets/images/20210929/04_inference_time.jpg){: .align-center}  
 
 이는 멜 스펙트로그램 길이에 따른 추론 시간 그래프를 그려봤을 때 더 확연한 차이로 나타나는데 두 모델 모두 멜 스펙트로그램 길이가 길어질수록 추론 시간이 선형적으로 증가하는 모습을 보이나, 그 기울기는 FastSpeech가 훨씬 완만하다.
 
 ### 강건성
 
-![robustness](/assets/images/20210929/05_robustness.jpg)
+![robustness](/assets/images/20210929/05_robustness.jpg){: .align-center}  
 
 TTS 모델들이 발음하기 어려워 하는 50개의 문장들을 가지고 강건성 테스트를 한 결과 FastSpeech는 모두 오류 없이 발음하였다.
 
 ### 길이 조절
 
-![duration control](/assets/images/20210929/06_duration_control.jpg)
+![duration control](/assets/images/20210929/06_duration_control.jpg){: .align-center}  
 
 length regulator의 하이퍼파라미터를 조절하여 phoneme별 duration을 특정 배수만큼 늘리거나 줄여서 음성의 속도를 조절할 수 있다.
 
-![adding breaks](/assets/images/20210929/07_adding_breaks.jpg)
+![adding breaks](/assets/images/20210929/07_adding_breaks.jpg){: .align-center}  
 
 그리고 문장에서 공백 문자에 해당하는 부분의 duration만 조절하여 음성의 운율 또한 임의로 만들어줄 수 있다.
 
 ### Ablation Study
 
-![ablation study](/assets/images/20210929/08_ablation_study.jpg)
+![ablation study](/assets/images/20210929/08_ablation_study.jpg){: .align-center}  
 
 FastSpeech 모델 구조에서 FFT 블록의 1D convolution을 뺀 경우(vanilla Transformer의 fully connected layer 사용)와 sequence-level knowledge distillation을 제거한 경우(모델 학습 시 생성된 멜 스펙트로그램 말고 GT 멜 스펙트로그램을 사용하는 방식)에 대하여 ablation study를 진행했다. 그 결과, 두 경우 모두 기존보다 성능이 저하됨을 확인할 수 있었다.
 
