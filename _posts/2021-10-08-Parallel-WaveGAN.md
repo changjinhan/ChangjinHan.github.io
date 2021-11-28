@@ -15,8 +15,9 @@ toc_label: "페이지 목차"
 categories: 
     - Paper Review
 tags: 
-    - Audio Synthesis
+    - Speech Synthesis
     - GAN
+    - Vocoder
 date: 2021-10-08
 ---
 
