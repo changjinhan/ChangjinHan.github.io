@@ -54,29 +54,18 @@ GAN이므로 생성자와 판별자로 이루어져 있다. 생성자는 WaveNet
 ## 손실 함수
 
 - 적대적 손실 함수(adversarial loss)
-
-$$L_{adv}(G,D)=\mathbb{E}_{z \sim N(0,I)}[(1-D(G(z)))^2]$$
+![adv loss](/assets/images/20211008/02_adv_loss.jpg){: .align-center}  
 
 - 보조 손실 함수(auxiliary loss)
     - single STFT loss
-        
-        $$L_s(G)=\mathbb{E}_{z\sim p(z),x\sim p_{data}}[L_{sc}(x,\hat{x})+L_{mag}(x,\hat{x})]$$
-        
+        ![single stft loss](/assets/images/20211008/03_single_stft_loss.jpg){: .align-center}  
+
     - spectral convergence & log STFT magnitude loss
-        
-        $$L_{sc}(x,\hat{x})=\frac{\left\| \left| STFT(x) \right|-\left| STFT(\hat{x}) \right|\right\|_{F}}{\left\| \left| STFT(x) \right|\right\|_{F}}$$
-        
-    
-    $$L_{mag}(x,\hat{x})=\frac{1}{N}\left\| log\left|STFT(x)\right|-log\left|STFT(\hat{x})\right| \right\|_1$$
-    
+        ![sc mag loss](/assets/images/20211008/04_sc_mag_loss.jpg){: .align-center}
     - 다중 해상도 손실 함수
-        
-        $$L_{aux}(G)=\frac{1}{M}\sum_{m=1}^{M}L_{s}^{(m)}(G)$$
-        
+        ![aux loss](/assets/images/20211008/05_aux_loss.jpg){: .align-center}
 - 최종 손실 함수 형태
-    
-    $$L_{G}(G,D)=L_{aux}(G)+\lambda_{adv}L_{adv}(G,D)$$
-    
+    ![final loss](/assets/images/20211008/06_final_loss.jpg){: .align-center}
 
 ## 의견
 
