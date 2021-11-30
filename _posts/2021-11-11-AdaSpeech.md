@@ -1,5 +1,5 @@
 ---
-title: "Adaspeech: Adaptive text to speech for custom voice"
+title: "AdaSpeech: Adaptive text to speech for custom voice"
 excerpt: 적은 양의 데이터로 개인화 음성을 합성해보자
 header:
     teaser: "/assets/images/20211111/01_model_structure.jpg"
