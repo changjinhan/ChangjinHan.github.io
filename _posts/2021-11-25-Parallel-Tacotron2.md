@@ -68,7 +68,7 @@ Residual encoder에서는 fine-grained token-level VAE를 사용했다. 학습 �
 
 ### 음성 합성 품질
 
-![baseline comparison](/assets/images/20211125/02_baseline_comparison.jpg)){: .align-center}  
+![baseline comparison](/assets/images/20211125/02_baseline_comparison.jpg){: .align-center}  
 
 베이스라인 모델인 Tacotron 2나 Parallel Tacotron보다 음성의 preference가 높다. 
 
