@@ -1,5 +1,5 @@
 ---
-title: "FastSpeech 2: Fast and high-quality end-to-end text to speech"
+title: "[Paper Review] FastSpeech 2: Fast and high-quality end-to-end text to speech"
 excerpt: FastSpeech에서 teacher forcing을 제거한 모델
 header:
     teaser: "/assets/images/20210930/01_model_structure.jpg"

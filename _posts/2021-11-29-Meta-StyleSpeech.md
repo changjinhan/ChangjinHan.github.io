@@ -1,5 +1,5 @@
 ---
-title: "Meta-StyleSpeech: Multi-Speaker Adaptive Text-to-Speech Generation"
+title: "[Paper Review] Meta-StyleSpeech: Multi-Speaker Adaptive Text-to-Speech Generation"
 excerpt: TTS에 meta learning 적용하기
 header:
     teaser: "/assets/images/20211129/01_model_structure.jpg"

@@ -1,5 +1,5 @@
 ---
-title: "Adversarial sparse transformer for time series forecasting"
+title: "[Paper Review] Adversarial sparse transformer for time series forecasting"
 excerpt: GAN을 활용한 Transformer 훈련
 header:
     teaser: "/assets/images/20210115/AST_architecture.jpg"

@@ -1,5 +1,5 @@
 ---
-title: "FastPitchFormant: Source-Filter Based Decomposed Modeling for Speech Synthesis"
+title: "[Paper Review] FastPitchFormant: Source-Filter Based Decomposed Modeling for Speech Synthesis"
 excerpt: FastPitch에 source-filter 이론을 접목시켰다
 header:
     teaser: "/assets/images/20211201/01_model_structure.jpg"

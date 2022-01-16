@@ -1,5 +1,5 @@
 ---
-title: "Deep Representation Learning in Speech Processing: Challenges, Recent Advances, and Future Trends"
+title: "[Paper Review] Deep Representation Learning in Speech Processing: Challenges, Recent Advances, and Future Trends"
 excerpt: 음성처리 서베이 논문
 header:
     teaser: "/assets/images/20200826/application.jpg"

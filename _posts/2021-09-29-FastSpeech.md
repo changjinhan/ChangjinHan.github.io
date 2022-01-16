@@ -1,5 +1,5 @@
 ---
-title: "FastSpeech: Fast, robust and controllable text to speech"
+title: "[Paper Review] FastSpeech: Fast, robust and controllable text to speech"
 excerpt: Transformer 기반의 빠르고 조절 가능한 TTS 모델
 header:
     teaser: "/assets/images/20210929/01_model_structure.jpg"

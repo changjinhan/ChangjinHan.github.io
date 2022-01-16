@@ -1,5 +1,5 @@
 ---
-title: "End-to-end Music-mixed Speech Recognition"
+title: "[Paper Review] End-to-end Music-mixed Speech Recognition"
 excerpt: 배경음악이 깔린 상황에서 음성인식을 할 수 있는 모델 
 header:
     teaser: "/assets/images/20200905/network_architecture.jpg"

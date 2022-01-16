@@ -1,5 +1,5 @@
 ---
-title: "Stock Market Forecasting Using Computational Intelligence: A Survey"
+title: "[Paper Review] Stock Market Forecasting Using Computational Intelligence: A Survey"
 excerpt: 주식 시장 예측 서베이 논문
 header:
     teaser: "/assets/images/20201004/forecasting.jpg"

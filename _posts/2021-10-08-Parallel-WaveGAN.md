@@ -1,5 +1,5 @@
 ---
-title: "Parallel WaveGAN: A fast waveform generation model based on generative adversarial networks with multi-resolution spectrogram"
+title: "[Paper Review] Parallel WaveGAN: A fast waveform generation model based on generative adversarial networks with multi-resolution spectrogram"
 excerpt: GAN loss와 새로운 loss를 결합하여 TTS를 하는 모델
 header:
     teaser: "/assets/images/20211008/01_training_framework.jpg"

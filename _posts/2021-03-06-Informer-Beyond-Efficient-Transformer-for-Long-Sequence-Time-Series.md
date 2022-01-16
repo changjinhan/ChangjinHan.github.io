@@ -1,5 +1,5 @@
 ---
-title: "Informer: Beyond Efficient Transformer for Long Sequence Time-Series"
+title: "[Paper Review] Informer: Beyond Efficient Transformer for Long Sequence Time-Series"
 excerpt: 긴 시계열 예측에 특화된 트랜스포머 모델
 header:
     teaser: "/assets/images/20210306/model_structure.jpg"

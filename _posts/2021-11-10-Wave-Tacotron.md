@@ -1,5 +1,5 @@
 ---
-title: "Wave-Tacotron: Spectrogram-free end-to-end text-to-speech synthesis"
+title: "[Paper Review] Wave-Tacotron: Spectrogram-free end-to-end text-to-speech synthesis"
 excerpt: 스펙트로그램 없이 end-to-end TTS 하기
 header:
     teaser: "/assets/images/20211110/01_model_structure.jpg"

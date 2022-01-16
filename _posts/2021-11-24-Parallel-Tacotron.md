@@ -1,5 +1,5 @@
 ---
-title: "Parallel Tacotron: Non-autoregressive and controllable TTS"
+title: "[Paper Review] Parallel Tacotron: Non-autoregressive and controllable TTS"
 excerpt: Non Autoregressive Tacotron + VAE
 header:
     teaser: "/assets/images/20211124/01_model_structure.jpg"

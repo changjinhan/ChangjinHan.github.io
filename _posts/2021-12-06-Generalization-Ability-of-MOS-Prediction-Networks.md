@@ -1,5 +1,5 @@
 ---
-title: "Generalization Ability of MOS Prediction Networks"
+title: "[Paper Review] Generalization Ability of MOS Prediction Networks"
 excerpt: MOS를 예측하는 데 생기는 어려움들을 생각해보자
 header:
     teaser: "/assets/images/20211206/01_metadata.jpg"

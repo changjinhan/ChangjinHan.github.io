@@ -1,5 +1,5 @@
 ---
-title: "All about Tacotron 1,2"
+title: "[Paper Review] All about Tacotron 1,2"
 excerpt: Tacotron 1,2 리뷰
 header:
     teaser: "/assets/images/20210913/tacotron1.jpg"

@@ -1,5 +1,5 @@
 ---
-title: "Parallel Tacotron 2: A Non-Autoregressive Neural TTS Model with Differentiable Duration Modeling"
+title: "[Paper Review] Parallel Tacotron 2: A Non-Autoregressive Neural TTS Model with Differentiable Duration Modeling"
 excerpt: Parallel Tacotron + duration model
 header:
     teaser: "/assets/images/20211125/01_model_structure.jpg"

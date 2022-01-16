@@ -1,5 +1,5 @@
 ---
-title: "FastPitch: Parallel text-to-speech with pitch prediction"
+title: "[Paper Review] FastPitch: Parallel text-to-speech with pitch prediction"
 excerpt: FastSpeech2와 거의 동시에 나온 FastSpeech 후속 버전
 header:
     teaser: "/assets/images/20211130/01_model_structure.jpg"
