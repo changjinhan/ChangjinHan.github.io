@@ -34,7 +34,7 @@ date: 2021-12-08
 
 ### 핵심 요약
 
-- 음성의 silence 구간을 voice audio detection(VAD)으로 제거하여 Tacotron 2의 학습 속도를 빠르게 개선했다.
+- 음성의 silence 구간을 voice activity detection(VAD)으로 제거하여 Tacotron 2의 학습 속도를 빠르게 개선했다.
 - 데이터셋에서 다른 화자에게는 존재했지만 특정 화자에 대해서 존재하지 않았던 감정도 합성해낼 수 있는 모델을 만들었다.
 - curriculum learning을 사용하여 모델이 감정과 사람의 특징을 찬찬히 배워나가게 했다.
 
