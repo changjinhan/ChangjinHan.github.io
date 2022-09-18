@@ -2,8 +2,8 @@
 title: "[Paper Review] A bi-directional LSTM approach for polyphone disambiguation in mandarin chinese"
 excerpt: 중국어 G2P를 위한 bi-directional LSTM
 header:
-    teaser: "/assets/images/20211214/"
-    overlay_image: "/assets/images/20211214/"
+    teaser: "/assets/images/20211214/bilstm.jpg"
+    overlay_image: "/assets/images/20211214/bilstm.jpg"
     overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
     # caption: 
     actions:
