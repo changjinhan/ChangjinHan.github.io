@@ -13,7 +13,7 @@
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme             : mmistakes/minimal-mistakes
 minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
+dark_theme_toggle        : true
 # Site Settings
 locale                   : "en-US" #"ko-KR"
 title                    : "Deep Log"
@@ -139,7 +139,8 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
-
+after_footer_scripts:
+  - /assets/js/custom/dark-theme.js
 
 # Reading Files
 include:
