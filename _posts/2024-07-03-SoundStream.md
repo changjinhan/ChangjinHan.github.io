@@ -46,13 +46,13 @@ SoundStream 모델은 아래의 네 가지 모듈로 이루어져 있다.
 - Decoder: 양자화된 임베딩으로부터 오디오를 재건하는 역할을 한다.
 - Discriminator: Decoder로부터 재건된 오디오와 원본 오디오를 구분지을 특성을 학습하여 고품질 오디오 압축의 학습을 돕는 역할을 한다.
 
-위의 그림에 나타나 있는 것과 같이 네 가지 모듈은 End-to-End로 함께 학습되며, 인퍼런스 시에Transmitter 쪽에서는 원하는 비트레이트에 맞춰 양자화된 임베딩을 전달하고 Receiver 쪽에서는 전달받은 임베딩을 디코딩하여 오디오 신호를 복원해내게 된다.
+위의 그림에 나타나 있는 것과 같이 네 가지 모듈은 End-to-End로 함께 학습되며, 인퍼런스 시에 Transmitter 쪽에서는 원하는 비트레이트에 맞춰 양자화된 임베딩을 전달하고 Receiver 쪽에서는 전달받은 임베딩을 디코딩하여 오디오 신호를 복원해내게 된다.
 
 ### Encoder and Decoder
 
 ![encoder and decoder](/assets/images/20240703/02.encoder_decoder.jpg){: .align-center}  
 
-Encoder와 Decoder는 SEANet의 구조를 모방하여 convolution 블록 기반으로 만들어졌다. Encoder에서는 채널 수를 늘리면서 다운 샘플링하고, Decoder에서는 반대로 채널 수를 줄이면서 업 샘플링을 하여 오디오를 복원해내는 구조이다. 실시간 인퍼런스를 보장하기 위해서 모든 convolution 블록에 causal convolution을 사용하고 있다. 오디오는 Encoder 블록 내에 존재하는 모든 stride 값의 곱만큼 시간축으로 압축되는데, 위의 그림에서는 2*4*5*8=320 이므로 임베딩 하나가 320개의 입력 샘플을 의미하는 셈이다.
+Encoder와 Decoder는 SEANet의 구조를 모방하여 convolution 블록 기반으로 만들어졌다. Encoder에서는 채널 수를 늘리면서 다운 샘플링하고, Decoder에서는 반대로 채널 수를 줄이면서 업 샘플링을 하여 오디오를 복원해내는 구조이다. 실시간 인퍼런스를 보장하기 위해서 모든 convolution 블록에 causal convolution을 사용하고 있다. 오디오는 Encoder 블록 내에 존재하는 모든 stride 값의 곱만큼 시간축으로 압축되는데, 위의 그림에서는 $2\times4\times5\times8=320$ 이므로 임베딩 하나가 320개의 입력 샘플을 의미하는 셈이다.
 
 FiLM conditioning은 선택 사항으로, SoundStream을 통해 오디오 압축과 디노이징을 함께 수행하고 싶을 때 사용한다. 구체적으로는 (inputs, targets, denoise)의 형태로 학습 데이터셋을 구성하고, denoise가 True일 때만 targets을 입력 오디오의 깨끗한 버전으로 만든다. 그리고 denoise 임베딩을 linear layer에 통과시켜 feature modulation을 위한 계수들을 구한 뒤, Encoder나 Decoder convolution 블록의 출력에 modulation을 해주는 것이다. 사전 실험에 의하면, Encoder나 Decoder 보틀넥 부분에만 FiLM layer를 적용하는 것이 가장 효과적이라고 한다.
 
