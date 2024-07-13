@@ -2,8 +2,8 @@
 title: "[Paper Review] SoundStream: An End-to-End Neural Audio Codec"
 excerpt: 최초의 End-to-End 뉴럴 오디오 코덱
 header:
-    teaser: "assets/images/20240703/01_model_architecture.jpg"
-    overlay_image: "assets/images/20240703/01_model_architecture.jpg"
+    teaser: "assets/images/20240703/01.model_architecture.jpg"
+    overlay_image: "assets/images/20240703/01.model_architecture.jpg"
     overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
     # caption: 
     actions:
