@@ -61,7 +61,7 @@ Large-scale 데이터셋으로 학습한 TTS 모델들이 훌륭한 in-context l
 
 ## 모델 구조
 
-![model architecture](/assets/images/20240923/14.model_architecture.jpg)
+![model architecture](/assets/images/20240923/14.model_architecture.jpg){: .align-center}  
 
 오디오 생성 모델인 AudioGen 모델을 사용하여 TTS에 맞게 수정하였다. TTS에 맞게 만들기 위하여 transcript 컨디셔닝 시에 word dropout을 제거하고, 초기 실험을 거쳐, transcript는 pre-pending, description은 cross-attention으로 컨디셔닝하는 방법을 채택했다. 
 
@@ -75,15 +75,15 @@ gender 컨트롤을 테스트하기 위해 사전 학습된 gender classifier를
 
 accent도 사전에 학습해둔 accent classifier를 통해 테스트를 진행했고, 68%라는 낮은 정확도를 기록했다. 저자들은 라벨의 노이즈와 학습 데이터셋의 accent 분포 불균형 때문에 이런 문제가 발생했을 것으로 추측한다.
 
-![correlation](/assets/images/20240923/15.corr_true_synth.jpg)
+![correlation](/assets/images/20240923/15.corr_true_synth.jpg){: .align-center}  
 
 그 외 속성들은 테스트셋에 대한 실제 라벨과 예측된 값을 비교하는 방식으로 성능을 측정한다. 그림 3을 통해 알 수 있듯이, C50을 빼고 나머지는 실제 라벨과 예측 라벨이 비례 관계를 따르면서 양호한 성능을 보여준다.
 
-![squim](/assets/images/20240923/16.squim.jpg)
+![squim](/assets/images/20240923/16.squim.jpg){: .align-center}  
 
 Torchaudio SQUIM을 사용해 음성의 품질을 평가해보았을 때도, 본 논문에서 제안하는 모델이 Audiobox를 능가하는 성능을 보여준다.
 
-![human evaluation](/assets/images/20240923/17.human_eval.jpg)
+![human evaluation](/assets/images/20240923/17.human_eval.jpg){: .align-center}  
 
 자원 봉사자들을 모집해 청취 테스트를 수행했을 때도 Audiobox를 능가하며, 심지어 GT도 크게 앞서는 것을 보여준다. 여기서 REL은 relevance의 줄임말로 음성이 description을 얼마나 충실하게 반영했는지를 평가하는 척도이다.
 
