@@ -191,6 +191,8 @@ incremental: false
 # Markdown Processing
 kramdown:
   math_engine: mathjax
+  math_engine_opts:
+    preview: false
   input: GFM
   hard_wrap: false
   auto_ids: true

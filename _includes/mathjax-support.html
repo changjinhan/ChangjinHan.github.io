@@ -34,6 +34,18 @@
       }
     };
 </script> -->
+<script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']],
+        tags: 'ams'  // 방정식 번호 자동 부여 (필요 없으면 생략 가능)
+      },
+      options: {
+        processEscapes: true
+      }
+    };
+</script>
 <script type="text/javascript" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
