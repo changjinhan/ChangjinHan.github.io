@@ -21,24 +21,12 @@
 <!-- <script type="text/javascript" 
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" async>
 </script> -->
-<!-- <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$']],
-        displayMath: [['$$', '$$']],
-        tags: 'ams'  // 방정식 번호 자동 설정
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-        processEscapes: true
-      }
-    };
-</script> -->
+
 <script>
     window.MathJax = {
       tex: {
         inlineMath: [['$', '$']],
-        displayMath: [['$$', '$$']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
         tags: 'ams'  // 방정식 번호 자동 부여 (필요 없으면 생략 가능)
       },
       options: {
