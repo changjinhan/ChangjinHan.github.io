@@ -11,11 +11,11 @@
             <span style="font-family:'-apple-system;">{{sum}}</style> 
         </li>
         <!-- 방문자 카운터 -->
-        <li style="margin-top: 10px;">
+        <!-- <li style="margin-top: 10px;">
             <script type="text/javascript" src="https://www.free-counters.org/count/hjl3"></script>
             <noscript>
                 <a href="https://www.free-counters.org/">Free Counter</a>
             </noscript>
-        </li>
+        </li> -->
     </ul>
 </nav>
