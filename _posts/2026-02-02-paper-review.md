@@ -260,7 +260,7 @@ ToolBench 기준으로 이런 결과가 나옵니다.
 이제 조금 더 모델 내부 구조 이야기로 들어가 보죠.
 
 * Deep Delta Learning\
-  https://arxiv.org/abs/2601.00417\
+  https://arxiv.org/abs/2601.00417 \
   코드: https://github.com/yifanzhang-pro/deep-delta-learning
 
 이 논문은 우리가 너무 당연하게 받아들이던 **ResNet 스타일 잔차 연결**에 대해 꽤 도발적인 질문을 던집니다.
@@ -311,8 +311,8 @@ ToolBench 기준으로 이런 결과가 나옵니다.
 이 논문은 그 벽을 꽤 우아한 방식으로 우회합니다.
 
 * Extending the Context of Pretrained LLMs by Dropping Their Positional Embeddings\
-  https://arxiv.org/abs/2512.12167\
-  프로젝트 페이지: https://pub.sakana.ai/DroPE\
+  https://arxiv.org/abs/2512.12167 \
+  프로젝트 페이지: https://pub.sakana.ai/DroPE \
   코드: https://github.com/SakanaAI/DroPE
 
 핵심 아이디어는 제목 그대로입니다.
@@ -395,8 +395,8 @@ MATH500, AMC, AIME24/25, GPQA, MMLU-pro 등에서 진행됐고,\
 텍스트에서 살짝 벗어나서, 비디오 생성 쪽도 꽤 흥미로운 논문이 나왔습니다.
 
 * Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation\
-  https://arxiv.org/abs/2512.04678\
-  모델: https://huggingface.co/JaydenLu666/Reward-Forcing-T2V-1.3B\
+  https://arxiv.org/abs/2512.04678 \
+  모델: https://huggingface.co/JaydenLu666/Reward-Forcing-T2V-1.3B \
   코드: https://github.com/JaydenLyh/Reward-Forcing
 
 문제 설정은 이렇습니다.
@@ -514,8 +514,8 @@ MATH500, AMC, AIME24/25, GPQA, MMLU-pro 등에서 진행됐고,\
 
 개인적으로 이번 주 논문 중 가장 흥미로웠던 건 이겁니다.
 
-* Learning to Discover at Test Time (TTT-Discover)\
-  https://arxiv.org/abs/2601.16175\
+* Learning to Discover at Test Time (TTT-Discover) \
+  https://arxiv.org/abs/2601.16175 \
   코드: https://github.com/test-time-training/discover
 
 질문은 아주 단순합니다.
