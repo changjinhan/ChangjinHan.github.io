@@ -1,4 +1,4 @@
-
+---
 title: "[Paper Review] 이번 주 AI/ML 논문 훑어보기 (26.01.26 ~ 02.01)"
 excerpt: 에이전트 조직·테스트타임 학습·소형 모델 반란까지
 header:
@@ -21,7 +21,7 @@ tags:
     - Agent
     - Test-Time Training
 date: 2026-02-02
-
+---
 
 이번 주는 유난히 느낌이 강했던 주제들이 몇 개 있었습니다.
 
