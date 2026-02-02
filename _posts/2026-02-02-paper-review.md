@@ -191,7 +191,7 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 
 툴 호출과 소형 모델 이야기를 했다면, 이 논문을 빼놓을 수 없습니다.
 
-* **ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration\**
+* **ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration**\
   [https://arxiv.org/abs/2511.21689](https://arxiv.org/abs/2511.21689)
 
 이 논문은 한마디로 정리하면 이렇습니다.
