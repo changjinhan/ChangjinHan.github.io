@@ -40,7 +40,7 @@ AI를 더 이상 하나의 모델로 보지 않고, **하나의 조직**으로 �
 대표적인 게 이 논문입니다.
 
 * **If You Want Coherence, Orchestrate a Team of Rivals**\
-  ![https://arxiv.org/abs/2601.14351](https://arxiv.org/abs/2601.14351)
+  [https://arxiv.org/abs/2601.14351](https://arxiv.org/abs/2601.14351)
 
 핵심 아이디어는 생각보다 단순하면서도 강력합니다.
 
@@ -85,7 +85,7 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 그 감각을 아주 정공법으로 정리한 논문이 바로 이거입니다.
 
 * **Challenges and Research Directions for Large Language Model Inference Hardware**\
-  ![https://arxiv.org/abs/2601.05047](https://arxiv.org/abs/2601.05047)
+  [https://arxiv.org/abs/2601.05047](https://arxiv.org/abs/2601.05047)
 
 요약하면, LLM 추론은 이제 이런 상태입니다.
 
@@ -128,7 +128,7 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 이 흐름을 가장 잘 보여주는 논문이 바로 이겁니다.
 
 * **Small Language Models for Efficient Agentic Tool Calling**\
-  ![https://arxiv.org/abs/2512.15943](https://arxiv.org/abs/2512.15943)
+  [https://arxiv.org/abs/2512.15943](https://arxiv.org/abs/2512.15943)
 
 이 논문이 주장하는 건 아주 직설적입니다.
 
@@ -192,7 +192,7 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 툴 호출과 소형 모델 이야기를 했다면, 이 논문을 빼놓을 수 없습니다.
 
 * **ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration\**
-  ![https://arxiv.org/abs/2511.21689](https://arxiv.org/abs/2511.21689)
+  [https://arxiv.org/abs/2511.21689](https://arxiv.org/abs/2511.21689)
 
 이 논문은 한마디로 정리하면 이렇습니다.
 
@@ -238,11 +238,11 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 
 관심 있다면 공식 페이지와 코드도 같이 보는 걸 추천합니다.
 
-* 연구 페이지: ![https://research.nvidia.com/labs/lpr/ToolOrchestra](https://research.nvidia.com/labs/lpr/ToolOrchestra)
+* 연구 페이지: [https://research.nvidia.com/labs/lpr/ToolOrchestra](https://research.nvidia.com/labs/lpr/ToolOrchestra)
 
-* GitHub: ![https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)
+* GitHub: [https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)
 
-* 오케스트레이터 모델: ![https://huggingface.co/nvidia/Nemotron-Orchestrator-8B](https://huggingface.co/nvidia/Nemotron-Orchestrator-8B)
+* 오케스트레이터 모델: [https://huggingface.co/nvidia/Nemotron-Orchestrator-8B](https://huggingface.co/nvidia/Nemotron-Orchestrator-8B)
 
 개인적으로는,\
 앞으로 "AI 백엔드 개발자"라는 역할이 생긴다면 바로 이런 오케스트레이션 레이어를 설계하고 튜닝하는 사람이 아닐까 싶습니다.
@@ -254,8 +254,8 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 이제 조금 더 모델 내부 구조 이야기로 들어가 보죠.
 
 * **Deep Delta Learning**\
-  ![https://arxiv.org/abs/2601.00417](https://arxiv.org/abs/2601.00417) \
-  코드: ![https://github.com/yifanzhang-pro/deep-delta-learning](https://github.com/yifanzhang-pro/deep-delta-learning)
+  [https://arxiv.org/abs/2601.00417](https://arxiv.org/abs/2601.00417) \
+  코드: [https://github.com/yifanzhang-pro/deep-delta-learning](https://github.com/yifanzhang-pro/deep-delta-learning)
 
 이 논문은 우리가 너무 당연하게 받아들이던 **ResNet 스타일 잔차 연결**에 대해 꽤 도발적인 질문을 던집니다.
 
@@ -305,9 +305,9 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 이 논문은 그 벽을 꽤 우아한 방식으로 우회합니다.
 
 * **Extending the Context of Pretrained LLMs by Dropping Their Positional Embeddings**\
-  ![https://arxiv.org/abs/2512.12167](https://arxiv.org/abs/2512.12167) \
-  프로젝트 페이지: ![https://pub.sakana.ai/DroPE](https://pub.sakana.ai/DroPE) \
-  코드: ![https://github.com/SakanaAI/DroPE](https://github.com/SakanaAI/DroPE)
+  [https://arxiv.org/abs/2512.12167](https://arxiv.org/abs/2512.12167) \
+  프로젝트 페이지: [https://pub.sakana.ai/DroPE](https://pub.sakana.ai/DroPE) \
+  코드: [https://github.com/SakanaAI/DroPE](https://github.com/SakanaAI/DroPE)
 
 핵심 아이디어는 제목 그대로입니다.
 
@@ -347,7 +347,7 @@ DroPE는 진짜로 꼼꼼히 읽어볼 만한 논문입니다.
 이 논문은 그 문제를 정면으로 파고듭니다.
 
 * **Can LLMs Guide Their Own Exploration? Gradient-Guided Reinforcement Learning for LLM Reasoning**\
-  ![https://arxiv.org/abs/2512.15687](https://arxiv.org/abs/2512.15687)
+  [https://arxiv.org/abs/2512.15687](https://arxiv.org/abs/2512.15687)
 
 아이디어는 이름 그대로입니다.
 
@@ -389,9 +389,9 @@ MATH500, AMC, AIME24/25, GPQA, MMLU-pro 등에서 진행됐고,\
 텍스트에서 살짝 벗어나서, 비디오 생성 쪽도 꽤 흥미로운 논문이 나왔습니다.
 
 * **Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation**\
-  ![https://arxiv.org/abs/2512.04678](https://arxiv.org/abs/2512.04678) \
-  모델: ![https://huggingface.co/JaydenLu666/Reward-Forcing-T2V-1.3B](https://huggingface.co/JaydenLu666/Reward-Forcing-T2V-1.3B) \
-  코드: ![https://github.com/JaydenLyh/Reward-Forcing](https://github.com/JaydenLyh/Reward-Forcing)
+  [https://arxiv.org/abs/2512.04678](https://arxiv.org/abs/2512.04678) \
+  모델: [https://huggingface.co/JaydenLu666/Reward-Forcing-T2V-1.3B](https://huggingface.co/JaydenLu666/Reward-Forcing-T2V-1.3B) \
+  코드: [https://github.com/JaydenLyh/Reward-Forcing](https://github.com/JaydenLyh/Reward-Forcing)
 
 문제 설정은 이렇습니다.
 
@@ -446,7 +446,7 @@ MATH500, AMC, AIME24/25, GPQA, MMLU-pro 등에서 진행됐고,\
 한 번쯤은 체감했을 법한 문제를 아주 잘 짚어냅니다.
 
 * **Agent Drift: Quantifying Behavioral Degradation in Multi-Agent LLM Systems Over Extended Interactions**\
-  ![https://arxiv.org/abs/2601.04170](https://arxiv.org/abs/2601.04170)
+  [https://arxiv.org/abs/2601.04170](https://arxiv.org/abs/2601.04170)
 
 논문에서 다루는 개념은 단 하나입니다.
 
@@ -509,8 +509,8 @@ MATH500, AMC, AIME24/25, GPQA, MMLU-pro 등에서 진행됐고,\
 개인적으로 이번 주 논문 중 가장 흥미로웠던 건 이겁니다.
 
 * **Learning to Discover at Test Time (TTT-Discover)** \
-  ![https://arxiv.org/abs/2601.16175](https://arxiv.org/abs/2601.16175) \
-  코드: ![https://github.com/test-time-training/discover](https://github.com/test-time-training/discover)
+  [https://arxiv.org/abs/2601.16175](https://arxiv.org/abs/2601.16175) \
+  코드: [https://github.com/test-time-training/discover](https://github.com/test-time-training/discover)
 
 질문은 아주 단순합니다.
 
