@@ -39,8 +39,8 @@ AI를 더 이상 하나의 모델로 보지 않고, **하나의 조직**으로 �
 
 대표적인 게 이 논문입니다.
 
-* If You Want Coherence, Orchestrate a Team of Rivals\
-  https://arxiv.org/abs/2601.14351
+* **If You Want Coherence, Orchestrate a Team of Rivals**\
+  ![https://arxiv.org/abs/2601.14351](https://arxiv.org/abs/2601.14351)
 
 핵심 아이디어는 생각보다 단순하면서도 강력합니다.
 
@@ -84,8 +84,8 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 
 그 감각을 아주 정공법으로 정리한 논문이 바로 이거입니다.
 
-* Challenges and Research Directions for Large Language Model Inference Hardware\
-  https://arxiv.org/abs/2601.05047
+* **Challenges and Research Directions for Large Language Model Inference Hardware**\
+  ![https://arxiv.org/abs/2601.05047](https://arxiv.org/abs/2601.05047)
 
 요약하면, LLM 추론은 이제 이런 상태입니다.
 
@@ -112,8 +112,7 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 
 두 방향이 묘하게 맞물리고 있습니다.
 
-즉, 당분간은\
-엄청 큰 단일 모델을 밀어붙이는 것보다
+즉, 당분간은 엄청 큰 단일 모델을 밀어붙이는 것보다
 
 * 작고 잘 훈련된 모델
 
@@ -128,8 +127,8 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 
 이 흐름을 가장 잘 보여주는 논문이 바로 이겁니다.
 
-* Small Language Models for Efficient Agentic Tool Calling\
-  https://arxiv.org/abs/2512.15943
+* **Small Language Models for Efficient Agentic Tool Calling**\
+  ![https://arxiv.org/abs/2512.15943](https://arxiv.org/abs/2512.15943)
 
 이 논문이 주장하는 건 아주 직설적입니다.
 
@@ -139,11 +138,9 @@ LLM을 여러 개 섞을 필요도 없고, 하나의 모델을 여러 역할 프
 
 * 대형 모델보다 **더 잘** 할 수 있다
 
-여기서 쓰인 모델은 facebook/opt-350m,\
-즉 3억 5천만 파라미터짜리 정말 작은 모델입니다.
+여기서 쓰인 모델은 facebook/opt-350m, 즉 3억 5천만 파라미터짜리 정말 작은 모델입니다.
 
-이걸 Hugging Face TRL(SFT)로 단 한 에폭 파인튜닝했는데,\
-ToolBench 기준으로 이런 결과가 나옵니다.
+이걸 Hugging Face TRL(SFT)로 단 한 에폭 파인튜닝했는데, ToolBench 기준으로 이런 결과가 나옵니다.
 
 * 파인튜닝된 SLM: 77.55%
 
@@ -154,7 +151,7 @@ ToolBench 기준으로 이런 결과가 나옵니다.
 * ToolLLaMA-CoT: 16.27%
 
 솔직히 처음 이 수치를 봤을 때는 눈을 의심했습니다.\
-"진짜 이렇게까지 차이가 난다고?" 하는 느낌에 가까웠어요.
+"진짜 이렇게까지 차이가 난다고?"
 
 하지만 내용을 읽다 보니 납득이 되는 부분이 있었는데요.
 
@@ -166,8 +163,7 @@ ToolBench 기준으로 이런 결과가 나옵니다.
 
 * 응답을 읽고 다시 다음 스텝을 계획
 
-즉, **범용 지식**보다\
-"해당 도구 세트를 얼마나 잘 이해하고 있느냐"가 훨씬 중요합니다.
+즉, **범용 지식**보다 "해당 도구 세트를 얼마나 잘 이해하고 있느냐"가 훨씬 중요합니다.
 
 그걸 위해:
 
@@ -177,8 +173,7 @@ ToolBench 기준으로 이런 결과가 나옵니다.
 
 * 적절한 SFT 파이프라인
 
-이 세 가지만 잘 설계하면,\
-굳이 수백억 파라미터짜리 모델을 쓸 이유가 점점 줄어드는 거죠.
+이 세 가지만 잘 설계하면, 굳이 수백억 파라미터짜리 모델을 쓸 이유가 점점 줄어드는 거죠.
 
 개발자로서 제 인사이트는 하나입니다.
 
@@ -196,8 +191,8 @@ ToolBench 기준으로 이런 결과가 나옵니다.
 
 툴 호출과 소형 모델 이야기를 했다면, 이 논문을 빼놓을 수 없습니다.
 
-* ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration\
-  https://arxiv.org/abs/2511.21689
+* **ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration\**
+  ![https://arxiv.org/abs/2511.21689](https://arxiv.org/abs/2511.21689)
 
 이 논문은 한마디로 정리하면 이렇습니다.
 
@@ -243,15 +238,14 @@ ToolBench 기준으로 이런 결과가 나옵니다.
 
 관심 있다면 공식 페이지와 코드도 같이 보는 걸 추천합니다.
 
-* 연구 페이지: https://research.nvidia.com/labs/lpr/ToolOrchestra
+* 연구 페이지: ![https://research.nvidia.com/labs/lpr/ToolOrchestra](https://research.nvidia.com/labs/lpr/ToolOrchestra)
 
-* GitHub: https://github.com/NVlabs/ToolOrchestra
+* GitHub: ![https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)
 
-* 오케스트레이터 모델: https://huggingface.co/nvidia/Nemotron-Orchestrator-8B
+* 오케스트레이터 모델: ![https://huggingface.co/nvidia/Nemotron-Orchestrator-8B](https://huggingface.co/nvidia/Nemotron-Orchestrator-8B)
 
 개인적으로는,\
-앞으로 "AI 백엔드 개발자"라는 역할이 생긴다면\
-바로 이런 오케스트레이션 레이어를 설계하고 튜닝하는 사람이 아닐까 싶습니다.
+앞으로 "AI 백엔드 개발자"라는 역할이 생긴다면 바로 이런 오케스트레이션 레이어를 설계하고 튜닝하는 사람이 아닐까 싶습니다.
 
 
 
@@ -259,9 +253,9 @@ ToolBench 기준으로 이런 결과가 나옵니다.
 
 이제 조금 더 모델 내부 구조 이야기로 들어가 보죠.
 
-* Deep Delta Learning\
-  https://arxiv.org/abs/2601.00417 \
-  코드: https://github.com/yifanzhang-pro/deep-delta-learning
+* **Deep Delta Learning**\
+  ![https://arxiv.org/abs/2601.00417](https://arxiv.org/abs/2601.00417) \
+  코드: ![https://github.com/yifanzhang-pro/deep-delta-learning](https://github.com/yifanzhang-pro/deep-delta-learning)
 
 이 논문은 우리가 너무 당연하게 받아들이던 **ResNet 스타일 잔차 연결**에 대해 꽤 도발적인 질문을 던집니다.
 
@@ -310,10 +304,10 @@ ToolBench 기준으로 이런 결과가 나옵니다.
 
 이 논문은 그 벽을 꽤 우아한 방식으로 우회합니다.
 
-* Extending the Context of Pretrained LLMs by Dropping Their Positional Embeddings\
-  https://arxiv.org/abs/2512.12167 \
-  프로젝트 페이지: https://pub.sakana.ai/DroPE \
-  코드: https://github.com/SakanaAI/DroPE
+* **Extending the Context of Pretrained LLMs by Dropping Their Positional Embeddings**\
+  ![https://arxiv.org/abs/2512.12167](https://arxiv.org/abs/2512.12167) \
+  프로젝트 페이지: ![https://pub.sakana.ai/DroPE](https://pub.sakana.ai/DroPE) \
+  코드: ![https://github.com/SakanaAI/DroPE](https://github.com/SakanaAI/DroPE)
 
 핵심 아이디어는 제목 그대로입니다.
 
@@ -352,8 +346,8 @@ DroPE는 진짜로 꼼꼼히 읽어볼 만한 논문입니다.
 
 이 논문은 그 문제를 정면으로 파고듭니다.
 
-* Can LLMs Guide Their Own Exploration? Gradient-Guided Reinforcement Learning for LLM Reasoning\
-  https://arxiv.org/abs/2512.15687
+* **Can LLMs Guide Their Own Exploration? Gradient-Guided Reinforcement Learning for LLM Reasoning**\
+  ![https://arxiv.org/abs/2512.15687](https://arxiv.org/abs/2512.15687)
 
 아이디어는 이름 그대로입니다.
 
@@ -394,10 +388,10 @@ MATH500, AMC, AIME24/25, GPQA, MMLU-pro 등에서 진행됐고,\
 
 텍스트에서 살짝 벗어나서, 비디오 생성 쪽도 꽤 흥미로운 논문이 나왔습니다.
 
-* Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation\
-  https://arxiv.org/abs/2512.04678 \
-  모델: https://huggingface.co/JaydenLu666/Reward-Forcing-T2V-1.3B \
-  코드: https://github.com/JaydenLyh/Reward-Forcing
+* **Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation**\
+  ![https://arxiv.org/abs/2512.04678](https://arxiv.org/abs/2512.04678) \
+  모델: ![https://huggingface.co/JaydenLu666/Reward-Forcing-T2V-1.3B](https://huggingface.co/JaydenLu666/Reward-Forcing-T2V-1.3B) \
+  코드: ![https://github.com/JaydenLyh/Reward-Forcing](https://github.com/JaydenLyh/Reward-Forcing)
 
 문제 설정은 이렇습니다.
 
@@ -451,8 +445,8 @@ MATH500, AMC, AIME24/25, GPQA, MMLU-pro 등에서 진행됐고,\
 이 논문은 에이전트 시스템을 운영해 본 사람이라면\
 한 번쯤은 체감했을 법한 문제를 아주 잘 짚어냅니다.
 
-* Agent Drift: Quantifying Behavioral Degradation in Multi-Agent LLM Systems Over Extended Interactions\
-  https://arxiv.org/abs/2601.04170
+* **Agent Drift: Quantifying Behavioral Degradation in Multi-Agent LLM Systems Over Extended Interactions**\
+  ![https://arxiv.org/abs/2601.04170](https://arxiv.org/abs/2601.04170)
 
 논문에서 다루는 개념은 단 하나입니다.
 
@@ -514,9 +508,9 @@ MATH500, AMC, AIME24/25, GPQA, MMLU-pro 등에서 진행됐고,\
 
 개인적으로 이번 주 논문 중 가장 흥미로웠던 건 이겁니다.
 
-* Learning to Discover at Test Time (TTT-Discover) \
-  https://arxiv.org/abs/2601.16175 \
-  코드: https://github.com/test-time-training/discover
+* **Learning to Discover at Test Time (TTT-Discover)** \
+  ![https://arxiv.org/abs/2601.16175](https://arxiv.org/abs/2601.16175) \
+  코드: ![https://github.com/test-time-training/discover](https://github.com/test-time-training/discover)
 
 질문은 아주 단순합니다.
 
@@ -589,26 +583,26 @@ TTT-Discover는 한 발 더 나아가서,
 
 개인적인 조언을 몇 가지로 정리해보면 이렇습니다.
 
-1. 새 프로젝트를 시작한다면,\
+1. **새 프로젝트**를 시작한다면,\
    처음부터 "에이전트 조직" 관점에서 설계해보는 걸 추천합니다.\
    최소한 기획자 / 실행자 / 검수자 정도 레이어는 나눠두면, 나중에 확장이 훨씬 쉬워집니다.
 
-2. 툴 호출이 핵심인 서비스라면,\
+2. **툴 호출이 핵심인 서비스**라면,\
    대형 모델로 직접 툴을 다루기보다\
    300M~1B급 SLM을 툴콜 전용으로 파인튜닝하는 설계를 진지하게 고려해볼 만합니다.\
    위 논문 결과를 보면, 이건 단순한 비용 최적화가 아니라 **성능 최적화**이기도 합니다.
 
-3. 긴 컨텍스트가 중요한 도메인(법률, 리서치, 코드베이스 요약 등)이라면,\
+3. **긴 컨텍스트가 중요한 도메인**(법률, 리서치, 코드베이스 요약 등)이라면,\
    DroPE 같은 맥락 확장 기법을 미리 눈여겨보고,\
    나중에 교체 가능한 아키텍처로 만들어두면 좋습니다.
 
-4. 에이전트 시스템을 만들고 있다면,\
+4. **에이전트 시스템**을 만들고 있다면,\
    지금 당장은 ASI 지표를 그대로 구현하지 않더라도,\
    "이 시스템이 시간 지나면 이상해질 수 있다"는 전제를 깔고\
    로그, 메트릭, 리셋 전략을 미리 설계해두는 게 좋습니다.
 
 5. 마지막으로,\
-   정말 어려운 문제 하나를 풀어야 하는 상황이라면\
+   **정말 어려운 문제 하나를 풀어야 하는 상황이라면**\
    TTT-Discover 스타일의 테스트 타임 강화학습을\
    "현실적인 옵션"으로 진지하게 고려해야 할 시점이 온 것 같습니다.
 
