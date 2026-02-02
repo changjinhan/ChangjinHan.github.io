@@ -2,8 +2,8 @@
 title: "[Paper Review] 이번 주 AI/ML 논문 훑어보기 (26.01.26 ~ 02.01)"
 excerpt: 에이전트 조직·테스트타임 학습·소형 모델 반란까지
 header:
-    teaser: ""
-    overlay_image: ""
+    teaser: "assets/images/paper_review.jpg"
+    overlay_image: "assets/images/paper_review.jpg"
     overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
     # caption: 
     actions:
