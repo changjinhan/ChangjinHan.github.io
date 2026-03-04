@@ -1,6 +1,6 @@
 ---
 title: "[Paper Review] 이번 주 AI/ML 논문 훑어보기 (26.02.23 ~ 03.01)"
-excerpt: '생각하는 LLM'의 현재와 다음 단계
+excerpt: 생각하는 LLM의 현재와 다음 단계
 header:
     teaser: "assets/images/paper_review.jpg"
     overlay_image: "assets/images/paper_review.jpg"
