@@ -1,0 +1,8 @@
+---
+import Shell from '../layouts/Shell.astro';
+import {posts,slug,dateLabel} from '../lib/content.mjs';
+export function getStaticPaths(){return ['tags','categories'].map(taxonomy=>({params:{taxonomy}}))}
+const field=Astro.params.taxonomy;const title=field==='tags'?'태그':'카테고리';
+const groups=[...new Set(posts.flatMap(p=>p[field]))].sort((a,b)=>a.localeCompare(b));
+---
+<Shell title={title+'로 탐색'} section="blog"><div class="wrap archive"><header class="page-heading"><span class="eyebrow">EXPLORE THE ARCHIVE</span><h1>{title}로 <span class="serif accent">둘러보기.</span></h1><p>관심 있는 주제에서 다음 읽을거리를 찾아보세요.</p></header><div class="taxonomy-list">{groups.map(g=><a class="pill" href={'#'+slug(g)}>{g} · {posts.filter(p=>p[field].includes(g)).length}</a>)}</div>{groups.map(g=><section class="taxonomy-group" id={slug(g)}><h2>{g}</h2>{posts.filter(p=>p[field].includes(g)).map(p=><a href={p.url}><time>{dateLabel(p.date)}</time>{p.displayTitle} ↗</a>)}</section>)}</div></Shell>

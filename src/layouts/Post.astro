@@ -1,0 +1,15 @@
+---
+import Shell from './Shell.astro';
+import Ad from '../components/Ad.astro';
+import {posts,dateLabel,slug} from '../lib/content.mjs';
+const {post}=Astro.props;
+const related=posts.filter(p=>p.url!==post.url&&p.tags.some(t=>post.tags.includes(t))).slice(0,3);
+---
+<Shell title={post.displayTitle} description={post.description} section="blog" article image={post.image||undefined}>
+<div class="wrap reader-wrap"><header class="reader-header"><nav class="breadcrumb"><a href="/">홈</a><span>/</span><a href="/blog/">글</a></nav><span class="eyebrow">{post.categories.join(' / ')||'RESEARCH NOTE'}</span><h1>{post.displayTitle}</h1><p class="deck">{post.description}</p><div class="reader-meta"><img src="/assets/images/profile.jpg" alt=""/><a href="/about/">Changjin Han</a><time datetime={post.date}>{dateLabel(post.date)}</time><span>{post.minutes} min read</span></div></header>
+<div class="reader-grid"><article><div class="prose" set:html={post.html}/><Ad name="article-end"/><div class="article-tags">{post.tags.map(t=><a href={'/tags/#'+slug(t)}>{t}</a>)}</div><section class="related"><h2>이어서 읽기</h2>{related.map(p=><a href={p.url}><time>{dateLabel(p.date)}</time>{p.displayTitle} ↗</a>)}</section><details class="comments" id="comments"><summary>댓글 보기 · Disqus</summary><div id="disqus_thread" data-identifier={new URL(post.legacy,Astro.site).pathname.slice(0,-1)} data-url={new URL(post.legacy,Astro.site).href}></div></details></article>
+{post.headings.length>0&&<details class="toc" open><summary>이 글의 목차</summary>{post.headings.map(h=><a class={h.level==='h3'?'sub':''} href={'#'+h.id}>{h.text}</a>)}</details>}</div></div>
+{post.data.use_math&&<script is:inline>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};</script>}
+{post.data.use_math&&<script is:inline defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>}
+<script>document.querySelector('#comments')?.addEventListener('toggle',function(){if(!(this as HTMLDetailsElement).open||location.hostname!=='changjinhan.github.io'||document.querySelector('[data-disqus-loaded]'))return;const el=document.querySelector<HTMLElement>('#disqus_thread')!;(window as any).disqus_config=function(){this.page.url=el.dataset.url;this.page.identifier=el.dataset.identifier};const s=document.createElement('script');s.src='https://changjinhan-github-io.disqus.com/embed.js';s.setAttribute('data-disqus-loaded','true');document.body.appendChild(s)});</script>
+</Shell>

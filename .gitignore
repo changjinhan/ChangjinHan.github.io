@@ -27,3 +27,13 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+# Astro generated output
+dist/
+.astro/
+public/assets/
+public/ads.txt
+
+# Local pnpm cache
+.pnpm-store/
+data/bondnote/source.json

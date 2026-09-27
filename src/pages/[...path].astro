@@ -1,0 +1,8 @@
+---
+import {postPaths} from '../lib/content.mjs';
+import Post from '../layouts/Post.astro';
+import Shell from '../layouts/Shell.astro';
+export const getStaticPaths = postPaths;
+const {post,alias}=Astro.props;
+---
+{post?<Post post={post}/>:<Shell title="글로 이동" section="blog" ads={false}><div class="wrap page-heading"><h1>기록을 새로운 주소에서 만나요.</h1><a class="text-link" href={alias.target}>글 읽으러 가기 →</a></div><meta http-equiv="refresh" content={`0;url=${alias.target}`}/></Shell>}

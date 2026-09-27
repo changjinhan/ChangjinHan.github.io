@@ -1,0 +1,24 @@
+---
+import Shell from './Shell.astro';
+import Ad from '../components/Ad.astro';
+import {bondPosts,bondData,bondArticles,bondUrl,articleUrl,dateLabel,md} from '../lib/content.mjs';
+const {post,article}=Astro.props;
+const articles=article?[article]:post.articles;
+const original=article?bondArticles.find(a=>a.id===article.id):bondData.briefings.find(b=>b.id===post.id);
+const title=article?article.heading:post.title;
+const related=bondPosts.filter(p=>p.id!==post.id&&p.articles.some(a=>articles.some(b=>a.originalTitle.toLowerCase()===b.originalTitle.toLowerCase()))).slice(0,3);
+const raw=original.body.replace(/[^]*/g,'');
+const nodes=post.figure==='credit'?['기업의 정보','신용위험 분석','투자 판단']:post.figure==='returns'?['시장 데이터','수익률 예측','검증과 적용']:['연구 질문','모델과 실험','검증과 적용'];
+---
+<Shell title={title} description={article?article.paragraphs[0]:post.intro} section="bondnote" article>
+<div class="wrap reader-wrap"><header class="reader-header"><nav class="breadcrumb"><a href="/bondnote/">Bondnote</a><span>/</span>{article?<a href={bondUrl(post)}>{dateLabel(post.date)} 브리핑</a>:<span>브리핑</span>}</nav><span class="eyebrow">BONDNOTE JOURNAL · {dateLabel(post.date)}</span><h1>{title}</h1><p class="deck">{article?article.paragraphs[0]:post.intro}</p><div class="reader-meta"><time datetime={post.date}>{dateLabel(post.date)}</time><span>약 {article?Math.max(2,Math.round(post.readMinutes/5)):post.readMinutes}분</span><span>{article?'RESEARCH NOTE':`${post.articles.length} RESEARCH NOTES`}</span></div></header>
+<div class="reader-grid"><article>
+{!article&&<figure class="concept"><span class="small-label">READING FRAMEWORK / 개념도</span><div class="concept-flow">{nodes.map((n,i)=><><span>{n}</span>{i<2&&<b>→</b>}</>)}</div><figcaption>연구를 읽는 관점을 표현한 개념도이며, 실측 데이터나 성과 차트가 아닙니다.</figcaption></figure>}
+{articles.map((a,i)=><section class="research-section prose" id={'note-'+a.id}>{!article&&<><span class="eyebrow">{String(i+1).padStart(2,'0')} / RESEARCH NOTE</span><h2><a href={articleUrl(a)}>{a.heading}</a></h2></>}<div class="original-title">다룬 자료 · {a.originalTitle}</div>{a.paragraphs.slice(article?1:0).map(p=><p set:html={md.renderInline(p)}/>)}{a.implications.length>0&&<aside class="editor-note"><h3>실무에서는 이렇게 읽을 수 있습니다</h3>{a.implications.map(p=><p set:html={md.renderInline(p)}/>)}<small>원 브리핑에 담긴 해석과 적용 아이디어입니다.</small></aside>}{a.caveats.length>0&&<aside class="editor-note"><h3>함께 확인할 점</h3>{a.caveats.map(p=><p set:html={md.renderInline(p)}/>)}</aside>}<div class="source-links">{a.links.map(l=><a href={l.url} target="_blank" rel="noreferrer">{l.label} ↗</a>)}</div></section>)}
+{!article&&post.closing&&<section class="research-section prose" id="closing"><h2>읽고 나서 남는 질문</h2><p set:html={md.renderInline(post.closing)}/></section>}
+{article&&<p style="margin-top:30px"><a class="text-link" href={bondUrl(post)}>이 연구가 소개된 하루의 글 읽기 →</a></p>}
+<aside class="editor-note">이 글은 해당 날짜의 AI 브리핑을 재편집했습니다. 논문의 결과, 기관의 설명, 국내 적용 아이디어는 근거 수준이 다를 수 있습니다. 날짜는 브리핑 기준이며 모든 자료의 발표일이 같은 것은 아닙니다.</aside>
+<details class="original-details"><summary>편집 전 브리핑 원문 펼치기</summary><div class="prose" set:html={md.render(raw)}/></details><Ad name="article-end"/>
+{related.length>0&&<section class="related"><h2>같은 연구를 다룬 지난 글</h2>{related.map(p=><a href={bondUrl(p)}><time>{dateLabel(p.date)}</time>{p.title} ↗</a>)}</section>}
+</article>{!article&&<details class="toc" open><summary>오늘의 연구 목차</summary>{articles.map((a,i)=><a href={'#note-'+a.id}>{String(i+1).padStart(2,'0')} · {a.heading}</a>)}<a href="#closing">읽고 나서 남는 질문</a></details>}</div></div>
+</Shell>

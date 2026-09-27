@@ -1,0 +1,45 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {posts,legacyAliases,bondPosts,bondArticles,bondData,postPaths,bondUrl,articleUrl} from '../src/lib/content.mjs';
+
+test('every Markdown post has a unique URL; shared old URLs resolve to the latest post',()=>{
+  assert.equal(posts.length,fs.readdirSync('_posts').filter(f=>f.endsWith('.md')).length);
+  assert.equal(new Set(posts.map(p=>p.url)).size,posts.length);
+  assert.equal(new Set(postPaths().map(p=>p.params.path)).size,postPaths().length);
+  for(const a of legacyAliases) assert.equal(a.target,posts.find(p=>p.legacy===a.url).url);
+  for(const p of posts) assert.ok(fs.existsSync(`dist${p.url}index.html`),p.url);
+});
+test('Bondnote preserves every date, article ID, editorial paragraph and source link',()=>{
+  assert.deepEqual(bondPosts.map(p=>p.date).sort(),bondData.briefings.map(p=>p.date).sort());
+  assert.deepEqual(bondPosts.flatMap(p=>p.sourceIds).sort(),bondArticles.map(a=>a.id).sort());
+  assert.equal(new Set(bondArticles.map(a=>a.id)).size,bondArticles.length);
+  for(const p of bondPosts){
+    const html=fs.readFileSync(`dist${bondUrl(p)}index.html`,'utf8');
+    assert.ok(html.includes('편집 전 브리핑 원문 펼치기'));
+    assert.equal(p.articles.length,bondData.briefings.find(b=>b.id===p.id).articles.length);
+    for(const a of p.articles){assert.ok(a.paragraphs.length>0);assert.ok(fs.existsSync(`dist${articleUrl(a)}index.html`));for(const l of a.links)assert.ok(html.includes(l.url.replaceAll('&','&amp;')),l.url);}
+  }
+});
+test('AdSense publisher, ads.txt and original two article placements survive migration',()=>{
+  assert.equal(fs.readFileSync('ads.txt','utf8'),fs.readFileSync('dist/ads.txt','utf8'));
+  const home=fs.readFileSync('dist/index.html','utf8');
+  const post=fs.readFileSync(`dist${posts[0].url}index.html`,'utf8');
+  assert.ok(home.includes('ca-pub-5927336110095461'));
+  assert.equal((home.match(/<ins /g)||[]).length,1);
+  assert.equal((post.match(/<ins /g)||[]).length,2);
+  assert.ok(post.includes('data-ad-position="article-end"'));
+});
+test('shared navigation points to native Bondnote and all local links and media resolve',()=>{
+  const files=fs.readdirSync('dist',{recursive:true}).filter(f=>f.endsWith('.html'));
+  for(const f of files){
+    const html=fs.readFileSync('dist/'+f,'utf8');
+    assert.ok(!html.includes('bond-ai-intelligence.changjin9653.chatgpt.site'),f);
+    for(const match of html.matchAll(/(?:href|src)="(\/[^"#]*)"/g)){
+      if(match[1].startsWith('//'))continue;
+      const url=new URL(match[1].replaceAll('&amp;','&'),'https://changjinhan.github.io');
+      const file='dist'+decodeURIComponent(url.pathname);
+      assert.ok(fs.existsSync(file)||fs.existsSync(file+'/index.html'),`${f}: ${match[1]}`);
+    }
+  }
+});

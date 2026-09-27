@@ -1,0 +1,7 @@
+---
+import {bondPosts} from '../../lib/content.mjs';
+import BondPost from '../../layouts/BondPost.astro';
+export function getStaticPaths(){return bondPosts.map(post=>({params:{date:post.date},props:{post}}))}
+const {post}=Astro.props;
+---
+<BondPost post={post}/>

@@ -1,0 +1,2 @@
+import {posts,bondPosts,bondArticles,bondUrl,articleUrl} from '../lib/content.mjs';
+export function GET(){const urls=['/','/blog/','/about/','/publications/','/bondnote/','/tags/','/categories/',...posts.map(p=>p.url),...bondPosts.map(bondUrl),...bondArticles.map(articleUrl)];return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u=>`<url><loc>${new URL(u,'https://changjinhan.github.io').href.replaceAll('&','&amp;')}</loc></url>`).join('')}</urlset>`,{headers:{'Content-Type':'application/xml'}})}
