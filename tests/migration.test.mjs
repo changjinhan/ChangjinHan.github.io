@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {execFileSync} from 'node:child_process';
 import {posts,legacyAliases,bondPosts,bondArticles,bondData,postPaths,bondUrl,articleUrl} from '../src/lib/content.mjs';
 
 test('every Markdown post has a unique URL; shared old URLs resolve to the latest post',()=>{
@@ -27,6 +30,31 @@ test('Markdown source links in a research note lead render as clickable links',(
   const html=fs.readFileSync(`dist${articleUrl(article)}index.html`,'utf8');
   assert.match(html,/<a href="https:\/\/libertystreeteconomics\.newyorkfed\.org\/2026\/05\/the-global-credit-cycle-in-corporate-bond-returns\/">뉴욕 연은 연구<\/a>/);
   assert.ok(!html.includes('[뉴욕 연은 연구](https://'));
+});
+test('Sites importer keeps existing articles and brings over the edited new briefing',()=>{
+  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'bondnote-import-'));
+  try{
+    fs.mkdirSync(path.join(dir,'scripts'));
+    fs.mkdirSync(path.join(dir,'data/bondnote/editorial'),{recursive:true});
+    fs.copyFileSync('scripts/bondnote-import-sites.mjs',path.join(dir,'scripts/bondnote-import-sites.mjs'));
+    const original=JSON.parse(fs.readFileSync('data/bondnote/briefings.json','utf8'));
+    const editorial=JSON.parse(fs.readFileSync('data/bondnote/editorial/posts.json','utf8'));
+    fs.writeFileSync(path.join(dir,'data/bondnote/briefings.json'),JSON.stringify(original));
+    fs.writeFileSync(path.join(dir,'data/bondnote/editorial/posts.json'),JSON.stringify(editorial));
+    const added=structuredClone(original.briefings[0]);
+    added.date='2026-09-28';added.id='test-2026-09-28';
+    added.articles.forEach((a,i)=>{a.id=`test-2026-09-28-${i+1}`;a.date=added.date;});
+    const next={...original,briefings:[added,...original.briefings]};
+    const nextEditorial={...editorial,[added.date]:structuredClone(editorial[original.briefings[0].date])};
+    const briefingPath=path.join(dir,'incoming-briefings.json');
+    const editorialPath=path.join(dir,'incoming-editorial.json');
+    fs.writeFileSync(briefingPath,JSON.stringify(next));
+    fs.writeFileSync(editorialPath,JSON.stringify(nextEditorial));
+    const result=execFileSync(process.execPath,[path.join(dir,'scripts/bondnote-import-sites.mjs'),briefingPath,editorialPath],{encoding:'utf8'});
+    assert.match(result,/UPDATED 58 briefings, 290 articles/);
+    assert.equal(JSON.parse(fs.readFileSync(path.join(dir,'data/bondnote/briefings.json'),'utf8')).briefings[0].date,added.date);
+    assert.ok(JSON.parse(fs.readFileSync(path.join(dir,'data/bondnote/editorial/posts.json'),'utf8'))[added.date]);
+  }finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
 test('AdSense publisher, ads.txt and original two article placements survive migration',()=>{
   assert.equal(fs.readFileSync('ads.txt','utf8'),fs.readFileSync('dist/ads.txt','utf8'));
