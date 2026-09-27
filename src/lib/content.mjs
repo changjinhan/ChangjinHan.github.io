@@ -7,7 +7,7 @@ import attrs from 'markdown-it-attrs';
 import footnote from 'markdown-it-footnote';
 
 export const slug = s => String(s).normalize('NFC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-').replace(/^-|-$/g, '');
-export const clean = s => String(s || '').replace(/[^]*/g, '').replace(/<[^>]*>/g, '').replace(/[*`#]/g, '').trim();
+export const clean = s => String(s || '').replace(/[^]*/g, '').replace(/\[([^\]]+)\]\(https?:\/\/[^\s)]+\)/g, '$1').replace(/<[^>]*>/g, '').replace(/[*`#]/g, '').trim();
 export const md = new MarkdownIt({ html: true, linkify: true, typographer: true }).use(anchor, { slugify: slug }).use(attrs).use(footnote);
 export const dateLabel = date => date.replaceAll('-', '.');
 const list = v => Array.isArray(v) ? v : v ? [v] : [];

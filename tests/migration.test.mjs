@@ -21,6 +21,13 @@ test('Bondnote preserves every date, article ID, editorial paragraph and source 
     for(const a of p.articles){assert.ok(a.paragraphs.length>0);assert.ok(fs.existsSync(`dist${articleUrl(a)}index.html`));for(const l of a.links)assert.ok(html.includes(l.url.replaceAll('&','&amp;')),l.url);}
   }
 });
+test('Markdown source links in a research note lead render as clickable links',()=>{
+  const article=bondArticles.find(a=>a.id==='generated-2026-09-27-2');
+  assert.ok(article);
+  const html=fs.readFileSync(`dist${articleUrl(article)}index.html`,'utf8');
+  assert.match(html,/<a href="https:\/\/libertystreeteconomics\.newyorkfed\.org\/2026\/05\/the-global-credit-cycle-in-corporate-bond-returns\/">뉴욕 연은 연구<\/a>/);
+  assert.ok(!html.includes('[뉴욕 연은 연구](https://'));
+});
 test('AdSense publisher, ads.txt and original two article placements survive migration',()=>{
   assert.equal(fs.readFileSync('ads.txt','utf8'),fs.readFileSync('dist/ads.txt','utf8'));
   const home=fs.readFileSync('dist/index.html','utf8');
