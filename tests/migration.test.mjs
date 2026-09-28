@@ -42,8 +42,10 @@ test('Sites importer keeps existing articles and brings over the edited new brie
     fs.writeFileSync(path.join(dir,'data/bondnote/briefings.json'),JSON.stringify(original));
     fs.writeFileSync(path.join(dir,'data/bondnote/editorial/posts.json'),JSON.stringify(editorial));
     const added=structuredClone(original.briefings[0]);
-    added.date='2026-09-28';added.id='test-2026-09-28';
-    added.articles.forEach((a,i)=>{a.id=`test-2026-09-28-${i+1}`;a.date=added.date;});
+    const latest=original.briefings.reduce((date,briefing)=>briefing.date>date?briefing.date:date,'');
+    added.date=new Date(Date.parse(`${latest}T00:00:00Z`)+86400000).toISOString().slice(0,10);
+    added.id=`test-${added.date}`;
+    added.articles.forEach((a,i)=>{a.id=`test-${added.date}-${i+1}`;a.date=added.date;});
     const next={...original,briefings:[added,...original.briefings]};
     const nextEditorial={...editorial,[added.date]:structuredClone(editorial[original.briefings[0].date])};
     const briefingPath=path.join(dir,'incoming-briefings.json');
@@ -51,7 +53,8 @@ test('Sites importer keeps existing articles and brings over the edited new brie
     fs.writeFileSync(briefingPath,JSON.stringify(next));
     fs.writeFileSync(editorialPath,JSON.stringify(nextEditorial));
     const result=execFileSync(process.execPath,[path.join(dir,'scripts/bondnote-import-sites.mjs'),briefingPath,editorialPath],{encoding:'utf8'});
-    assert.match(result,/UPDATED 58 briefings, 290 articles/);
+    const expectedArticles=original.briefings.reduce((count,briefing)=>count+briefing.articles.length,added.articles.length);
+    assert.match(result,new RegExp(`UPDATED ${original.briefings.length+1} briefings, ${expectedArticles} articles`));
     assert.equal(JSON.parse(fs.readFileSync(path.join(dir,'data/bondnote/briefings.json'),'utf8')).briefings[0].date,added.date);
     assert.ok(JSON.parse(fs.readFileSync(path.join(dir,'data/bondnote/editorial/posts.json'),'utf8'))[added.date]);
   }finally{fs.rmSync(dir,{recursive:true,force:true});}

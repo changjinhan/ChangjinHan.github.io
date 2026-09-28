@@ -47,7 +47,7 @@ const output={updatedAt:incoming.updatedAt||new Date().toISOString(),syncStatus:
 const temporary=new URL('../data/bondnote/.briefings.next.json',import.meta.url);
 fs.writeFileSync(temporary,JSON.stringify(output));
 const editorialTemporary=new URL('../data/bondnote/editorial/.posts.next.json',import.meta.url);
-fs.writeFileSync(editorialTemporary,JSON.stringify(incomingEditorial));
+fs.writeFileSync(editorialTemporary,JSON.stringify(incomingEditorial,null,2)+'\n');
 fs.renameSync(temporary,target);
 fs.renameSync(editorialTemporary,editorialTarget);
 console.log(`UPDATED ${briefings.length} briefings, ${briefings.flatMap(b=>b.articles).length} articles, latest ${briefings[0].date}`);
