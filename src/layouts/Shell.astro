@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import '../styles/archer.css';
 import Ad from '../components/Ad.astro';
-const {title = 'Changjin Han', description = 'Notes on speech AI, research, and the bond market.', section = 'home', ads = true, image = '/assets/images/bio-profile.jpg', article = false} = Astro.props;
+const {title = 'Changjin Han', description = 'Notes on speech AI, research, and the bond market.', section = 'home', ads = true, image = '/assets/images/profile.png', article = false} = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const nav = [{href:'/',label:'Home',id:'home'},{href:'/blog/',label:'Posts',id:'blog'},{href:'/about/',label:'About',id:'about'},{href:'/publications/',label:'Research',id:'publications'},{href:'/bondnote/',label:'Bondnote',id:'bondnote'}];
 ---
@@ -11,7 +11,7 @@ const nav = [{href:'/',label:'Home',id:'home'},{href:'/blog/',label:'Posts',id:'
 <head>
   <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>{title} — Changjin Han</title><meta name="description" content={description}/>
-  <link rel="canonical" href={canonical}/><link rel="icon" href="/assets/images/favicon/favicon.ico"/>
+  <link rel="canonical" href={canonical}/><link rel="icon" type="image/svg+xml" href="/assets/images/mark.svg"/>
   <link rel="alternate" type="application/rss+xml" title="Changjin Han" href="/feed.xml"/>
   <meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content={article ? 'article' : 'website'}/><meta property="og:image" content={new URL(image,Astro.site)}/>
   <meta name="theme-color" content="#faf9f5"/>
@@ -21,7 +21,7 @@ const nav = [{href:'/',label:'Home',id:'home'},{href:'/blog/',label:'Posts',id:'
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header wrap">
-    <a class="brand" href="/" aria-label="Changjin Han home"><span class="brand-mark" aria-hidden="true"></span><span>changjinhan</span></a>
+    <a class="brand" href="/" aria-label="Changjin Han home"><svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="3" y="3" width="17" height="17" rx="4" stroke="currentColor" stroke-width="2.8"/><rect x="12" y="12" width="17" height="17" rx="4" stroke="currentColor" stroke-width="2.8"/></svg><span>changjinhan</span></a>
     <nav aria-label="Main navigation">{nav.map(n=><a href={n.href} aria-current={section===n.id?'page':undefined}>{n.label}</a>)}</nav>
     <div class="header-tools"><a class="icon-button" href="/blog/#search" aria-label="Search posts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></a><button class="icon-button" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 15.3A8.6 8.6 0 0 1 8.7 4 8.6 8.6 0 1 0 20 15.3Z"/></svg></button></div>
   </header>

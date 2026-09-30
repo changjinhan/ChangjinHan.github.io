@@ -33,8 +33,7 @@ a:hover {color: var(--accent);}
 
 .site-header {height: 64px; gap: 28px; position: sticky; top: 0; z-index: 30; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 95%, transparent); backdrop-filter: blur(12px);}
 .brand {font-size: 14px; letter-spacing: -.035em; font-weight: 700; gap: 9px;}
-.brand-mark {width: 20px; height: 22px; padding: 0; background: none; color: var(--accent); font-family: Arial,sans-serif; font-size: 22px; letter-spacing: 0;}
-.brand-mark::before {content: '◢'; line-height: 1;}
+.brand-mark {width: 26px; height: 26px; flex: none; padding: 0; background: none; color: var(--accent);}
 .site-header nav {gap: 28px; font-size: 13px;}
 .site-header nav a {color: var(--ink); padding: 16px 0;}
 .site-header nav a[aria-current=page]:after {height: 1px; background: var(--ink); bottom: 11px;}
@@ -44,7 +43,7 @@ a:hover {color: var(--accent);}
 
 .archer-home {padding-bottom: 60px;}
 .home-hero {max-width: 930px; margin-inline: auto; display: grid; grid-template-columns: 270px minmax(0,1fr); align-items: center; gap: 48px; padding: 124px 0 136px;}
-.hero-portrait {display: block; width: 270px; height: 270px; object-fit: cover; object-position: center 24%; border-radius: 17px; box-shadow: 0 14px 34px #1b1b1b13;}
+.hero-portrait {display: block; width: 270px; height: 270px; object-fit: cover; object-position: center 18%; border-radius: 17px; box-shadow: 0 14px 34px #1b1b1b13;}
 .hero-main h1 {font-size: clamp(40px,4.85vw,64px); font-weight: 700; line-height: 1.23; letter-spacing: -.065em;}
 .hero-main h1 span {color: #3d3d3b;}
 :root[data-theme=dark] .hero-main h1 span {color: var(--ink);}
