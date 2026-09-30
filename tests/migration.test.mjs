@@ -31,6 +31,11 @@ test('Markdown source links in a research note lead render as clickable links',(
   assert.match(html,/<a href="https:\/\/libertystreeteconomics\.newyorkfed\.org\/2026\/05\/the-global-credit-cycle-in-corporate-bond-returns\/">뉴욕 연은 연구<\/a>/);
   assert.ok(!html.includes('[뉴욕 연은 연구](https://'));
 });
+test('Bondnote archive renders Markdown links in the latest summary',()=>{
+  const html=fs.readFileSync('dist/bondnote/index.html','utf8');
+  assert.match(html,/<section class="bond-latest"[\s\S]*?<p>[^<]*<a href="https:\/\//);
+  assert.ok(!html.includes('[BIS의 AI 인프라 자금조달 분석](https://'));
+});
 test('Sites importer keeps existing articles and brings over the edited new briefing',()=>{
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'bondnote-import-'));
   try{
