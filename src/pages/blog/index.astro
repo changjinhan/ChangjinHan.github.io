@@ -3,18 +3,18 @@ import Shell from '../../layouts/Shell.astro';
 import PostRow from '../../components/PostRow.astro';
 import {posts,topics,topicFor,clean} from '../../lib/content.mjs';
 ---
-<Shell title="글 모음" section="blog"><div class="wrap archive">
-<header class="page-heading"><span class="eyebrow">BLOG</span><h1>읽고 <span class="serif accent">쓴 글.</span></h1><p>논문 리뷰와 공부하면서 적은 글을 모았습니다. 제목이나 주제로 찾아볼 수 있습니다.</p></header>
-<div class="search-panel" id="search"><input id="blog-search" type="search" placeholder="제목, 본문, 태그로 검색" aria-label="글 검색"/><select id="blog-year" aria-label="작성 연도"><option value="">모든 연도</option>{[...new Set(posts.map(p=>p.date.slice(0,4)))].map(y=><option>{y}</option>)}</select></div>
-<div class="filter-tabs" aria-label="글 주제">{topics.map((t,i)=><button data-topic={t} aria-pressed={i===0?'true':'false'}>{t}</button>)}</div>
-<div class="results-meta"><span id="result-count" aria-live="polite">{posts.length}개의 글</span><div><a href="/tags/">태그 탐색 ↗</a> · <button class="reset-button" id="reset-filters">필터 초기화</button></div></div>
+<Shell title="Posts" section="blog"><div class="wrap archive">
+<header class="page-heading"><span class="eyebrow">BLOG</span><h1>Notes <span class="serif accent">& writing.</span></h1><p>Paper reviews and things I've learned along the way. Search by title or topic.</p></header>
+<div class="search-panel" id="search"><input id="blog-search" type="search" placeholder="Search titles, text, or tags" aria-label="Search posts"/><select id="blog-year" aria-label="Year published"><option value="">All years</option>{[...new Set(posts.map(p=>p.date.slice(0,4)))].map(y=><option>{y}</option>)}</select></div>
+<div class="filter-tabs" aria-label="Post topics">{topics.map((t,i)=><button data-topic={t} aria-pressed={i===0?'true':'false'}>{t}</button>)}</div>
+<div class="results-meta"><span id="result-count" aria-live="polite">{posts.length} posts</span><div><a href="/tags/">Browse tags ↗</a> · <button class="reset-button" id="reset-filters">Reset filters</button></div></div>
 <div id="post-list">{posts.map(p=><div data-post data-topic={topicFor(p)} data-year={p.date.slice(0,4)} data-search={clean([p.title,p.description,...p.tags,p.content].join(' ')).toLowerCase()}><PostRow post={p}/></div>)}</div>
-<div class="empty-state" id="empty-results" hidden><h3>아직 일치하는 글이 없어요.</h3><p>다른 검색어나 주제를 선택해 보세요.</p></div>
-<button class="load-more" id="more-posts" hidden>글 더 보기 ↓</button>
+<div class="empty-state" id="empty-results" hidden><h3>No matching posts.</h3><p>Try another search or topic.</p></div>
+<button class="load-more" id="more-posts" hidden>Load more posts ↓</button>
 </div>
 <script>
-const items=Array.from(document.querySelectorAll<HTMLElement>('[data-post]'));const search=document.querySelector<HTMLInputElement>('#blog-search')!;const year=document.querySelector<HTMLSelectElement>('#blog-year')!;const buttons=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-topic]:not([data-post])'));let topic='전체',limit=12;
-const params=new URLSearchParams(location.search);search.value=params.get('q')||'';topic=params.get('topic')||'전체';if(!buttons.some(b=>b.dataset.topic===topic))topic='전체';
-function render(){const q=search.value.trim().toLowerCase();const matched=items.filter(i=>(topic==='전체'||i.dataset.topic===topic)&&(!year.value||i.dataset.year===year.value)&&(!q||i.dataset.search?.includes(q)));items.forEach(i=>i.hidden=true);matched.slice(0,limit).forEach(i=>i.hidden=false);document.querySelector('#result-count')!.textContent=`${matched.length}개의 글`;document.querySelector<HTMLElement>('#empty-results')!.hidden=matched.length!==0;document.querySelector<HTMLElement>('#more-posts')!.hidden=matched.length<=limit;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.topic===topic)));}
-search.addEventListener('input',()=>{limit=12;render()});year.addEventListener('change',()=>{limit=12;render()});buttons.forEach(b=>b.addEventListener('click',()=>{topic=b.dataset.topic!;limit=12;render()}));document.querySelector('#more-posts')!.addEventListener('click',()=>{limit+=12;render()});document.querySelector('#reset-filters')!.addEventListener('click',()=>{topic='전체';search.value='';year.value='';limit=12;render()});render();if(location.hash==='#search')search.focus();
+const items=Array.from(document.querySelectorAll<HTMLElement>('[data-post]'));const search=document.querySelector<HTMLInputElement>('#blog-search')!;const year=document.querySelector<HTMLSelectElement>('#blog-year')!;const buttons=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-topic]:not([data-post])'));let topic='All',limit=12;
+const params=new URLSearchParams(location.search);search.value=params.get('q')||'';topic=params.get('topic')||'All';if(!buttons.some(b=>b.dataset.topic===topic))topic='All';
+function render(){const q=search.value.trim().toLowerCase();const matched=items.filter(i=>(topic==='All'||i.dataset.topic===topic)&&(!year.value||i.dataset.year===year.value)&&(!q||i.dataset.search?.includes(q)));items.forEach(i=>i.hidden=true);matched.slice(0,limit).forEach(i=>i.hidden=false);document.querySelector('#result-count')!.textContent=`${matched.length} posts`;document.querySelector<HTMLElement>('#empty-results')!.hidden=matched.length!==0;document.querySelector<HTMLElement>('#more-posts')!.hidden=matched.length<=limit;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.topic===topic)));}
+search.addEventListener('input',()=>{limit=12;render()});year.addEventListener('change',()=>{limit=12;render()});buttons.forEach(b=>b.addEventListener('click',()=>{topic=b.dataset.topic!;limit=12;render()}));document.querySelector('#more-posts')!.addEventListener('click',()=>{limit+=12;render()});document.querySelector('#reset-filters')!.addEventListener('click',()=>{topic='All';search.value='';year.value='';limit=12;render()});render();if(location.hash==='#search')search.focus();
 </script></Shell>

@@ -4,35 +4,35 @@ import {posts,bondPosts,bondUrl,dateLabel} from '../lib/content.mjs';
 const recent=posts.slice(0,3);
 const latestBond=bondPosts[0];
 const work=[
-  {year:'2025',title:'StableFormTTS · ICASSP',description:'제로샷 음성 합성에서 포먼트 생성의 안정성을 다룬 연구입니다.'},
-  {year:'2023',title:'Chinese G2P · ICASSP',description:'중국어 문자와 발음의 관계를 이웃 정보로 풀어낸 연구입니다.'},
-  {year:'2021',title:'Scene Graph Retrieval · AAAI',description:'장면 그래프의 유사도를 학습해 이미지를 검색하는 연구에 참여했습니다.'}
+  {year:'2025',title:'StableFormTTS · ICASSP',description:'Improving the stability of formant generation in zero-shot speech synthesis.'},
+  {year:'2023',title:'Chinese G2P · ICASSP',description:'Using neighboring characters to improve Chinese grapheme-to-phoneme conversion.'},
+  {year:'2021',title:'Scene Graph Retrieval · AAAI',description:'Learning scene graph similarity for image retrieval.'}
 ];
 ---
 <Shell>
   <div class="wrap archer-home">
     <section class="home-hero" aria-labelledby="home-title">
-      <img class="hero-portrait" src="/assets/images/profile.jpg" alt="한창진 프로필 사진" width="496" height="638"/>
+      <img class="hero-portrait" src="/assets/images/profile.jpg" alt="Portrait of Changjin Han" width="496" height="638"/>
       <div class="hero-main">
-        <h1 id="home-title">한창진.<br/><span>읽고, 만들고,<br/>기록합니다.</span></h1>
-        <div class="hero-links"><a href="/blog/">글 읽기</a><a href="/about/">소개</a><a href="mailto:cjhanist@gmail.com">이메일</a></div>
+        <h1 id="home-title">Changjin Han.<br/><span>I read, build,<br/>and write.</span></h1>
+        <div class="hero-links"><a href="/blog/">Read posts</a><a href="/about/">About me</a><a href="mailto:cjhanist@gmail.com">Email</a></div>
       </div>
     </section>
 
     <section class="home-section" aria-labelledby="recent-title">
-      <div class="section-bar"><h2 id="recent-title">§ 최근 글</h2><a href="/blog/">모든 글 →</a></div>
-      <div class="editorial-list">{recent.map(post=><a class="editorial-row" href={post.url}><time datetime={post.date}>{dateLabel(post.date)}</time><strong>{post.displayTitle}</strong><span class="row-kind">BLOG</span><span class="row-direction" aria-hidden="true">↗</span></a>)}</div>
+      <div class="section-bar"><h2 id="recent-title">§ Recent writing</h2><a href="/blog/">All posts →</a></div>
+      <div class="editorial-list">{recent.map(post=><a class="editorial-row" href={post.url}><time datetime={post.date}>{dateLabel(post.date)}</time><strong lang={/[가-힣]/.test(post.displayTitle)?'ko':'en'}>{post.displayTitle}</strong><span class="row-kind">BLOG</span><span class="row-direction" aria-hidden="true">↗</span></a>)}</div>
     </section>
 
     <section class="home-section" aria-labelledby="work-title">
-      <div class="section-bar"><h2 id="work-title">§ 연구와 발표</h2><a href="/publications/">전체 이력 →</a></div>
+      <div class="section-bar"><h2 id="work-title">§ Research & talks</h2><a href="/publications/">View all →</a></div>
       <div class="work-list">{work.map(item=><div class="work-row"><span class="work-year">{item.year}</span><div><h3>{item.title}</h3><p>{item.description}</p></div></div>)}</div>
     </section>
 
     <section class="home-section home-bondnote" aria-labelledby="bond-title">
-      <div class="section-bar"><h2 id="bond-title">§ Bondnote</h2><a href="/bondnote/">아카이브 →</a></div>
-      <p class="section-intro">채권시장과 AI에 관한 자료를 읽고 날짜별로 정리합니다.</p>
-      {latestBond&&<a class="editorial-row" href={bondUrl(latestBond)}><time datetime={latestBond.date}>{dateLabel(latestBond.date)}</time><strong>{latestBond.title}</strong><span class="row-kind">BRIEFING</span><span class="row-direction" aria-hidden="true">↗</span></a>}
+      <div class="section-bar"><h2 id="bond-title">§ Bondnote</h2><a href="/bondnote/">Archive →</a></div>
+      <p class="section-intro">A dated reading log on AI and the bond market.</p>
+      {latestBond&&<a class="editorial-row" href={bondUrl(latestBond)}><time datetime={latestBond.date}>{dateLabel(latestBond.date)}</time><strong lang={/[가-힣]/.test(latestBond.title)?'ko':'en'}>{latestBond.title}</strong><span class="row-kind">BRIEFING</span><span class="row-direction" aria-hidden="true">↗</span></a>}
     </section>
   </div>
 </Shell>

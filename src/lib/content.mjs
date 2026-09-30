@@ -45,7 +45,7 @@ export const bondArticles = bondData.briefings.flatMap(b => b.articles);
 export const bondCategories = ['금리 · 커브','크레딧','거래 · 유동성','AI · 모델','리스크 · 운용','퀀트사 동향'];
 export const bondUrl = p => `/bondnote/${p.date}/`;
 export const articleUrl = a => `/bondnote/research/${a.id}/`;
-export const topics = ['전체', 'Speech & Audio', 'AI & Agents', 'Time Series'];
+export const topics = ['All', 'Speech & Audio', 'AI & Agents', 'Time Series'];
 export function topicFor(p) {
   const s = [p.title,...p.tags].join(' ');
   return /time.series|stock|금융|Informer|N-BEATS|forecasting/i.test(s) ? 'Time Series' : /Agent|LLM|이번 주|language model/i.test(s) ? 'AI & Agents' : 'Speech & Audio';

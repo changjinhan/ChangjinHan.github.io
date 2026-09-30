@@ -19,7 +19,7 @@ test('Bondnote preserves every date, article ID, editorial paragraph and source 
   assert.equal(new Set(bondArticles.map(a=>a.id)).size,bondArticles.length);
   for(const p of bondPosts){
     const html=fs.readFileSync(`dist${bondUrl(p)}index.html`,'utf8');
-    assert.ok(html.includes('편집 전 브리핑 원문 펼치기'));
+    assert.ok(html.includes('Show the original briefing text'));
     assert.equal(p.articles.length,bondData.briefings.find(b=>b.id===p.id).articles.length);
     for(const a of p.articles){assert.ok(a.paragraphs.length>0);assert.ok(fs.existsSync(`dist${articleUrl(a)}index.html`));for(const l of a.links)assert.ok(html.includes(l.url.replaceAll('&','&amp;')),l.url);}
   }
@@ -31,9 +31,9 @@ test('Markdown source links in a research note lead render as clickable links',(
   assert.match(html,/<a href="https:\/\/libertystreeteconomics\.newyorkfed\.org\/2026\/05\/the-global-credit-cycle-in-corporate-bond-returns\/">뉴욕 연은 연구<\/a>/);
   assert.ok(!html.includes('[뉴욕 연은 연구](https://'));
 });
-test('Bondnote archive renders Markdown links in the latest summary',()=>{
+test('Bondnote archive renders Markdown links in briefing excerpts',()=>{
   const html=fs.readFileSync('dist/bondnote/index.html','utf8');
-  assert.match(html,/<section class="bond-latest"[\s\S]*?<p>[^<]*<a href="https:\/\//);
+  assert.match(html,/<a href="https:\/\/www\.bis\.org\/publications\/qr-202603\/financing-ai-infrastructure-boom-on-and-off-balance-sheet-borrowing">BIS의 AI 인프라 자금조달 분석<\/a>/);
   assert.ok(!html.includes('[BIS의 AI 인프라 자금조달 분석](https://'));
 });
 test('Sites importer keeps existing articles and brings over the edited new briefing',()=>{
@@ -72,6 +72,16 @@ test('AdSense publisher, ads.txt and original two article placements survive mig
   assert.equal((home.match(/<ins /g)||[]).length,1);
   assert.equal((post.match(/<ins /g)||[]).length,2);
   assert.ok(post.includes('data-ad-position="article-end"'));
+});
+test('site navigation and page introductions default to English',()=>{
+  for(const page of ['index.html','about/index.html','blog/index.html','publications/index.html','bondnote/index.html']){
+    const html=fs.readFileSync(`dist/${page}`,'utf8');
+    assert.ok(html.includes('<html lang="en">'),page);
+    assert.ok(html.includes('aria-label="Main navigation"'),page);
+  }
+  assert.ok(fs.readFileSync('dist/index.html','utf8').includes('Recent writing'));
+  assert.ok(fs.readFileSync('dist/about/index.html','utf8').includes('What I write about'));
+  assert.ok(fs.readFileSync('dist/bondnote/index.html','utf8').includes('Daily briefings'));
 });
 test('shared navigation points to native Bondnote and all local links and media resolve',()=>{
   const files=fs.readdirSync('dist',{recursive:true}).filter(f=>f.endsWith('.html'));
