@@ -2,23 +2,51 @@
 import Shell from './Shell.astro';
 import Ad from '../components/Ad.astro';
 import {bondPosts,bondData,bondArticles,bondUrl,articleUrl,dateLabel,md,clean} from '../lib/content.mjs';
+import MarkdownIt from 'markdown-it';
+import {stripFacts} from '../../scripts/lib/bondnote-editorial.mjs';
+import '../styles/bondnote.css';
 const {post,article}=Astro.props;
-const articles=article?[article]:post.articles;
+const notes=article?[article]:post.articles;
 const original=article?bondArticles.find(a=>a.id===article.id):bondData.briefings.find(b=>b.id===post.id);
 const title=article?article.heading:post.title;
-const related=bondPosts.filter(p=>p.id!==post.id&&p.articles.some(a=>articles.some(b=>a.originalTitle.toLowerCase()===b.originalTitle.toLowerCase()))).slice(0,3);
-const raw=original.body.replace(/[^]*/g,'');
-const nodes=post.figure==='credit'?['Company data','Credit risk','Investment decision']:post.figure==='returns'?['Market data','Return forecasts','Validation']:['Research question','Model & tests','Validation'];
+const noteMd=new MarkdownIt({html:false,breaks:true,linkify:true});
+const render=(s)=>noteMd.renderInline(stripFacts(s).replace(/[^]*/g,''));
+const index=bondPosts.findIndex(p=>p.id===post.id);
+const older=bondPosts[index+1], newer=bondPosts[index-1];
 ---
-<Shell title={title} description={clean(article?article.paragraphs[0]:post.intro)} section="bondnote" article>
-<div class="wrap reader-wrap"><header class="reader-header"><nav class="breadcrumb"><a href="/bondnote/">Bondnote</a><span>/</span>{article?<a href={bondUrl(post)}>{dateLabel(post.date)} briefing</a>:<span>Briefing</span>}</nav><span class="eyebrow">BONDNOTE JOURNAL · {dateLabel(post.date)}</span><h1>{title}</h1><p class="deck" set:html={md.renderInline(article?article.paragraphs[0]:post.intro)}/><div class="reader-meta"><time datetime={post.date}>{dateLabel(post.date)}</time><span>{article?Math.max(2,Math.round(post.readMinutes/5)):post.readMinutes} min read</span><span>{article?'RESEARCH NOTE':`${post.articles.length} RESEARCH NOTES`}</span></div></header>
-<div class="reader-grid"><article>
-{!article&&<figure class="concept"><span class="small-label">READING FRAMEWORK</span><div class="concept-flow">{nodes.map((n,i)=><><span>{n}</span>{i<2&&<b>→</b>}</>)}</div><figcaption>A conceptual reading guide, not a chart of measured data or performance.</figcaption></figure>}
-{articles.map((a,i)=><section class="research-section prose" id={'note-'+a.id}>{!article&&<><span class="eyebrow">{String(i+1).padStart(2,'0')} / RESEARCH NOTE</span><h2><a href={articleUrl(a)}>{a.heading}</a></h2></>}<div class="original-title">Source discussed · {a.originalTitle}</div>{a.paragraphs.slice(article?1:0).map(p=><p set:html={md.renderInline(p)}/>)}{a.implications.length>0&&<aside class="editor-note"><h3>How this might apply in practice</h3>{a.implications.map(p=><p set:html={md.renderInline(p)}/>)}<small>Interpretations and ideas from the original briefing.</small></aside>}{a.caveats.length>0&&<aside class="editor-note"><h3>What to check</h3>{a.caveats.map(p=><p set:html={md.renderInline(p)}/>)}</aside>}<div class="source-links">{a.links.map(l=><a href={l.url} target="_blank" rel="noreferrer">{l.label} ↗</a>)}</div></section>)}
-{!article&&post.closing&&<section class="research-section prose" id="closing"><h2>Questions to take away</h2><p set:html={md.renderInline(post.closing)}/></section>}
-{article&&<p style="margin-top:30px"><a class="text-link" href={bondUrl(post)}>Read the full daily briefing →</a></p>}
-<aside class="editor-note">This piece is edited from an AI briefing for the date shown. Research findings, institutional statements, and application ideas may rest on different levels of evidence. The date refers to the briefing; the sources may have been published earlier.</aside>
-<details class="original-details"><summary>Show the original briefing text</summary><div class="prose" set:html={md.render(raw)}/></details><Ad name="article-end"/>
-{related.length>0&&<section class="related"><h2>More on the same research</h2>{related.map(p=><a href={bondUrl(p)}><time>{dateLabel(p.date)}</time>{p.title} ↗</a>)}</section>}
-</article>{!article&&<details class="toc" open><summary>Today's research</summary>{articles.map((a,i)=><a href={'#note-'+a.id}>{String(i+1).padStart(2,'0')} · {a.heading}</a>)}<a href="#closing">Questions to take away</a></details>}</div></div>
+<Shell title={title} description={clean(stripFacts(article?article.question:post.intro))} section="bondnote" article>
+<div class="wrap bn-reader">
+  <header class="bn-cover">
+    <nav class="breadcrumb"><a href="/bondnote/">Bondnote</a><span>/</span>{article?<a href={bondUrl(post)}>{dateLabel(post.date)}</a>:<span>Daily reading</span>}</nav>
+    <div class="bn-cover-meta"><span>FIXED INCOME / FIELD NOTES</span><time datetime={post.date}>{dateLabel(post.date)}</time></div>
+    <h1 lang="ko">{title}</h1>
+    <p class="bn-deck" lang="ko" set:html={render(article?article.question:post.intro)}/>
+    <div class="bn-byline"><span>{article?'Research note':`${post.articles.length} notes`}</span><span>{article?Math.max(2,Math.ceil(post.readMinutes/5)):post.readMinutes} min read</span><a href="#evidence">Sources & evidence ↓</a></div>
+  </header>
+  <div class="bn-reader-grid">
+    <article class="bn-manuscript">
+      {notes.map((note,i)=><section class="bn-note" id={'note-'+note.id}>
+        {!article&&<header class="bn-note-heading"><span class="bn-number">{String(i+1).padStart(2,'0')}</span><div><span class="bn-label">RESEARCH NOTE</span><h2 lang="ko"><a href={articleUrl(note)}>{note.heading}</a></h2></div></header>}
+        {!article&&<p class="bn-question" lang="ko">{note.question}</p>}
+        <div class="bn-story" lang="ko">{note.paragraphs.map(part=><p set:html={render(part)}/>)}</div>
+        <aside class="bn-hypothesis"><span class="bn-label">DESK HYPOTHESIS</span>{note.implications.map(p=><p lang="ko" set:html={render(p)}/>)}</aside>
+        <p class="bn-scope" lang="ko"><span class="bn-label" lang="en">SCOPE</span><span set:html={render(note.caveats.join('\n\n'))}/></p>
+        <div class="bn-sources">{note.links.map(l=><a href={l.url} target="_blank" rel="noreferrer"><span>{new URL(l.url).hostname.replace(/^www\./,'')}</span>{l.label} ↗</a>)}</div>
+      </section>)}
+      {!article&&<section class="bn-closing" id="closing"><span class="bn-label">AFTER READING</span><p lang="ko" set:html={render(post.closing)}/></section>}
+      <section class="bn-evidence" id="evidence"><h2>Sources & evidence</h2><p class="bn-evidence-intro">Primary excerpts are passages checked against the linked publication. Archive excerpts retain the earlier briefing’s record.</p>
+        {notes.map(note=><details><summary><span>{note.heading}</span><span>{note.facts.length} records +</span></summary><div class="bn-ledger">{note.facts.map(f=><div class="bn-fact"><div><span class="bn-label">{f.id} · {f.verification==='primary'?'PRIMARY EXCERPT':'ARCHIVE EXCERPT'}</span><a href={f.url} target="_blank" rel="noreferrer">Source ↗</a></div><p lang="ko" set:html={render(f.statement)}/><blockquote set:html={render(f.quote)}/><small>{f.location}</small></div>)}</div></details>)}
+      </section>
+      <details class="original-details" id="original"><summary>Show the original briefing text</summary><div class="prose" lang="ko" set:html={md.render(original.body.replace(/[^]*/g,''))}/></details>
+      <Ad name="article-end"/>
+      <nav class="bn-next" aria-label="Other briefings">{article?<a href={bondUrl(post)}>Read the full briefing ↗</a>:<>{older&&<a href={bondUrl(older)}><span>← Previous briefing</span><strong>{dateLabel(older.date)}</strong></a>}{newer&&<a href={bondUrl(newer)}><span>Next briefing →</span><strong>{dateLabel(newer.date)}</strong></a>}</>}</nav>
+    </article>
+    {!article&&<aside class="bn-side"><details open data-bn-contents><summary>In this briefing</summary>{notes.map((note,i)=><a href={'#note-'+note.id}><span>{String(i+1).padStart(2,'0')}</span><span lang="ko">{note.heading}</span></a>)}<a href="#closing">After reading</a><a href="#evidence">Sources & evidence</a></details><div class="bn-side-footer">BONDNOTE<br/>A daily reading notebook.</div></aside>}
+  </div>
+</div>
 </Shell>
+
+<script>
+const contents=document.querySelector<HTMLDetailsElement>('[data-bn-contents]');
+if(contents && matchMedia('(max-width: 720px)').matches) contents.open=false;
+</script>

@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {validateEditorial} from './lib/bondnote-editorial.mjs';
 
 const [sourcePath,editorialPath]=process.argv.slice(2);
 if(!sourcePath||!editorialPath)throw new Error('Usage: node scripts/bondnote-import-sites.mjs <Sites data/briefings.json> <Sites data/editorial/posts.json>');
@@ -35,7 +36,7 @@ if(incoming.briefings.length<current.briefings.length)throw new Error('브리핑
 for(const date of Object.keys(currentEditorial))if(!incomingEditorial[date])throw new Error(`기존 편집 글이 사라졌습니다: ${date}`);
 for(const briefing of incoming.briefings){
   const entry=incomingEditorial[briefing.date];
-  if(!entry?.title||!entry?.intro||!Array.isArray(entry.headings)||entry.headings.length!==briefing.articles.length)throw new Error(`브리핑 편집 정보 오류: ${briefing.date}`);
+  validateEditorial(briefing, entry);
 }
 
 const briefings=incoming.briefings.sort((a,b)=>b.date.localeCompare(a.date));

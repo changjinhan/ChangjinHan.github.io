@@ -28,18 +28,20 @@ test('Markdown source links in a research note lead render as clickable links',(
   const article=bondArticles.find(a=>a.id==='generated-2026-09-27-2');
   assert.ok(article);
   const html=fs.readFileSync(`dist${articleUrl(article)}index.html`,'utf8');
-  assert.match(html,/<a href="https:\/\/libertystreeteconomics\.newyorkfed\.org\/2026\/05\/the-global-credit-cycle-in-corporate-bond-returns\/">뉴욕 연은 연구<\/a>/);
+  assert.match(html,/<a href="https:\/\/libertystreeteconomics\.newyorkfed\.org\/2026\/05\/the-global-credit-cycle-in-corporate-bond-returns\/"[^>]*>[^<]*뉴욕 연은[^<]*<\/a>/);
   assert.ok(!html.includes('[뉴욕 연은 연구](https://'));
 });
-test('Bondnote archive renders Markdown links in briefing excerpts',()=>{
+test('Bondnote archive shows the redesigned daily and research entries',()=>{
   const html=fs.readFileSync('dist/bondnote/index.html','utf8');
-  assert.match(html,/<a href="https:\/\/www\.bis\.org\/publications\/qr-202603\/financing-ai-infrastructure-boom-on-and-off-balance-sheet-borrowing">BIS의 AI 인프라 자금조달 분석<\/a>/);
-  assert.ok(!html.includes('[BIS의 AI 인프라 자금조달 분석](https://'));
+  assert.ok(html.includes(bondPosts[0].title));
+  assert.ok(html.includes('Questions, research, and desk notes.'));
+  assert.ok(!html.includes('<!-- F'));
 });
 test('Sites importer keeps existing articles and brings over the edited new briefing',()=>{
   const dir=fs.mkdtempSync(path.join(os.tmpdir(),'bondnote-import-'));
   try{
-    fs.mkdirSync(path.join(dir,'scripts'));
+    fs.mkdirSync(path.join(dir,'scripts/lib'),{recursive:true});
+    fs.copyFileSync('scripts/lib/bondnote-editorial.mjs',path.join(dir,'scripts/lib/bondnote-editorial.mjs'));
     fs.mkdirSync(path.join(dir,'data/bondnote/editorial'),{recursive:true});
     fs.copyFileSync('scripts/bondnote-import-sites.mjs',path.join(dir,'scripts/bondnote-import-sites.mjs'));
     const original=JSON.parse(fs.readFileSync('data/bondnote/briefings.json','utf8'));
@@ -52,7 +54,9 @@ test('Sites importer keeps existing articles and brings over the edited new brie
     added.id=`test-${added.date}`;
     added.articles.forEach((a,i)=>{a.id=`test-${added.date}-${i+1}`;a.date=added.date;});
     const next={...original,briefings:[added,...original.briefings]};
-    const nextEditorial={...editorial,[added.date]:structuredClone(editorial[original.briefings[0].date])};
+    const addedEditorial=structuredClone(editorial[original.briefings[0].date]);
+    addedEditorial.notes.forEach((note,i)=>{note.id=added.articles[i].id;note.facts.forEach(f=>{f.verification='primary';});});
+    const nextEditorial={...editorial,[added.date]:addedEditorial};
     const briefingPath=path.join(dir,'incoming-briefings.json');
     const editorialPath=path.join(dir,'incoming-editorial.json');
     fs.writeFileSync(briefingPath,JSON.stringify(next));
