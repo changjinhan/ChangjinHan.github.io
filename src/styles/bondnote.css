@@ -59,3 +59,18 @@
 @media(max-width:720px){.bn-cover{padding-top:35px}.bn-cover .breadcrumb{margin-bottom:26px}.bn-cover-meta{font-size:8px}.bn-cover h1{font-size:31px;margin:22px 0}.bn-deck{font-size:15px}.bn-byline{font-size:9px;gap:13px}.bn-byline a{margin-left:0}.bn-reader-grid{display:flex;flex-direction:column;gap:0}.bn-side{order:0;position:static;padding:22px 0;border-bottom:1px solid var(--line)}.bn-manuscript{order:1}.bn-side details{max-height:none}.bn-side-footer{display:none}.bn-side a{padding:7px 0;font-size:11px}.bn-note{padding:34px 0}.bn-note-heading{gap:17px}.bn-number{font-size:32px;min-width:40px}.bn-note h2{font-size:21px}.bn-story{font-size:16px;line-height:1.95}.bn-question{font-size:16px}.bn-hypothesis{padding:18px}.bn-hypothesis p{font-size:14px}.bn-scope{grid-template-columns:1fr;gap:5px}.bn-evidence summary{display:block}.bn-evidence summary>span:last-child{display:block;margin-top:6px}.bn-archive .bond-item{grid-template-columns:1fr}.bn-archive .bond-item p{grid-column:1;grid-row:3}.bn-archive .bond-item .small-label{grid-column:1;grid-row:4}.bn-archive .bond-latest h2{font-size:23px}}
 @media(prefers-reduced-motion:no-preference){.bn-cover{animation:settle-in .65s cubic-bezier(.2,.7,.2,1) both}.bn-sources a{transition:border-color .2s}.bn-sources a:hover{border-color:var(--accent)}}
 @media print{.bn-side,.bn-next,.bn-byline a{display:none}.bn-reader-grid{display:block}.bn-story{font-size:12pt}.bn-note{break-inside:avoid}.bn-evidence details>div{display:block}}
+/* Connected research prose, with a summary that can stand on its own. */
+.bn-takeaway {padding:22px 24px;border:1px solid var(--line);border-radius:3px;margin:0 0 30px;background:var(--soft)}
+.bn-takeaway p {font-size:16px;line-height:1.9;margin:12px 0 0;word-break:keep-all;overflow-wrap:break-word}
+.bn-story {word-break:keep-all;overflow-wrap:break-word;line-height:1.95}
+.bn-story p {margin-bottom:24px}
+.bn-hypothesis p,.bn-scope {word-break:keep-all;overflow-wrap:break-word}
+.bn-evidence-link {display:inline-block;margin-top:16px;font:11px var(--mono);color:var(--muted);text-underline-offset:4px}
+.bn-archive-record {padding:20px 0;font-size:12px;line-height:1.9;color:var(--muted)}
+.bn-archive-record p {margin:12px 0;max-width:560px}
+.bn-archive-record a {text-decoration:underline;text-underline-offset:4px}
+.bn-fact blockquote {white-space:normal;word-break:normal;overflow-wrap:break-word}
+.bn-evidence details {scroll-margin-top:30px}
+@media(max-width:720px){.bn-takeaway{padding:18px}.bn-takeaway p{font-size:15px}.bn-story{font-size:16px;line-height:1.95}}
+
+.bn-archive .bond-item p {font-size:14px;line-height:1.9;word-break:keep-all;overflow-wrap:break-word}

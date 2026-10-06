@@ -1,50 +1,65 @@
-# Bondnote editorial contract · version 2
+# Bondnote editorial contract · revision 3
 
-User-selected writing skill: [subinium/re-sseol-ch / paper-report](https://github.com/subinium/re-sseol-ch/tree/main/skills/paper-report), MIT. A copy is stored in `.openai/skills/paper-report/`. Read its SKILL.md, planning, style, fact-check and rubric references before drafting.
+User-selected research skill: [subinium/re-sseol-ch / paper-report](https://github.com/subinium/re-sseol-ch/tree/main/skills/paper-report), MIT; vendored in `.openai/skills/paper-report/`. Read its fact-check, planning, style and rubric references. This contract adapts it to five daily fixed-income research notes. The user's October 5 correction takes precedence over the skill's community slang, 음슴체, forced short-line layout and long single-paper part counts.
 
-This is a daily fixed-income research notebook, adapting the skill's long single-paper report to **five research notes**. Each day has one guiding question, five individual explanations and a three-line close. Use two to four short evidence paragraphs per note rather than mechanically repeating a 10–26-part paper report five times. This daily scope takes precedence over the upstream part-count and image-count targets. A single-paper deep dive can use the complete upstream format.
+## Write for someone meeting the research for the first time
 
-## Research and evidence
+The reader should understand what was studied, how it was checked, what was found, why the finding makes sense and what remains unknown without opening the publication. Explain the research, rather than announcing that a paper exists. Use the readable core of [Karpathy's clarity advice](https://x.com/karpathy/status/2105819303471976479): clear subjects, plain words, consistent terms and a connected argument. Do not enforce English sentence-length rules on Korean.
 
-- Read the actual primary publication, not just a search result. Read the paper in full when a paper is the chosen source. Retain the exact source title, publication date, accessed date, version and location. An inaccessible paper must be replaced by another accessible source or explicitly held as an unpublished draft.
-- Build the fact ledger **before** the outline and manuscript. Record exact source excerpts; one record per claim, retaining conditions, comparison, uncertainty and units. No invented lineage, people, affiliation, performance or model details. Re-read important tables and numbers in their original context.
-- For new notes use `verification: "primary"` only for a publication actually read. A historical quote from the old briefing has `verification: "archive"`; it is not a new primary verification. Existing archive records and URLs remain available.
-- An internal quant-company strategy, label or P&L is unknown unless explicitly published. Hiring material is not evidence of a deployed profitable strategy. Do not use job ads to fill the quant section.
-- Keep desk hypotheses in `idea`, separate from research findings. No direct investment orders. Keep limitations in `caveat`. Distinguish estimates, forecasts, simulations and empirical results.
+- Write natural, professional Korean with complete '-다' sentences and ordinary paragraphs. Define an unfamiliar term or abbreviation when it first matters. Explain the economic action before relying on a label. Keep menus, controls and provenance labels in English; retain original research titles.
+- Each note starts with a **standalone summary**. Give the concrete problem, method or evidence, actual finding and decisive condition in about 150–320 Korean characters. Its purpose is understanding, not teasing the article. It must not copy a body paragraph.
+- The body normally has three to five connected paragraphs, roughly 500–1,000 Korean characters, adjusted to the available evidence. Begin from the actual question; explain the mechanism, data or experiment; report the comparison and result; identify its meaning and limits. These are reasoning requirements, not mandatory subheadings or a repeated paragraph template. Do not pad sparse sources.
+- Include sample, period, benchmark, units, magnitude and uncertainty **when the publication reports them**. Never manufacture a sample, coefficient or trading result to make a note look substantial. Distinguish simulation, association, identification, policy judgement and a company product claim.
+- A framework or company engineering post needs an explanation of how the process works and what it enables. It does not establish profitable proprietary signals. Hiring material cannot stand in for research evidence.
+- Separate the domestic desk hypothesis (`idea`) from the publication's findings. Give a concrete dataset, comparison and evaluation criterion, not a direct trade recommendation. State the specific scope limit in `caveat`.
+- No forced 40-character line breaks, translated noun piles, rhetorical hype, repeated “핵심은”, “A가 아니라 B”, generic three-line endings, copied summaries, or paragraphs consisting of a pasted earlier briefing quote. Titles and daily opening/close must reflect that day's actual material.
 
-## Voice and narrative
+## Evidence before manuscript
 
-- Korean 음슴체, one breath per line, usually 8–30 characters and at most 40 where natural. Use line breaks to preserve clauses, not an automatic character counter. Vary endings naturally. Site controls remain English; research titles keep their original language.
-- Start with a real question arising from the material. Explain what happens first, then name the technical concept. Connect the next paragraph to the previous result. Keep the scope narrow enough for the evidence to support it.
-- No per-paragraph subheadings, numbered boilerplate, colon titles, hype, insult, invented metaphors or repetitive “핵심은”, “A가 아니라 B”, “알아보자”, “게임 체인저”. Do not convert prose by replacing sentence endings mechanically.
-- End with three short lines that answer the day's question and leave a specific test or unresolved condition. The conclusion must be grounded in the notes and vary with the material.
-- Put a clickable Markdown source link immediately after the factual passage. Never translate or rewrite URLs. The reader renders safe Markdown and line breaks; raw HTML is not permitted.
+Read the selected original publication, not a search snippet. For a paper, read the full paper when accessible; when only an official HTML summary is available, describe only that summary's verified claims and name the access limit. Do not pretend to have read PDF pages or to have reproduced an experiment.
+
+Newly authored primary quotations in the publicly stored ledger total at most 25 words per publication. Use short exact anchors and record the wider checked context in your own statement with precise source locations; do not reproduce long source paragraphs in JSON. Preserve user-provided historical ledger records unchanged in the audit trail.
+
+Build the fact ledger before outlining. Every substantive factual passage, including the standalone summary, carries `<!-- F1 F2 -->` tags. One record per supported claim, with an exact source quotation, original URL, publication/version, precise section or page and access date. Preserve context and units. Primary quotations remain in the publication's actual language; never back-translate a Korean paraphrase into an invented English original.
+
+`verification: "primary"` means the recorded publication passage was actually checked. `verification: "archive"` means the quotation is from the earlier Korean briefing, not the primary publication. Existing archive provenance and source-URL-unavailable markers remain honest. An archive record must match the original saved briefing exactly. Correcting a prior mistaken primary record retains it in `legacyFacts` for the audit trail rather than continuing to cite it.
+
+New dates after `2026-10-04` require primary records for every active fact. Unverified new source passages stay unpublished; never generate empty or pretend-primary ledgers. A narrow official summary can be used only within its stated limits. Historical editorial rewriting does not turn archived claims into primary verification.
+
+## Links and visible evidence
+
+Do not put repeated publication URLs in `summary` or `parts`. Cite fact IDs internally; each note's source list is built from its original article links and shows each unique publication URL once. The renderer links the note to its own evidence section. Keep every original source URL in the raw record; never rewrite or translate a URL.
+
+In Sources & evidence, primary records separate the Korean explanation from the actual original-language passage and precise location. Display short original quotations; avoid duplicate claim/quote text. Archive records are labelled **Earlier briefing record** and link to the preserved original briefing. Do not display the Korean briefing as an original-publication excerpt. Keep the complete internal ledger and original raw briefing for auditability.
 
 ## Data contract
 
-Keep `data/source.json`, `data/briefings.json`, article IDs and prior dates. The original daily heading/date/1–5 structure required by `scripts-build-data.mjs` remains the ingest format; the published notebook uses the editorial below. Save the full original briefing plus its metadata in source.json. Add today's editorial to `data/editorial/posts.json`, keyed by YYYY-MM-DD:
+Keep all original dates, daily/article IDs, `data/source.json` and `data/briefings.json`. Preserve the ingest daily heading/date/1–5 format in raw messages. Published editorial in `data/editorial/posts.json` is keyed by YYYY-MM-DD:
 
 ```json
 {
   "styleVersion": 2,
-  "title": "그날 자료를 묶는 짧은 제목",
-  "intro": "도입의 짧은 장면\n그 장면에서 나오는 질문?",
-  "closing": "질문에 대한 답\n답의 조건\n다음에 확인할 구체적인 항목",
-  "headings": ["연구별 제목 다섯 개"],
+  "editorialRevision": 3,
+  "title": "A title specific to the day's research",
+  "intro": "A concrete opening in Korean",
+  "closing": "A grounded close specific to the findings",
+  "headings": ["Five research titles, in article order"],
   "notes": [{
-    "id": "generated-YYYY-MM-DD-1",
-    "question": "이 연구에서 확인하려는 질문?",
+    "id": "the preserved article ID",
+    "question": "The specific question this note answers",
+    "summary": "A standalone Korean answer, distinct from the body <!-- F1 F2 -->",
     "parts": [
-      "짧은 설명\n원문의 결과와 조건을 보존한 문장 <!-- F1 -->\n[원문](https://example.com/publication)",
-      "앞 결과에서 이어지는 설명\n근거와 한계를 포함한 문장 <!-- F2 -->\n[원문](https://example.com/publication)"
+      "The question and necessary context in a complete paragraph <!-- F1 -->",
+      "The actual evidence, method and comparison <!-- F2 -->",
+      "The mechanism, interpretation and supported condition <!-- F1 F2 -->"
     ],
-    "idea": "국내 데스크에서 시험해볼 가설\n검증할 데이터와 비교 기준을 적음",
-    "caveat": "공개 자료가 뒷받침하는 범위와 아직 모르는 부분",
+    "idea": "A separate domestic desk test with a comparison and metric",
+    "caveat": "What the evidence actually covers and leaves unknown",
     "facts": [{
       "id": "F1",
-      "statement": "본문에 사용하는 사실 하나",
-      "quote": "Exact verbatim passage actually read in the source",
-      "location": "Publication title, version, page/section, accessed YYYY-MM-DD",
+      "statement": "The specific supported claim in Korean",
+      "quote": "An exact passage in the source's original language",
+      "location": "Title, version/date, section/page, accessed date",
       "url": "https://example.com/publication",
       "verification": "primary"
     }]
@@ -52,14 +67,14 @@ Keep `data/source.json`, `data/briefings.json`, article IDs and prior dates. The
 }
 ```
 
-The arrays have exactly five entries in the same order as briefing.articles. Fact IDs are scoped per note; every factual part cites its supporting IDs using `<!-- F1 F2 -->`. Every fact URL belongs to that article's links. The migration cutoff is 2026-10-04; all later dates must use primary evidence. Twenty historical notes did not retain a publication URL; their archive-only links point to the original briefing record and are explicitly labelled as missing a source URL. Include F2 if the manuscript cites F2. Existing `essays` and `figure` fields are obsolete and must not be used as the publication path.
+Both arrays have exactly five entries, ordered to match briefing.articles. Fact IDs are scoped to each note. Numeric prose tokens must occur in the cited quotations; preserve units and distinguish percent, percentage points and basis points. The reader removes internal fact tags. Old essays/figure fields are not the publication path.
 
-## Checks and publication
+## Review and publication
 
-1. Outline the guiding question and paragraph connections after the ledger. Review facts, flow and AI phrasing independently where subagents are available. Preserve uncertainty when correcting text.
-2. Run `scripts-build-data.mjs` for newly saved raw messages, then `scripts-build-blog.mjs`. The shared `scripts/lib/bondnote-editorial.mjs` rejects missing v2 notes, ID/order mismatches, missing facts, unsupported numbers, invalid source URLs and archive quotations not found in the original record.
-3. The upstream `check_report.py` can check individual exported manuscripts and ledgers. For this daily adaptation, review long-report-specific warnings about part counts, images and recurring narrative markers rather than padding the report. Fix factual, wording and line-length errors.
-4. Build and verify five notes, short line breaks, links in the opening/body/close, safe Markdown, source ledgers, mobile reading, and preservation of every old date and ID. Stop publication if the contract or preservation checks fail; keep the draft for recovery.
-5. Publish to the existing private Site using the Sites source workflow and current hosting skill. Verify deployment succeeds. The separate Codex blog uploader imports the same editorial, builds/tests, pushes GitHub master and verifies Pages. Do not claim GitHub success in the source-writing task.
+1. Outline after the ledger. Check the standalone summary from the perspective of a reader who has never seen the paper. Explain each necessary term, cause and condition; do not just list topic nouns.
+2. Independently review factual support, flow and artificial phrasing. Where subagents are available, use bounded research/review assignments. Review the manuscript, not merely its character count. Fix repeats and missing explanations without strengthening uncertain results.
+3. Run data generation when raw messages changed and build the notebook with the shared `scripts/lib/bondnote-editorial.mjs` validator. It checks revision, five ordered notes, summaries, evidence tags/numbers, source matching, archival quote fidelity, primary status for new dates and duplicate manuscript text. A passing validator is a structural check, not a substitute for reading the source.
+4. Build and verify daily and individual-note pages, readable desktop/mobile paragraphs, standalone summaries, unique publication links, honest primary/archive displays, all historical dates/IDs and existing advertising. Keep test fixtures independent of whichever date happens to be newest.
+5. Publish the existing private Site using its current Sites workflow without changing access. The separate blog uploader imports identical editorial data, builds/tests, pushes GitHub master and confirms the Pages deployment and live date. Never claim GitHub publication from the source writer alone.
 
-Do not redesign templates, overwrite old editorials or change Site access during a routine daily run. On a repeated date, resume its saved draft and publication state instead of duplicating it. Do not fill missing historical dates without their real source.
+During routine daily runs, add the new researched day and leave older editorial intact. Resume a saved same-date draft rather than duplicating it. Do not backfill missing dates without actual records. Publication stops when validation fails, retaining the draft for recovery.

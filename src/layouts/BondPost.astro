@@ -9,10 +9,19 @@ const {post,article}=Astro.props;
 const notes=article?[article]:post.articles;
 const original=article?bondArticles.find(a=>a.id===article.id):bondData.briefings.find(b=>b.id===post.id);
 const title=article?article.heading:post.title;
-const noteMd=new MarkdownIt({html:false,breaks:true,linkify:true});
+const noteMd=new MarkdownIt({html:false,breaks:false,linkify:false});
 const render=(s)=>noteMd.renderInline(stripFacts(s).replace(/[^]*/g,''));
 const index=bondPosts.findIndex(p=>p.id===post.id);
 const older=bondPosts[index+1], newer=bondPosts[index-1];
+const quoteBudgets=new Map();
+const evidenceNotes=notes.map(note=>({...note, primary:note.facts.filter(f=>f.verification==='primary').map(f=>{
+  const sourceKey=new URL(f.url); sourceKey.hash=''; for(const key of [...sourceKey.searchParams.keys()])if(/^utm_/i.test(key)||['gclid','fbclid'].includes(key))sourceKey.searchParams.delete(key); sourceKey.searchParams.sort();
+  const remaining=Math.max(0,25-(quoteBudgets.get(sourceKey.href)||0));
+  const words=f.quote.trim().split(/\s+/);
+  const count=Math.min(remaining,words.length);
+  quoteBudgets.set(sourceKey.href,(quoteBudgets.get(sourceKey.href)||0)+count);
+  return {...f,displayQuote:count?words.slice(0,count).join(' ')+(count<words.length?' …':''):''};
+ }),archived:note.facts.filter(f=>f.verification==='archive')}));
 ---
 <Shell title={title} description={clean(stripFacts(article?article.question:post.intro))} section="bondnote" article>
 <div class="wrap bn-reader">
@@ -28,14 +37,20 @@ const older=bondPosts[index+1], newer=bondPosts[index-1];
       {notes.map((note,i)=><section class="bn-note" id={'note-'+note.id}>
         {!article&&<header class="bn-note-heading"><span class="bn-number">{String(i+1).padStart(2,'0')}</span><div><span class="bn-label">RESEARCH NOTE</span><h2 lang="ko"><a href={articleUrl(note)}>{note.heading}</a></h2></div></header>}
         {!article&&<p class="bn-question" lang="ko">{note.question}</p>}
+        <aside class="bn-takeaway"><span class="bn-label">IN BRIEF</span><p lang="ko" set:html={render(note.summary)}/></aside>
         <div class="bn-story" lang="ko">{note.paragraphs.map(part=><p set:html={render(part)}/>)}</div>
         <aside class="bn-hypothesis"><span class="bn-label">DESK HYPOTHESIS</span>{note.implications.map(p=><p lang="ko" set:html={render(p)}/>)}</aside>
         <p class="bn-scope" lang="ko"><span class="bn-label" lang="en">SCOPE</span><span set:html={render(note.caveats.join('\n\n'))}/></p>
-        <div class="bn-sources">{note.links.map(l=><a href={l.url} target="_blank" rel="noreferrer"><span>{new URL(l.url).hostname.replace(/^www\./,'')}</span>{l.label} ↗</a>)}</div>
+        <div class="bn-sources" id={'sources-'+note.id}>{note.links.map(l=><a href={l.url} target="_blank" rel="noreferrer"><span>{new URL(l.url).hostname.replace(/^www\./,'')}</span>{l.label} ↗</a>)}</div>
+        <a class="bn-evidence-link" href={'#evidence-'+note.id}>Evidence & verification ↓</a>
       </section>)}
       {!article&&<section class="bn-closing" id="closing"><span class="bn-label">AFTER READING</span><p lang="ko" set:html={render(post.closing)}/></section>}
-      <section class="bn-evidence" id="evidence"><h2>Sources & evidence</h2><p class="bn-evidence-intro">Primary excerpts are passages checked against the linked publication. Archive excerpts retain the earlier briefing’s record.</p>
-        {notes.map(note=><details><summary><span>{note.heading}</span><span>{note.facts.length} records +</span></summary><div class="bn-ledger">{note.facts.map(f=><div class="bn-fact"><div><span class="bn-label">{f.id} · {f.verification==='primary'?'PRIMARY EXCERPT':'ARCHIVE EXCERPT'}</span><a href={f.url} target="_blank" rel="noreferrer">Source ↗</a></div><p lang="ko" set:html={render(f.statement)}/><blockquote set:html={render(f.quote)}/><small>{f.location}</small></div>)}</div></details>)}
+      <section class="bn-evidence" id="evidence"><h2>Sources & evidence</h2><p class="bn-evidence-intro">Original passages appear only when checked against the publication. Earlier briefing records are identified separately.</p>
+        {evidenceNotes.map(note=><details id={'evidence-'+note.id}><summary><span>{note.heading}</span><span>{note.primary.length} primary · {note.archived.length} archived +</span></summary><div class="bn-ledger">
+          {note.primary.map(f=><div class="bn-fact" data-verification="primary"><div><span class="bn-label">{f.id} · PRIMARY RECORD</span></div><p lang="ko" set:html={render(f.statement)}/>{f.displayQuote&&<><span class="bn-label">ORIGINAL PASSAGE</span><blockquote lang={/[가-힣]/.test(f.quote)?'ko':'en'} set:html={render(f.displayQuote)}/></>}<small>{f.location}</small></div>)}
+          {note.archived.length>0&&<div class="bn-archive-record" data-verification="archive"><span class="bn-label">EARLIER BRIEFING RECORD</span><p>These {note.archived.length} records come from the earlier briefing, not a newly verified original publication. They are retained in the original briefing below; no primary-source quotation is shown.</p><a href="#original">Read the earlier record ↓</a></div>}
+          <a class="bn-evidence-link" href={'#sources-'+note.id}>Publication links ↑</a>
+        </div></details>)}
       </section>
       <details class="original-details" id="original"><summary>Show the original briefing text</summary><div class="prose" lang="ko" set:html={md.render(original.body.replace(/[^]*/g,''))}/></details>
       <Ad name="article-end"/>
@@ -49,4 +64,16 @@ const older=bondPosts[index+1], newer=bondPosts[index-1];
 <script>
 const contents=document.querySelector<HTMLDetailsElement>('[data-bn-contents]');
 if(contents && matchMedia('(max-width: 720px)').matches) contents.open=false;
+function openLinkedRecord(){
+ const target=document.getElementById(decodeURIComponent(location.hash.slice(1)));
+ if(target instanceof HTMLDetailsElement) target.open=true;
+}
+addEventListener('hashchange',openLinkedRecord);
+openLinkedRecord();
+document.addEventListener('click',event=>{
+ const link=(event.target as Element).closest<HTMLAnchorElement>('a[href^="#"]');
+ if(!link) return;
+ const target=document.getElementById(decodeURIComponent(link.hash.slice(1)));
+ if(target instanceof HTMLDetailsElement) target.open=true;
+});
 </script>
