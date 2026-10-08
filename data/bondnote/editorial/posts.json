@@ -17086,5 +17086,307 @@
         ]
       }
     ]
+  },
+  "2026-10-08": {
+    "styleVersion": 2,
+    "editorialRevision": 3,
+    "title": "같은 충격도 자금 여건과 계산 병목에 따라 달라진다",
+    "intro": "오늘 자료는 충격의 이름보다 그것이 통과하는 조건을 묻는다. 지정학적 위험은 유동성이 있을 때 금으로 더 강하게 옮겨갔고, 금리인상은 혁신자금을 빌릴 수 없는 기업에 더 오래 남았다. 거래 AI에서도 예측모형만이 아니라 위험배분, 주문집행, 시뮬레이터의 계산 병목이 결과를 바꾼다.",
+    "closing": "안전자산, AI 설비투자, 기업 R&D는 모두 자금의 이동 가능성과 연결구조에 따라 반응이 달라졌다. HRT와 Two Sigma의 공개자료도 모델 하나보다 문제분해와 실험회전이 중요하다는 점을 보여준다. 한국 채권 데스크에서는 상태를 구분한 데이터, 단계별 기준모형, 계산·체결비용을 같은 검증표에 놓는 것이 다음 실험의 출발점이다.",
+    "headings": [
+      "Chasing El Dorado: gold under shifting geopolitical and financial conditions",
+      "The AI investment race",
+      "Innovation, financial frictions, and persistent effects of monetary policy",
+      "Applying Artificial Intelligence to Trading",
+      "A 24x Speedup for Reinforcement Learning with RLlib + Ray"
+    ],
+    "notes": [
+      {
+        "id": "generated-2026-10-08-1",
+        "question": "지정학적 위험이 커지면 금은 언제나 같은 크기로 오를까?",
+        "summary": "BIS는 1990~2026년 월별 자료에서 지정학적 위험을 VIX와 분리하고 금 수익률의 동적 반응을 추정했다. 위협과 실제 사건 모두 금 수익률을 높였지만 금융여건이 느슨할 때 효과가 컸다. 위험상승과 완화적 금융여건이 겹치면 각각 1.3%와 1.2%로 확대돼, 유동성이 안전자산 이동을 가능하게 하는 조건으로 나타났다. <!-- F1 F2 F3 F4 -->",
+        "parts": [
+          "금의 안전자산 역할을 평균 상관계수 하나로 보면 지정학적 충격과 일반적인 금융불안을 섞게 된다. 연구진은 지정학적 위험지수의 위협과 실제 사건 성분을 VIX에 회귀해 금융위험과 직교하는 충격을 만들었다. 이어 1990~2026년 월별 자료와 국소투영을 사용해 충격 이후 금 수익률 경로를 추정했다. 지정학적 뉴스 자체의 효과와 광범위한 위험회피를 나누려는 설계다. <!-- F1 -->",
+          "금융여건이 느슨하면서 지정학적 위험이 상승하는 상태에서는 위협과 실제 사건 충격의 금 수익률 효과가 각각 1.3%와 1.2%로 커졌다. 같은 충격도 투자자가 포트폴리오를 바꿀 자금과 시장유동성을 갖고 있는지에 따라 가격반응이 달라진다는 결과다. <!-- F2 F3 -->",
+          "연구는 기회비용과 신용·유동성 경로를 따로 점검했고 후자에서 더 분명한 증거를 찾았다. 자금이 묶인 스트레스 국면에는 금을 사고 싶어도 다른 자산을 팔거나 마진을 조달하기 어렵다. 반대로 금융여건이 느슨하면 재배분이 쉬워 안전자산 수요가 가격에 더 빠르게 반영된다. 추정치는 역사적 상태의 평균반응이며 다음 지정학적 사건의 금 가격을 확정하는 규칙으로 쓸 수 없다. <!-- F4 -->"
+        ],
+        "idea": "지정학적 위험지수의 위협·사건 성분을 VIX와 분리하고, 원/달러·국고채·금 ETF의 12개월 반응을 국내 금융상황지수 국면별로 추정한다. 단일 선형모형과 상태의존 국소투영의 방향 적중률, 최대 손실, 헤지비용을 비교한다.",
+        "caveat": "월별 거시자료에 대한 상태의존 국소투영 결과다. 금융여건과 지정학적 위험의 구분은 모형 선택에 의존하며, 금·채권 포트폴리오의 실시간 거래성과를 시험한 연구가 아니다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "분석은 1990~2026년 월별 자료를 쓰고 금 수익률의 동적 반응을 추정한다.",
+            "quote": "1990 to 2026",
+            "location": "BIS Working Paper No. 1380, §§1 and 3.2, printed pp. 1 and 7, accessed 2026-10-08",
+            "url": "https://www.bis.org/publications/working-paper-1380-chasing-el-dorado-gold-under-shifting-geopolitical-and-financial-condition.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "위험상승과 느슨한 금융여건이 겹치면 지정학적 위협 충격의 금 수익률 효과는 1.3%다.",
+            "quote": "increases to 1.3%",
+            "location": "BIS Working Paper No. 1380, §1, printed p. 3, accessed 2026-10-08",
+            "url": "https://www.bis.org/publications/working-paper-1380-chasing-el-dorado-gold-under-shifting-geopolitical-and-financial-condition.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "같은 복합상태에서 실제 지정학적 사건 충격의 금 수익률 효과는 1.2%다.",
+            "quote": "increases to 1.2%",
+            "location": "BIS Working Paper No. 1380, §1, printed p. 3, accessed 2026-10-08",
+            "url": "https://www.bis.org/publications/working-paper-1380-chasing-el-dorado-gold-under-shifting-geopolitical-and-financial-condition.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "작동경로의 증거는 기회비용보다 신용·유동성 위험 경로에서 더 뚜렷하다.",
+            "quote": "credit and liquidity risk channel",
+            "location": "BIS Working Paper No. 1380, abstract, printed p. 1, accessed 2026-10-08",
+            "url": "https://www.bis.org/publications/working-paper-1380-chasing-el-dorado-gold-under-shifting-geopolitical-and-financial-condition.pdf",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-08-2",
+        "question": "AI 설비투자가 생산성 기대보다 앞서갈 때 신용위험은 어떻게 커지는가?",
+        "summary": "BIS는 소수 승자가 시장을 차지하는 AI 경쟁을 동적 게임으로 만들고 기업 재무제표와 공개 거래자료로 보정했다. 기준 투자는 효율적 수준의 약 1.5배, 수요탄력성이 낮으면 약 세 배였다. 부채와 순환형 자금조달은 전문설비의 동시 매각손실을 키웠고, 약 3조 달러의 설비투자부터 기대 순경제잉여가 음수로 바뀌었다. 이는 관측된 손실이 아니라 모형 시나리오다. <!-- F1 F2 F3 F4 F5 -->",
+        "parts": [
+          "AI 인프라 경쟁에서는 각 기업이 전체 산업의 수익성보다 먼저 규모를 확보하려 한다. 논문은 소수 승자가 대부분의 수익을 가져가는 동적 경쟁게임을 만들고, 기업 재무제표와 공개된 투자거래에 맞춰 매개변수를 보정했다. 기준 모형의 총투자는 사회계획자가 선택할 효율적 수준의 약 1.5배였고, AI 서비스 수요가 가격에 덜 반응하는 경우에는 약 세 배까지 늘었다. <!-- F1 F2 F3 -->",
+          "취약성은 투자규모와 자금조달이 맞물리면서 생긴다. 앞서기 위해 부채로 전문화된 GPU·데이터센터 자산을 먼저 늘리지만, 생산성 실현이 약하면 여러 기업이 동시에 같은 자산을 처분해야 한다. 자연스러운 매수자인 다른 대형 사업자도 같은 충격을 받아 회수시장이 얇아진다. 보정된 모형에서 관측된 채권·리스 공시는 초기 투자 중 부채 비중이 30~40%라는 범위와 맞았다. <!-- F4 -->",
+          "모형에서는 초기 설비투자가 약 3조 달러가 되는 지점부터 총산출에서 자본비용을 뺀 기대 순경제잉여가 음수가 됐다. 순환출자와 구매관계도 한 기업의 충격을 다른 기업의 자산가치와 자금여건으로 전달했다. 이 수치는 투자경쟁의 민감도를 보여주는 보정 결과이며 실제 산업의 필연적 붕괴 예측으로 볼 수 없다. 생산성, 수요탄력성, 담보 회수율을 바꾸는 스트레스 범위로 읽어야 한다. <!-- F5 -->"
+        ],
+        "idea": "반도체·전력기기·데이터센터 발행사의 회사채, 리스, 프로젝트금융, 구매보증을 프로젝트 단위 네트워크로 묶는다. AI 매출이 기준보다 20% 낮고 담보 회수율도 하락하는 시나리오에서 스프레드·차환비율·연쇄 한도초과를 단독 부도 스트레스와 비교한다.",
+        "caveat": "기업 재무제표와 공개 거래자료로 보정한 이론모형이다. 과잉투자 배수와 3조 달러 임계는 가정에 민감하며, 특정 발행사의 부도확률이나 실제 회수율을 추정한 결과가 아니다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "모형은 AI 기업 재무제표와 공개된 투자거래 자료로 보정했다.",
+            "quote": "balance sheets and to the public deal records",
+            "location": "BIS Working Paper No. 1367, §1, printed p. 4, accessed 2026-10-08",
+            "url": "https://www.bis.org/publications/working-paper-1367-ai-investment-race.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "기준 모형의 투자는 효율적 수준의 약 1.5배다.",
+            "quote": "around 1.5 times",
+            "location": "BIS Working Paper No. 1367, abstract, printed p. 1, accessed 2026-10-08",
+            "url": "https://www.bis.org/publications/working-paper-1367-ai-investment-race.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "수요탄력성이 낮은 경우 과잉투자는 약 3배까지 상승한다.",
+            "quote": "around three times",
+            "location": "BIS Working Paper No. 1367, abstract, printed p. 1, accessed 2026-10-08",
+            "url": "https://www.bis.org/publications/working-paper-1367-ai-investment-race.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "관측된 채권발행과 리스 공시는 초기 설비투자의 부채 비중 30~40% 범위를 시사한다.",
+            "quote": "30–40 per cent",
+            "location": "BIS Working Paper No. 1367, Appendix B.2, printed p. 51, accessed 2026-10-08",
+            "url": "https://www.bis.org/publications/working-paper-1367-ai-investment-race.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F5",
+            "statement": "보정된 모형에서 약 3조 달러의 1기 설비투자부터 기대 순경제잉여가 음수가 된다.",
+            "quote": "around $3 tn",
+            "location": "BIS Working Paper No. 1367, §1, printed p. 4, accessed 2026-10-08",
+            "url": "https://www.bis.org/publications/working-paper-1367-ai-investment-race.pdf",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-08-3",
+        "question": "같은 금리인상에도 어떤 기업의 혁신투자가 더 오래 위축되는가?",
+        "summary": "영란은행은 1997~2017년 미국 R&D 기업 895개의 재무자료와 대출계약을 연결했다. 25bp 긴축 뒤 현금흐름은 비슷했지만 현금흐름 기반 대출이 없는 기업의 R&D는 첫해 1.8%포인트 더 줄었다. 내생성장 모형의 영구 생산손실은 0.12%였고 대출접근을 전 기업으로 넓히면 약 30% 감소했다. 관측된 차이와 모형 결과는 구분해야 한다. <!-- F1 F2 F3 F4 F5 F6 -->",
+        "parts": [
+          "R&D는 특허와 인력처럼 담보로 잡기 어려운 자산에 쓰이므로 매출이 줄면 내부자금에 크게 의존한다. 연구진은 물적 담보 대신 EBITDA의 배수로 한도를 정하는 현금흐름 기반 대출이 완충재가 되는지 물었다. Compustat과 DealScan을 연결한 1997~2017년 미국 상장사 패널에는 R&D를 지속한 기업 895개가 포함됐다. <!-- F1 F2 -->",
+          "고빈도 자료로 식별한 25bp 긴축 뒤 두 집단의 현금흐름은 비슷하게 줄었다. 그러나 이런 대출계약이 없는 기업은 있는 기업보다 첫해 R&D를 약 1.8%포인트 더 줄였다. 물적투자의 상대반응은 비슷했고, 같은 기업이 현금흐름 기반 대출을 처음 도입한 전후를 비교하면 R&D 변동성만 지속적으로 낮아졌다. 내부자금 감소만이 아니라 외부 혁신금융 접근이 차이를 만들었다는 증거다. <!-- F3 F6 -->",
+          "연구진은 이 이질성을 내생적 성장모형에 넣었다. 25bp 긴축은 첫해 생산갭을 크게 낮춘 뒤 추세 대비 생산수준을 영구적으로 0.12% 낮췄다. 모든 기업에 현금흐름 기반 대출 접근을 열면 영구손실이 약 30% 줄었다. 앞의 1.8%포인트는 관측자료의 상대반응이고, 뒤의 장기손실은 보정된 모형의 반사실 결과이므로 같은 실증계수로 취급하면 안 된다. <!-- F3 F4 F5 F6 -->"
+        ],
+        "idea": "한국 R&D 기업의 대출약정, EBITDA, 특허, 회사채 발행과 금리충격을 분기별로 연결한다. 이익연동 대출 접근 기업과 비접근 기업을 매칭해 8분기 R&D·특허·스프레드 반응과 등급이동을 비교한다.",
+        "caveat": "미국 상장 R&D 기업과 신디케이트론 자료에 관한 연구다. 대출접근의 이질적 반응은 미시자료에서 추정했지만 0.12%의 영구 생산손실과 접근 확대 효과는 보정된 거시모형의 결과다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "연결 표본은 1997~2017년 미국 상장 R&D 기업 자료다.",
+            "quote": "between 1997 and 2017",
+            "location": "Bank of England Staff Working Paper No. 1,205, §1, printed p. 2, accessed 2026-10-08",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2026/innovation-financial-frictions-and-persistent-effects-of-monetary-policy.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "기준 표본에는 R&D를 지속한 기업 895개가 포함된다.",
+            "quote": "baseline sample contains 895 R&D-performing firms",
+            "location": "Bank of England Staff Working Paper No. 1,205, §2.1, printed p. 7, accessed 2026-10-08",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2026/innovation-financial-frictions-and-persistent-effects-of-monetary-policy.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "25bp 긴축 뒤 비접근 기업의 첫해 R&D 감소는 접근 기업보다 약 1.8%포인트 크다.",
+            "quote": "about 1.8 percentage points",
+            "location": "Bank of England Staff Working Paper No. 1,205, §2.2.2, printed p. 9, accessed 2026-10-08",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2026/innovation-financial-frictions-and-persistent-effects-of-monetary-policy.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "모형에서 25bp 긴축 뒤 추세 대비 영구 생산손실은 0.12%다.",
+            "quote": "persistent output loss of 0.12%",
+            "location": "Bank of England Staff Working Paper No. 1,205, §5.2, printed p. 28, accessed 2026-10-08",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2026/innovation-financial-frictions-and-persistent-effects-of-monetary-policy.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F5",
+            "statement": "전 기업으로 대출접근을 넓히면 모형의 영구손실이 약 30% 줄어든다.",
+            "quote": "about 30 percent",
+            "location": "Bank of England Staff Working Paper No. 1,205, §1, printed p. 3, accessed 2026-10-08",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2026/innovation-financial-frictions-and-persistent-effects-of-monetary-policy.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F6",
+            "statement": "실증과 모형의 공통 긴축 충격 크기는 25bp다.",
+            "quote": "25-basis-point contractionary shock",
+            "location": "Bank of England Staff Working Paper No. 1,205, Figure 1 note, printed p. 8, accessed 2026-10-08",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2026/innovation-financial-frictions-and-persistent-effects-of-monetary-policy.pdf",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-08-4",
+        "question": "거래 AI는 가격예측 하나로 끝나는가?",
+        "summary": "HRT는 시장·대체자료에서 순거래수익을 위험과 규정 제약 아래 높이는 문제를 설명한다. 하나의 AI 대신 미래가격 예측, 위험조정 자산배분, 주문집행으로 분해한다. 예측 예시는 닷새 뒤 가격이고 집행은 목표수량, 가격충격, 미완료 위험을 함께 다룬다. 실제 모델과 P&L은 공개하지 않아 확인되는 것은 연구·생산 문제의 구조다. <!-- F1 F2 F3 F4 F5 -->",
+        "parts": [
+          "HRT는 시장조성을 가격발견과 유동성 공급의 서비스로 설명하며, 가격·거래량·뉴스·공시 같은 자료를 행동으로 바꾼다. 목표는 거래비용을 뺀 순거래수익이지만 위험한 포지션, 규정위반, 시장에 해로운 행동은 제약해야 한다. 회사 설명상 거래결정은 모형과 코드로 구동되지만, 이 문구만으로 완전자율 AI나 특정 전략을 뜻하지는 않는다. <!-- F1 -->",
+          "게임과 달리 시장은 다른 참여자의 포지션과 숨은 주문을 완전히 볼 수 없고 현실의 새 표본은 한 번씩만 쌓인다. 여러 AI를 상대로 만든 시뮬레이션도 실제 상호작용을 완전히 재현하지 못한다. HRT는 이 한계 때문에 큰 문제를 예측, 최적화, 집행으로 나눈다. 예측은 향후 가격의 지도학습 문제로, 최적화는 신호를 위험을 분산한 목표포지션으로 바꾸는 문제로 다룬다. <!-- F2 F3 -->",
+          "집행은 목표포지션을 실제 주문으로 옮기는 단계다. 한꺼번에 사면 가격충격이 커지고, 지나치게 나누면 좋은 가격을 놓치거나 마감까지 목표수량을 채우지 못한다. 따라서 짧은 가격예측과 체결가능성, 남은 시간과 수량을 같이 다뤄야 한다. 공개 글은 이 과정과 다일 순거래수익 목표를 설명하지만 모델군, 실거래 시장, 보유기간과 P&L은 밝히지 않았다. <!-- F4 -->"
+        ],
+        "idea": "국채선물·현물·IRS에서 5분 뒤 중간가격 예측, 비용·DV01 제약 포트폴리오, 체결확률 기반 집행을 독립 모듈로 만든다. 각 모듈을 기준모형과 교체하는 절제실험으로 비용 차감 P&L, 최대 DV01, 미체결률과 mark-out을 비교한다.",
+        "caveat": "HRT의 공식 기술 설명은 문제분해와 예시를 공개한다. 특정 생산모형, 실거래 자료, 배포통제와 손익은 공개하지 않았으므로 수익효과나 비밀 전략을 확인한 자료로 볼 수 없다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "HRT는 모형과 코드가 거래결정을 구동한다고 설명한다.",
+            "quote": "drive all our trading decisions",
+            "location": "HRT, Applying Artificial Intelligence to Trading, opening, accessed 2026-10-08",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/ai-trading/",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "거래자료는 하나의 현실에서 실시간으로 천천히 축적되므로 게임처럼 무한 생성할 수 없다고 설명한다.",
+            "quote": "we have only one reality",
+            "location": "HRT, Applying Artificial Intelligence to Trading, AI comparison section, accessed 2026-10-08",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/ai-trading/",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "거래 AI 문제는 예측·최적화·집행의 세 하위문제로 분해된다.",
+            "quote": "three subproblems",
+            "location": "HRT, Applying Artificial Intelligence to Trading, decomposition section, accessed 2026-10-08",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/ai-trading/",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "설명 예시의 목표는 총위험 한도 아래 여러 날의 순거래수익을 최대화하는 것이다.",
+            "quote": "maximize our net trading profit over multiple days",
+            "location": "HRT, Applying Artificial Intelligence to Trading, decomposition example, accessed 2026-10-08",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/ai-trading/",
+            "verification": "primary"
+          },
+          {
+            "id": "F5",
+            "statement": "가격예측의 설명 예시는 5일 뒤 개별 증권 가격을 라벨로 둔다.",
+            "quote": "next five days",
+            "location": "HRT, Applying Artificial Intelligence to Trading, prediction subsection, accessed 2026-10-08",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/ai-trading/",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-08-5",
+        "question": "강화학습 연구에서 GPU를 늘려도 왜 실험이 빨라지지 않을 수 있는가?",
+        "summary": "Two Sigma의 금융 강화학습 사례는 모형학습보다 CPU 시뮬레이터의 표본생성이 병목이었다. 기존 24 CPU 실험은 7~10시간이 걸렸고 약 90%가 표본 생성이었다. RLlib의 배치 rollout으로 1.5~2.5시간, Ray 클러스터로 약 20분까지 줄여 합산 약 24배 빨라졌다. 한 실험의 계산 결과이며 거래수익 개선을 입증하지 않는다. <!-- F1 F2 F3 F4 F5 F6 -->",
+        "parts": [
+          "강화학습은 정책이 환경에 행동을 보내고 관측과 보상을 되돌려 받는 과정을 반복한다. 금융자료는 신호대잡음비가 낮아 많은 표본이 필요하지만 환경 시뮬레이터는 CPU에서 천천히 움직일 수 있다. Two Sigma 사례의 기존 실험은 24 CPU로 7~10시간이 걸렸고, 표본 생성은 전체 시간의 약 90%를 차지했다. GPU를 키워도 느린 환경은 빨라지지 않았다. <!-- F1 F2 F6 -->",
+          "기존 벡터환경은 여러 환경의 한 step이 모두 끝나야 다음 계산으로 넘어갔다. 일부 reset이나 step이 오래 걸리면 나머지 작업자가 기다리는 lock-step 문제가 생긴다. RLlib은 여러 rollout을 묶어 끝나는 단위부터 수집하는 방식으로 기다림을 줄였다. 같은 이천만 표본 실험의 벽시계 시간은 7~10시간에서 1.5~2.5시간으로 줄었다. <!-- F3 -->",
+          "추가로 Ray를 이용해 범용 CPU 머신 여러 대에 rollout 작업자를 분산하자 시간은 약 20분까지 내려갔다. 발표는 RLlib 전환의 약 4배와 클러스터 확장의 약 6배를 합쳐 약 24배라고 요약한다. 그러나 이는 특정 환경과 병목에 대한 속도결과다. 정책의 거래수익, 표본외 안정성, 시뮬레이터 현실성은 별도 검증해야 하며 계산량을 늘린 것과 더 좋은 전략을 얻은 것은 동일하지 않다. <!-- F3 F4 F5 F7 -->"
+        ],
+        "idea": "국채 집행 시뮬레이터에서 정책·표본수·무작위 시드를 고정하고 단일머신 벡터환경, 배치 rollout, Ray 클러스터를 비교한다. 벽시계 시간, 초당 환경 step, 비용, 정책수익 분산과 재현률을 함께 측정한다.",
+        "caveat": "2021년의 한 금융 강화학습 실험과 계산환경에 관한 기술발표다. 24배는 두 단계의 벽시계 속도향상을 합친 값이며, 실거래 배포나 손익개선을 보여주는 결과가 아니다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "기존 금융 강화학습 실험은 24 CPU에서 7~10시간이 걸렸다.",
+            "quote": "7-10 Hrs",
+            "location": "Two Sigma, A 24x Speedup for Reinforcement Learning with RLlib + Ray, slide 9, accessed 2026-10-08",
+            "url": "https://www.twosigma.com/wp-content/uploads/2021/08/A-24x-Speedup-for-Reinforcement-Learning-with-RLlib-and-Ray-Two-Sigma.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "전체 시간의 약 90%는 환경 표본 생성에 쓰였다.",
+            "quote": "~90% generating samples",
+            "location": "Two Sigma, A 24x Speedup for Reinforcement Learning with RLlib + Ray, slide 9, accessed 2026-10-08",
+            "url": "https://www.twosigma.com/wp-content/uploads/2021/08/A-24x-Speedup-for-Reinforcement-Learning-with-RLlib-and-Ray-Two-Sigma.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "RLlib 전환으로 같은 2천만 표본 실험은 1.5~2.5시간이 걸렸다.",
+            "quote": "7-10 Hrs -> 1.5-2.5 Hrs ~4x",
+            "location": "Two Sigma, A 24x Speedup for Reinforcement Learning with RLlib + Ray, slide 13, accessed 2026-10-08",
+            "url": "https://www.twosigma.com/wp-content/uploads/2021/08/A-24x-Speedup-for-Reinforcement-Learning-with-RLlib-and-Ray-Two-Sigma.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "Ray 클러스터를 더하면 실험시간은 약 20분까지 줄었다.",
+            "quote": "RLlib + Ray ~20 min",
+            "location": "Two Sigma, A 24x Speedup for Reinforcement Learning with RLlib + Ray, slide 19, accessed 2026-10-08",
+            "url": "https://www.twosigma.com/wp-content/uploads/2021/08/A-24x-Speedup-for-Reinforcement-Learning-with-RLlib-and-Ray-Two-Sigma.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F5",
+            "statement": "발표는 두 단계의 속도향상을 합쳐 약 24배로 요약했다.",
+            "quote": "Together ~24x",
+            "location": "Two Sigma, A 24x Speedup for Reinforcement Learning with RLlib + Ray, slide 22, accessed 2026-10-08",
+            "url": "https://www.twosigma.com/wp-content/uploads/2021/08/A-24x-Speedup-for-Reinforcement-Learning-with-RLlib-and-Ray-Two-Sigma.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F6",
+            "statement": "기존 실험은 24 CPU에서 실행됐다.",
+            "quote": "24 CPUs",
+            "location": "Two Sigma, A 24x Speedup for Reinforcement Learning with RLlib + Ray, slide 9, accessed 2026-10-08",
+            "url": "https://www.twosigma.com/wp-content/uploads/2021/08/A-24x-Speedup-for-Reinforcement-Learning-with-RLlib-and-Ray-Two-Sigma.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F7",
+            "statement": "Ray 클러스터 확장은 RLlib 단독 대비 약 6배의 추가 속도향상을 냈다.",
+            "quote": "~6x speedup",
+            "location": "Two Sigma, A 24x Speedup for Reinforcement Learning with RLlib + Ray, slide 19, accessed 2026-10-08",
+            "url": "https://www.twosigma.com/wp-content/uploads/2021/08/A-24x-Speedup-for-Reinforcement-Learning-with-RLlib-and-Ray-Two-Sigma.pdf",
+            "verification": "primary"
+          }
+        ]
+      }
+    ]
   }
 }
