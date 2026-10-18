@@ -18776,5 +18776,1043 @@
         ]
       }
     ]
+  },
+  "2026-10-15": {
+    "styleVersion": 2,
+    "editorialRevision": 3,
+    "title": "유동성의 양보다 중요한 것: 가격·해석·병목",
+    "intro": "오늘 자료는 시장에 정보나 자원이 얼마나 많은지만 세면 중요한 위험을 놓친다는 공통점을 보인다. 레포 현금은 공급자가 많아도 긴축기에 비싸졌고, 같은 거시뉴스도 전망 분산과 정책불확실성에 따라 국채 반응이 달라졌다. 퀀트 연구에서는 모델보다 데이터 이동경로와 생산 사슬을 함께 봐야 했다.",
+    "closing": "채권 AI의 검증은 예측점수 하나로 끝나지 않는다. 조달가격에는 공급자의 대차대조표가, 이벤트 반응에는 정책국면이, 연구속도에는 데이터 경로가 들어간다. 한국 시장에서 복제할 때도 각 신호가 어느 조건에서 가격·체결·위험으로 이어졌는지 분리해 기록해야 한다.",
+    "headings": [
+      "SoS! The overnight bilateral liquidity provision of non-bank financial institutions to banks",
+      "Bond yield responses to macro news: the role of macro forecast disagreement and monetary policy uncertainty",
+      "The Fed's Fine-Tune: Coarse Statements and Predictive Pressers",
+      "Long on Research, Short on Bandwidth",
+      "Quant Research at IMC"
+    ],
+    "notes": [
+      {
+        "id": "generated-2026-10-15-1",
+        "question": "비은행기관이 많은 현금을 공급하면 은행의 익일물 레포는 언제나 싸고 안정적인가?",
+        "summary": "영란은행은 2018년 7월부터 2024년 12월까지 영국 양자간 익일물 길트 레포를 분석했다. 비은행 공급량은 은행 간 거래보다 6~12배 컸지만, 상대가격은 2022년 이전 평균 -7bp에서 이후 약 +10bp로 바뀌어 공급의 양과 가격 안정성이 함께 움직이지 않음을 보였다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "연구가 묻는 것은 은행이 비은행금융기관에서 빌리는 담보부 익일자금이 전통적인 은행 간 자금보다 언제 싸고 안정적인가다. 표본은 2018년 7월 1일부터 2024년 12월 31일까지이며, 영란은행이 수집한 거래별 Sterling Money Market Data를 사용한다. 중앙청산을 거치지 않은 길트 담보 양자간 거래라 상대방과 가격을 직접 비교할 수 있다. <!-- F1 -->",
+          "비은행기관이 은행에 공급한 현금은 이 구간의 은행 간 양자거래보다 6~12배 많았다. 연구진은 차주별 신용위험을 덜어내기 위해 비은행 조달스프레드에서 같은 은행의 은행 간 스프레드를 뺀 Spread-of-Spread를 만들었다. 이 값은 2022년 이전 평균 -7bp였지만 이후 약 +10bp로 전환됐다. 공급량이 많다는 사실만으로 한계조달가격이 낮다고 볼 수 없는 이유다. <!-- F2 F3 -->",
+          "저자들은 단기금리가 오를 때 현금의 기회비용이 높아지는 경로와 장기자산 평가손실이 보험·연기금·펀드의 대차대조표를 누르는 경로를 구분한다. 두 번째 경로는 공급가격의 변동성과 지속성을 키울 수 있다. 다만 논문은 채무불이행이나 담보품질을 분석하지 않았고 영국의 특정 양자간 익일물 구간만 다루므로, 국내 레포 전체로 일반화하려면 별도 검증이 필요하다. <!-- F3 -->"
+        ],
+        "idea": "국고채 담보 익일물 레포를 공급자 유형과 차주별로 묶고 동일 차주의 은행 간 금리 대비 상대스프레드를 계산한다. 단기 IRS와 장기 실질금리 변화 전후의 공급량·평균가격·가격변동성을 펀드·보험·연기금별로 비교한다.",
+        "caveat": "2018~2024년 영국의 비청산 양자간 익일물 길트 레포를 다룬 실증연구다. 중앙청산 거래, 부도위험과 담보품질은 분석범위 밖이며 한국 레포시장에 대한 인과효과를 직접 제시하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "표본은 2018년 7월 1일부터 2024년 12월 31일까지다.",
+            "quote": "1 July 2018 to 31 December 2024",
+            "location": "Bank of England Staff Working Paper No. 1,195, Section 3, page 9, July 2026, accessed 2026-10-15",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2026/sos-the-overnight-bilateral-liquidity-provision-of-non-bank-financial-institutions-to-banks.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "비은행기관의 공급량은 은행 간 양자거래보다 6~12배 컸다.",
+            "quote": "6 to 12 times larger",
+            "location": "Bank of England Staff Working Paper No. 1,195, Abstract, page 1, July 2026, accessed 2026-10-15",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2026/sos-the-overnight-bilateral-liquidity-provision-of-non-bank-financial-institutions-to-banks.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "상대가격은 2022년 이전 -7bp에서 이후 약 +10bp로 바뀌었다.",
+            "quote": "prior to 2022 ... -7 basis points ... thereafter ... +10 basis points",
+            "location": "Bank of England Staff Working Paper No. 1,195, Introduction, page 5, July 2026, accessed 2026-10-15",
+            "url": "https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2026/sos-the-overnight-bilateral-liquidity-provision-of-non-bank-financial-institutions-to-banks.pdf",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-15-2",
+        "question": "같은 거시지표 서프라이즈가 왜 어떤 날에는 국채금리를 크게 움직이고 다른 날에는 작게 움직이는가?",
+        "summary": "BIS는 1998~2024년 미국 국채선물의 장중 반응을 여섯 거시지표 발표에서 분석했다. 발표 전 전망기관의 의견차가 클수록 수익률 반응은 약해졌고, 단기 정책금리 불확실성이 높을수록 반응은 커졌다. 팬데믹 뒤에는 CPI의 정책정보가 강해지고 고용 신호는 약해졌다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "시장예상과 실제 발표의 차이가 같아도 국채가격 충격은 일정하지 않다. 연구는 1998년부터 2024년까지 미국 국채선물의 장중 변화를 CPI, 신규실업수당, 비농업고용, 내구재주문, 소매판매와 GDP 발표 주변에서 측정했다. 발표 전 설문전망의 분산과 단기금리 옵션에서 얻은 정책금리 불확실성을 서로 다른 상태변수로 놓았다. <!-- F1 -->",
+          "전망기관의 의견차가 크면 발표치가 향후 정책금리를 알려주는 정밀한 신호인지부터 의심하게 된다. 실제 추정에서도 전망 분산이 높을수록 수익률곡선 반응이 약해졌다. 반대로 중앙은행의 다음 경로가 불확실한 시기에는 새 거시정보가 정책전망을 갱신하는 데 더 큰 비중을 얻었고, 같은 서프라이즈에 대한 반응이 확대됐다. 두 변수는 불확실성이라는 이름이 비슷하지만 가격에 반대방향으로 작용했다. <!-- F2 F3 -->",
+          "팬데믹 이후에는 연준의 물가안정 대응이 더 중요한 정책신호가 되면서 CPI 반응이 강해졌고, 고용지표는 조사 응답률 저하와 정책초점 이동 속에서 영향이 약해졌다. 이 설명은 베이지안 학습모형과 장중 회귀가 함께 지지하지만, 한국 시장에서 같은 구조가 유지된다는 증거가 되지 않는다. 이벤트 모델은 서프라이즈 하나가 아니라 전망 분산과 정책국면을 함께 입력해야 한다. <!-- F2 F3 -->"
+        ],
+        "idea": "국고채선물 3년·10년의 CPI·고용·산업생산·GDP 발표창 반응을 구축한다. 서프라이즈와 전망치 분산, OIS·금리옵션의 정책불확실성 상호작용을 추정해 고정계수 모형과 시변계수 모형의 표본 밖 오차와 비용차감 손익을 비교한다.",
+        "caveat": "미국 국채선물의 장중 반응과 베이지안 학습모형을 결합한 연구다. 결과는 거시뉴스의 정보가치와 금리반응의 연관성을 설명하며, 한국 국채의 계수나 거래성과를 직접 제시하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "분석기간은 1998년부터 2024년까지다.",
+            "quote": "period from 1998 to 2024",
+            "location": "BIS Working Paper No. 1361, Focus, 16 June 2026, accessed 2026-10-15",
+            "url": "https://www.bis.org/publications/working-paper-1361-bond-yield-responses-macro-news-role-macro-forecast-disagreement-and-monetary-policy-uncertainty.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "전망기관 의견차가 클수록 국채수익률 반응은 약해졌다.",
+            "quote": "Higher disagreement among forecasters dampens the reactions of bond yields.",
+            "location": "BIS Working Paper No. 1361, Findings, 16 June 2026, accessed 2026-10-15",
+            "url": "https://www.bis.org/publications/working-paper-1361-bond-yield-responses-macro-news-role-macro-forecast-disagreement-and-monetary-policy-uncertainty.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "단기 정책금리 불확실성이 높을수록 수익률 반응은 커졌다.",
+            "quote": "Higher interest rate uncertainty, by contrast, amplifies yield reactions.",
+            "location": "BIS Working Paper No. 1361, Findings, 16 June 2026, accessed 2026-10-15",
+            "url": "https://www.bis.org/publications/working-paper-1361-bond-yield-responses-macro-news-role-macro-forecast-disagreement-and-monetary-policy-uncertainty.pdf",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-15-3",
+        "question": "FOMC 성명과 기자회견을 같은 매파·비둘기파 점수로 읽어도 되는가?",
+        "summary": "연준 연구진은 DeBERTa V3로 FOMC 성명·기자회견·의장 연설을 분류했다. 2011년 4월~2025년 4월 표본에서 성명은 극단적인 기조가 많았고 기자회견은 혼합 신호가 많았다. 기자회견 심리는 최근 정책기조를 통제해도 미래 금리와 별도 예측 상관을 보였다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "성명은 결정과 이유를 짧게 압축하지만 기자회견은 준비발언과 질의응답에서 조건을 덧붙인다. 연구진은 문맥을 양방향으로 읽는 DeBERTa V3를 통화정책 문서에 맞춰 조정했다. 문단에는 매파·비둘기파·중립 라벨을, 문장에는 물가·고용·금융여건·성장 등 주제 라벨을 붙여 서로 다른 커뮤니케이션의 내용을 비교했다. <!-- F2 -->",
+          "기자회견이 열린 2011년 4월부터 2025년 4월까지 성명과 기자회견을 같은 회의 단위로 맞췄다. 성명 심리의 사분의 삼 이상은 완전히 매파·비둘기파·중립 중 하나였지만 기자회견은 극단적인 점수가 약 사분의 일에 그쳤다. 기자회견은 한 방향의 표제 아래에서도 완화·긴축 조건을 함께 담아 성명의 거친 신호를 세분했다. <!-- F1 F3 -->",
+          "기자회견 심리는 최근 연방기금금리를 통제한 뒤에도 미래 정책금리와 별도의 예측 상관을 보였고, 시장반응과의 관계도 다른 문서보다 강했다. 그러나 상관관계가 모델의 실시간 거래수익이나 인과효과를 뜻하지는 않는다. 채권 NLP에서는 문서 전체 점수와 문답별 조건 신호를 분리하고, 모델 버전과 사람 라벨의 불일치를 계속 기록해야 한다. <!-- F1 F3 -->"
+        ],
+        "idea": "금통위 의결문·총재 기자회견·문답을 문장 단위로 정렬한다. 한국어 금융 인코더와 LLM을 사람 이중라벨 검증셋에서 비교하고 macro-F1, 재학습별 라벨안정성, 발표창 국채선물 반응의 추가 설명력으로 평가한다.",
+        "caveat": "미국 중앙은행 커뮤니케이션의 텍스트 분류와 시장반응을 다룬 연구다. 미래 정책금리와의 결과는 예측 상관이며 인과효과나 실거래 P&L을 입증하지 않는다. 한국어 문답에는 별도 라벨과 재검증이 필요하다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "기자회견 비교표본은 2011년 4월부터 2025년 4월까지다.",
+            "quote": "April 2011 to April 2025",
+            "location": "Federal Reserve FEDS 2026-029, Figure 6 note, page 14, May 2026, accessed 2026-10-15",
+            "url": "https://www.federalreserve.gov/econres/feds/files/2026029pap.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "연구는 DeBERTa V3를 텍스트 분류에 사용했다.",
+            "quote": "DeBERTa V3",
+            "location": "Federal Reserve FEDS 2026-029, Section 4, page 10, May 2026, accessed 2026-10-15",
+            "url": "https://www.federalreserve.gov/econres/feds/files/2026029pap.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "기자회견은 다른 커뮤니케이션보다 미래 정책과 더 강한 예측 상관을 보였다.",
+            "quote": "press conferences correlate with future policy to a greater extent",
+            "location": "Federal Reserve FEDS 2026-029, Abstract, page 1, May 2026, accessed 2026-10-15",
+            "url": "https://www.federalreserve.gov/econres/feds/files/2026029pap.pdf",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-15-4",
+        "question": "여러 지역의 거래연구가 느려졌을 때 어떤 데이터가 병목의 주인을 찾아내는가?",
+        "summary": "HRT는 장기간 시장자료로 여러 모델을 학습·모의하는 글로벌 클러스터에서 WAN 포화가 학습을 지연시킨 사건을 공개했다. eBPF·NFS 추적, 서비스 로그와 스위치 카운터를 결합해 워크플로별 전송량을 중복 없이 맞췄고, 현재는 과도한 작업을 자동 제한한다. <!-- F1 F2 F3 F4 -->",
+        "parts": [
+          "HRT의 연구계산은 여러 지역의 CPU·GPU가 거래소의 장기간 자료로 다양한 모델을 학습하고 수많은 거래 시나리오를 모의하는 구조다. 한 학습이 시카고 GPU에서 뉴욕 자료를 가져오다 멈췄지만 표준 전송서비스 로그에는 새 사용자가 보이지 않았다. 계산자원보다 지역 간 데이터 이동이 병목이 된 사건이다. <!-- F1 -->",
+          "회사는 Linux 커널의 소켓 함수에 eBPF 훅을 달고 CPU별로 분당 바이트를 집계했다. NFS는 커널 작업자 계정으로 보이는 문제 때문에 저수준 NFS 함수도 별도로 추적했다. 여기에 전송서비스 로그와 스위치의 독립적인 총바이트를 합쳐 사용자·프로그램·워크플로에 귀속했고, 같은 흐름이 여러 계층에 잡힐 때는 한 번만 세었다. <!-- F2 F3 -->",
+          "원인은 시카고의 수천 작업이 분산캐시를 거치지 않고 뉴욕의 같은 파일을 반복해 읽은 설정오류였다. HRT는 이 관측자료를 위치변경 판단과 네트워크를 포화시키는 워크플로의 자동 제한에 사용한다. 공개 글은 연구인프라의 진단과 통제 과정은 보여주지만 모델의 라벨·알파·P&L은 공개하지 않는다. <!-- F4 -->"
+        ],
+        "idea": "국고채·회사채 시뮬레이션마다 연구자, 작업 ID, 데이터 스냅샷, 리전과 전송바이트를 기록한다. 서비스 로그·eBPF·스위치 총량의 일치율을 관측성 지표로 두고 자동제한 전후 학습완료시간 p95, 실패율과 재실행비용을 비교한다.",
+        "caveat": "HRT가 공개한 글로벌 연구인프라 운영사례다. 도표는 실제 사건을 단순화·과장한 형태이며 모델구조, 시장별 예측목표, 거래지연과 P&L은 공개하지 않았다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "HRT는 장기간 시장자료로 여러 모델을 학습한다.",
+            "quote": "train a diverse set of models on years of history",
+            "location": "HRT, Long on Research, Short on Bandwidth, Intro, 12 October 2026, accessed 2026-10-15",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/long-on-research-short-on-bandwidth/",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "커널 집계는 분당 바이트 합계를 사용한다.",
+            "quote": "per-minute byte totals",
+            "location": "HRT, Long on Research, Short on Bandwidth, Every Byte Counts, 12 October 2026, accessed 2026-10-15",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/long-on-research-short-on-bandwidth/",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "집계는 사용자와 워크플로에 트래픽을 귀속한다.",
+            "quote": "users, programs, and workflows",
+            "location": "HRT, Long on Research, Short on Bandwidth, Every Byte Counts, 12 October 2026, accessed 2026-10-15",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/long-on-research-short-on-bandwidth/",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "HRT는 과도한 워크플로를 자동 제한한다.",
+            "quote": "automated processes to throttle workflows",
+            "location": "HRT, Long on Research, Short on Bandwidth, Mostly Accounted For, 12 October 2026, accessed 2026-10-15",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/long-on-research-short-on-bandwidth/",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-15-5",
+        "question": "IMC의 공개 설명에서 연구모형은 어떤 검증·인프라를 거쳐 실제 거래시스템과 연결되는가?",
+        "summary": "IMC는 모델과 예측을 현재 거래와 새 시장 확장의 기반으로 두고, 머신러닝·AI·대규모 계산을 데이터 분석·백테스트·거래 시뮬레이션에 쓴다고 설명한다. 자체 소프트웨어와 FPGA는 실거래의 속도와 용량을 담당한다. 모델 라벨·위험한도·전략별 손익은 공개되지 않았다. <!-- F1 F2 F3 F4 -->",
+        "parts": [
+          "IMC는 글로벌 퀀트 연구팀이 장기 성과를 좌우하는 feature·모델·전략을 만들고 확장한다고 설명한다. 모델과 예측의 품질은 이미 운용하는 거래뿐 아니라 새 전략·상품·시장으로 넓히는 데도 중요하다고 명시한다. 이는 예측문제가 연구실의 점수로 끝나지 않고 거래범위 확대와 연결된다는 회사 차원의 설명이다. <!-- F1 F2 -->",
+          "연구환경에는 머신러닝·AI·대규모 계산이 들어가며, 쓰임새로 데이터 분석, 백테스트와 거래 시뮬레이션이 제시된다. 연구자는 트레이더와 나란히 일한다. 공개 범위에서 확인되는 feedback loop는 가설과 예측을 과거자료·모의시장에 대조하고 거래 의사결정에 넘기는 과정이지만, 데이터셋·라벨·검증창은 알려져 있지 않다. <!-- F2 F3 -->",
+          "생산계층에서는 모든 소프트웨어를 내부에서 개발하고 FPGA를 속도와 처리용량의 기반으로 쓴다고 설명한다. 따라서 같은 신호라도 연구 코드, 실시간 입력, 하드웨어 경로와 위험통제가 일치해야 배포 가능한 모델이 된다. 다만 이 자료는 구체적 지연수치, kill switch 설계나 전략별 P&L을 공개하지 않아 확인 가능한 사실과 국내 적용가설을 구분해야 한다. <!-- F4 -->"
+        ],
+        "idea": "국고채 현물·선물·IRS의 데이터 스냅샷, feature·모델 버전, 백테스트와 모의체결을 한 계보로 기록한다. 같은 신호를 범용 서버와 FPGA 전처리 경로에서 재생해 추론 p99·체결률·mark-out·비용차감 손익을 비교한다.",
+        "caveat": "IMC가 공개한 회사 차원의 연구·기술 설명이며 발행일은 확인되지 않는다. 연구에서 생산으로 이어지는 구성요소는 확인되지만 구체적 데이터, 라벨, 모델구조, 위험한도와 전략별 P&L은 공개되지 않았다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "퀀트 연구팀은 feature·모델·전략을 만들고 확장한다.",
+            "quote": "building and expanding the features, models, and strategies",
+            "location": "IMC, Quant Research at IMC, page body, publication date unconfirmed, accessed 2026-10-15",
+            "url": "https://www.imc.com/us/what-we-do/quant-research",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "모델과 예측은 현재 거래와 새 전략·상품·시장 확장에 쓰인다.",
+            "quote": "models and predictions",
+            "location": "IMC, Quant Research at IMC, Maximizing our edge, publication date unconfirmed, accessed 2026-10-15",
+            "url": "https://www.imc.com/us/what-we-do/quant-research",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "연구환경은 데이터 분석·백테스트·거래 시뮬레이션을 강화한다.",
+            "quote": "data analytics, back testing, and trading simulation capabilities",
+            "location": "IMC, Quant Research at IMC, Always innovating, publication date unconfirmed, accessed 2026-10-15",
+            "url": "https://www.imc.com/us/what-we-do/quant-research",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "자체 소프트웨어와 FPGA가 생산 거래 인프라의 기반이다.",
+            "quote": "FPGA hardware is the backbone",
+            "location": "IMC, Technology at IMC, Hardware Engineering, publication date unconfirmed, accessed 2026-10-15",
+            "url": "https://www.imc.com/us/what-we-do/technology",
+            "verification": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "2026-10-16": {
+    "styleVersion": 2,
+    "editorialRevision": 3,
+    "title": "예측보다 먼저 볼 것: 조달비용·결제·생산경로",
+    "intro": "오늘 자료는 좋은 신호가 실제 거래가 되기 전에 통과해야 할 세 가지 경로를 보여준다. 레포에서는 유동성 버퍼의 비용이 가격에 붙고, MBS에서는 헤지가 있어도 결제가 늦으면 딜러 대차대조표가 막힌다. 시계열 모델과 퀀트 인프라도 발표시차와 생산 재현성을 지키지 못하면 연구점수를 거래의 우위로 바꿀 수 없다.",
+    "closing": "같은 원리는 한국 채권 데스크에도 적용된다. 예측은 시점 데이터로 검증하고, 포지션은 실제 조달·결제비용을 반영하며, 시뮬레이션과 실거래는 같은 데이터 계약과 위험통제를 써야 한다. 이 세 연결고리가 기록돼야 모델 성능과 시장에서 벌어들인 결과를 구분해 설명할 수 있다.",
+    "headings": [
+      "Repo and the Liquidity Risk Premium",
+      "BISTRO: a general purpose oracle for macroeconomic time series",
+      "Dealers and the Dealer of Last Resort: Evidence from the Agency MBS Market in the COVID-19 Crisis",
+      "What the interns have wrought, special jumbo 2026 edition",
+      "Designing for latency and research iteration"
+    ],
+    "notes": [
+      {
+        "id": "generated-2026-10-16-1",
+        "question": "안전한 국채 담보의 익일물 레포인데도 왜 딜러 중개스프레드가 정책금리와 준비금에 따라 달라지는가?",
+        "summary": "뉴욕 연은은 SLR 면제 종료 뒤의 FICC 청산 익일물 미 국채 레포와 삼자간 레포를 분석했다. 딜러의 고객 간 평균 중개스프레드는 7.5bp였고, 평균 조건에서 지급준비금 이자율 100bp 상승은 유동성 위험 프리미엄을 0.9bp 높이는 것으로 추정됐다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "국채를 담보로 하루 빌리는 거래도 딜러에게 무위험은 아니다. 담보가격 하락과 급매 할인, 현금공급자의 롤오버 중단에 대비하려면 유동성 버퍼를 보유해야 한다. 연구는 이 버퍼의 기회비용이 딜러가 자금을 빌리는 금리와 레버리지 고객에게 빌려주는 금리 사이의 스프레드에 어떻게 들어가는지 묻는다. <!-- F2 -->",
+          "표본은 코로나 충격과 SLR 면제 종료 이후인 2021년 봄부터 시작한다. FICC DVP의 거래별 금리·원금·CUSIP·상대방 자료에서 담보 확보 목적의 특수 레포를 걸러내고, 익일물 미 국채 조달거래만 남겼다. 이 구간의 고객 간 평균 중개스프레드는 7.5bp였고, 금리가 오르거나 연준 부채와 준비금이 줄 때 프리미엄이 커졌다. <!-- F1 F2 -->",
+          "평균 금리·준비금 조건에서 지급준비금 이자율 100bp 상승은 프리미엄 0.9bp 상승으로 환산됐다. 같은 방향의 변화는 준비금 감소로도 나타났고, 비용은 주로 딜러에게서 현금을 빌리는 레버리지 고객의 대출금리에 반영됐다. 다만 이는 거래자료를 이용한 추정이며 정책실험이 아니고, 중앙청산 익일물 중심 결과를 다른 만기와 한국 시장에 그대로 적용할 수 없다. <!-- F3 -->"
+        ],
+        "idea": "국고채 담보 익일물 레포의 딜러 차입·대출 방향과 상대방 유형을 연결해 중개스프레드를 만든다. 기준금리·결제유동성·담보특수성·레버리지 차주 비중을 입력한 선형·비선형 모형을 비교하고 베이시스 포지션의 비용차감 손익으로 평가한다.",
+        "caveat": "2021년 4월~2024년 12월 미국의 FICC 청산 익일물 국채 레포와 삼자간 레포에 대한 관측연구다. 정책금리와 준비금 효과는 모형 추정치이며 다른 담보·만기·시장에 대한 인과효과를 직접 제시하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "표본은 2021년 4월 1일부터 2024년 12월 말까지다.",
+            "quote": "April 1, 2021",
+            "location": "New York Fed Staff Report No. 1189, Section 1.1, page 9, March 2026, accessed 2026-10-16",
+            "url": "https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr1189.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "표본기간 딜러의 고객 간 평균 중개스프레드는 7.5bp였다.",
+            "quote": "7.5 basis points",
+            "location": "New York Fed Staff Report No. 1189, Introduction, page 5, March 2026, accessed 2026-10-16",
+            "url": "https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr1189.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "2024년 평균 조건에서 지급준비금 이자율 100bp 상승은 유동성 위험 프리미엄 0.9bp 상승으로 추정됐다.",
+            "quote": "100-basis-point increase in the interest rate on reserve balances results in a 0.9 basis point increase",
+            "location": "New York Fed Staff Report No. 1189, Abstract, page 2, March 2026, accessed 2026-10-16",
+            "url": "https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr1189.pdf",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-16-2",
+        "question": "거시·금리계열용 파운데이션 모델은 목적별 예측모형을 실제로 대체할 수 있는가?",
+        "summary": "BIS는 MOIRAI를 63개 경제의 4,925개 거시계열에 미세조정해 BISTRO를 만들었다. 자료에는 금리·채권수익률 731개가 들어가며 발표시차를 보존한다. 미국 물가에서는 가장 짧은 지평을 제외한 모든 지평에서 단순 자기회귀 모형과 MOIRAI를 앞섰지만 일부 국가·구간에서는 더 큰 오류를 냈다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "BISTRO는 텍스트의 다음 단어 대신 시계열의 다음 값을 예측하는 트랜스포머다. 범용 MOIRAI가 서로 다른 빈도와 분야의 방대한 관측치로 학습됐지만 장기 거시예측과 공변량 처리에는 약했다. BIS는 모델을 일별 빈도와 고정 패치로 제한하고 중앙은행 거시자료에 미세조정해 기초모형을 목적영역에 맞췄다. <!-- F1 -->",
+          "내부 자료는 63개 경제의 4,925개 계열이며 국내금리·채권수익률 731개를 포함한다. 월·분기 자료는 새 값이 발표될 때까지 직전 값을 유지하고 실제 발표시차를 반영해 일별 축에 놓았다. GDP를 실제 발표일 이전에 보지 못하게 하는 방식이어서, 채권 백테스트에서 흔한 개정치·미래정보 누출을 줄이는 설계다. <!-- F1 F2 -->",
+          "미국 물가에서는 가장 짧은 지평을 제외한 모든 지평에서 단순 자기회귀 모형과 MOIRAI보다 정확했고, 물가상승의 지속성도 단순 평균회귀 모형보다 잘 포착했다. 그러나 일부 선진국의 최근 평가구간에서는 단순모형보다 큰 오류를 냈다. 저자도 최종 해답이 아니라 저비용 기준선으로 규정하므로, 금리곡선용 모델은 만기와 스트레스 구간마다 단순모형을 이기는지 별도로 확인해야 한다. <!-- F3 -->"
+        ],
+        "idea": "한국은행·통계청·KOFIA·거래소 자료를 최초 발표시각 기준으로 버전 관리한다. 국고채 3·5·10년 수익률과 커브 팩터를 목표로 BISTRO 계열 모델, AR(1), 동적 Nelson–Siegel을 롤링 비교하고 RMSFE·방향정확도·비용차감 손익·스트레스 최대오차를 평가한다.",
+        "caveat": "중앙은행 거시예측을 위한 파운데이션 모델 연구다. 주요 실증은 물가에 집중되고 채권수익률 자체의 거래성과를 보고하지 않는다. 일부 국가·기간에서 단순 AR(1)보다 오차가 컸으며, 2021년 물가 사례의 일부는 학습구간과 겹친다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "BISTRO의 내부 자료는 63개 경제의 4,925개 시계열이다.",
+            "quote": "4,925 time series across 63 economies",
+            "location": "BIS Quarterly Review, BISTRO, Box A, March 2026, accessed 2026-10-16",
+            "url": "https://www.bis.org/publications/qr-202603/bistro-general-purpose-oracle-macroeconomic-time-series",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "자료에는 국내금리와 채권수익률 731개가 포함된다.",
+            "quote": "domestic interest rates and bond yields (731)",
+            "location": "BIS Quarterly Review, BISTRO, Box A, March 2026, accessed 2026-10-16",
+            "url": "https://www.bis.org/publications/qr-202603/bistro-general-purpose-oracle-macroeconomic-time-series",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "미국 물가에서 BISTRO는 1개월 앞을 제외한 모든 예측지평에서 AR(1)과 MOIRAI보다 나았다.",
+            "quote": "all horizons except the one-month-ahead",
+            "location": "BIS Quarterly Review, BISTRO, Forecasting inflation section, March 2026, accessed 2026-10-16",
+            "url": "https://www.bis.org/publications/qr-202603/bistro-general-purpose-oracle-macroeconomic-time-series",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-16-3",
+        "question": "현물과 선도로 재고위험을 헤지해도 MBS 베이시스가 닫히지 않은 이유는 무엇인가?",
+        "summary": "뉴욕 연은은 TRACE 딜러 거래와 연준 매입자료로 2020년 위기 당시 agency MBS의 현물 지정풀–TBA 선도 괴리를 분석했다. 빠른 결제 매입의 시작일과 실제 결제일에 베이시스가 각각 43bp와 29bp 축소됐고, 딜러 순현물 매입도 크게 늘어 대차대조표 제약 경로를 지지했다. <!-- F1 F2 F3 F4 -->",
+        "parts": [
+          "딜러는 현물 지정풀을 사서 재고로 들고 TBA 선도를 반대방향으로 거래해 가격위험을 줄인다. 그런데 현물은 총액이 보완적 레버리지비율의 익스포저에 잡히는 반면 표준 파생상품의 익스포저는 훨씬 작다. 헤지가 성공해도 현물 재고가 대차대조표를 차지하면 현물–선도 가격차가 유지될 수 있다. <!-- F1 -->",
+          "논문은 TRACE의 딜러 식별 거래와 연준 매입자료를 결합해 위기 사건을 일별로 나눴다. 연준이 결제를 앞당긴 비표준 TBA 매입을 시작한 날 베이시스는 43bp 줄었고, 실제 결제가 시작된 날에는 29bp 더 줄었다. 일반 TBA 매입과 자금지원 발표 주변에서는 같은 축소가 나타나지 않았다. <!-- F2 F3 -->",
+          "유동성 지원 뒤 딜러의 순현물 매입은 크게 늘었고 비표준 TBA를 통해 빠르게 연준에 넘겨졌다. 고객 매도는 가격괴리가 줄 때 오히려 늘었으므로 단순한 매도중단 설명과 맞지 않는다. 다만 짧은 위기 사건연구이고 정책이 동시에 시행돼 완전한 인과분리는 어렵다. <!-- F4 -->"
+        ],
+        "idea": "국고채 현물–선물과 MBS 현물–스왑 헤지의 딜러별 베이시스를 만들고 결제일·레포한도·증거금·자기자본 사용량을 연결한다. 지원조치 발표일과 실제 결제일을 나눈 사건연구로 베이시스·순매입·호가깊이를 비교한다.",
+        "caveat": "2020년 3월 미국 agency MBS 위기의 짧은 사건창을 다룬 관측연구이며 2026년 9월 개정본이다. 여러 정책이 동시에 시행돼 모든 효과를 완전히 분리할 수 없고, 국고채나 한국 MBS 시장의 계수를 직접 제시하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "논문은 2020년 7월 초판이 2026년 9월 개정됐다.",
+            "quote": "July 2020; revised September 2026",
+            "location": "New York Fed Staff Report No. 933, title page, accessed 2026-10-16",
+            "url": "https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr933.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "비표준 TBA 매입 시작일인 3월 19일 현물–선도 베이시스가 43bp 축소됐다.",
+            "quote": "decreased significantly by 43 bps",
+            "location": "New York Fed Staff Report No. 933, Section 4.2, page 28, revised September 2026, accessed 2026-10-16",
+            "url": "https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr933.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "비표준 TBA 매입의 결제가 시작된 3월 24일 베이시스가 29bp 축소됐다.",
+            "quote": "declined by 29 bps",
+            "location": "New York Fed Staff Report No. 933, Section 4.2, page 29, revised September 2026, accessed 2026-10-16",
+            "url": "https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr933.pdf",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "PDCF 설치 뒤 딜러 순현물 매입은 하루 평균 약 150억달러로 늘었다.",
+            "quote": "about $15 billion per day",
+            "location": "New York Fed Staff Report No. 933, Figure 4 discussion, page 30, revised September 2026, accessed 2026-10-16",
+            "url": "https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr933.pdf",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-16-4",
+        "question": "주문장 예측모델의 아이디어는 어떤 특징·전송·검증 구조를 거쳐 실거래 시스템에 들어가는가?",
+        "summary": "Jane Street는 주문별 미래상태 신경망, 수익률과 미래 입력특징을 함께 예측하는 시퀀스 모델, 거래시스템용 특징 엔진 개선을 공개했다. 특징 계산을 별도 프로세스로 옮겨 공유메모리로 제공했고, 메시지버스 개선은 실제 시나리오에서 CPU를 30% 줄였다. 전략별 P&L은 공개하지 않았다. <!-- F1 F2 F3 F4 -->",
+        "parts": [
+          "시장가 한 개를 맞히는 문제와 주문장 안의 각 주문이 체결·취소·잔존할지를 맞히는 문제는 입력과 출력의 모양부터 다르다. Jane Street가 공개한 프로젝트는 가변 크기 주문장에 하나의 공통 시퀀스를 넣고 개별 주문의 미래에 답하는 신경망을 탐색했다. 다른 프로젝트는 수익률과 미래 입력특징을 함께 예측해 트리 탐색·자기증류가 직접 수익률 예측보다 나은지 검증했다. <!-- F1 -->",
+          "연구특징을 실시간으로 계산하는 경로도 바꿨다. 과거에는 한 프로세스가 시장자료 수신, 특징상태 유지와 벡터 평가를 모두 맡았지만 일부 계산을 별도 프로세스로 옮기고 대칭 이중버퍼 공유메모리로 거래시스템에 제공했다. 이는 모델의 복잡도를 늘리면서도 실시간 경로의 지연과 장애영역을 분리하려는 생산 설계다. <!-- F2 -->",
+          "내부 메시지버스 Aria의 인덱싱 개선은 실제 시나리오에서 CPU 사용량을 30% 줄였고, 연구용 객체저장소를 POSIX로 연결한 시스템은 1.3GiB/s 읽기 속도에 도달했다. 공개 글은 연구→생산 연결의 구체적 부품을 보여주지만 인턴 프로젝트 표본이며 전략별 라벨·위험한도·수익기여는 밝히지 않는다. <!-- F3 F4 -->"
+        ],
+        "idea": "국채선물 주문별 10ms·100ms·1초 뒤 체결·취소·잔존을 라벨링하고 공통 주문장 시퀀스에서 주문별 확률을 낸다. 직접 수익률 예측과 멀티태스크 모델을 Brier score·체결 후 mark-out·특징서비스 p99·공유메모리 누락률로 비교한다.",
+        "caveat": "Jane Street가 2026년 인턴 프로젝트 일부를 설명한 공식 기술 글이다. 내부 모델과 인프라의 존재·목적은 확인되지만 완전한 아키텍처, 검증표본, 위험통제와 전략별 P&L은 공개되지 않았다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "개별 주문의 미래를 예측하는 신경망과 수익률·미래특징을 함께 예측하는 시퀀스 모델을 탐색했다.",
+            "quote": "future of any order on the book",
+            "location": "Jane Street Blog, ML Research and Engineering, 30 September 2026, accessed 2026-10-16",
+            "url": "https://blog.janestreet.com/wrought-2026/",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "특징 엔진은 거래시스템에 입력을 공급하며 일부 계산을 별도 프로세스로 분리했다.",
+            "quote": "feeds into our trading systems",
+            "location": "Jane Street Blog, Software Engineering, 30 September 2026, accessed 2026-10-16",
+            "url": "https://blog.janestreet.com/wrought-2026/",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "Aria 인덱싱 개선은 실제 시나리오에서 CPU 사용량을 30% 줄였다.",
+            "quote": "30% less CPU utilization",
+            "location": "Jane Street Blog, Software Engineering, 30 September 2026, accessed 2026-10-16",
+            "url": "https://blog.janestreet.com/wrought-2026/",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "Depot의 FUSE 연결은 1.3GiB/s 읽기 속도에 도달했다.",
+            "quote": "read speeds of 1.3 GiB/s",
+            "location": "Jane Street Blog, Linux Engineering and IT, 30 September 2026, accessed 2026-10-16",
+            "url": "https://blog.janestreet.com/wrought-2026/",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-16-5",
+        "question": "저지연 거래시스템은 연구자가 새 모델을 빠르게 생산에 올리는 능력과 어떻게 함께 설계되는가?",
+        "summary": "Optiver는 거래스택이 시각 그래프, 고수준 언어의 컴파일 방식, 네이티브 코드 종단구조로 진화한 과정을 공개했다. 두 번째 세대는 ML 생산화를 열었지만 빌드와 도구 유지가 병목이 됐고, 세 번째는 시장자료부터 주문까지 계층을 줄여 지연과 연구반복을 함께 개선했다. 구체적 수치는 비공개다. <!-- F1 F2 F3 F4 -->",
+        "parts": [
+          "첫 세대는 트레이더가 시각 그래프로 전략을 조립해 아이디어를 쉽게 표현했지만 노드와 경로가 늘수록 실시간 경로가 무거워졌다. 두 번째 세대는 고수준 언어의 평가로직을 빠른 생산코드로 컴파일했다. 이 방식이 머신러닝을 연구와 실거래에 넣었지만, 모델이 복잡해지면서 컴파일러 성능·표현력·빌드시간을 유지하는 비용이 새 병목이 됐다. <!-- F1 -->",
+          "세 번째 세대는 시장자료 수신부터 주문전송까지 네이티브 코드로 계층을 줄였다. 목표는 특징과 모델이 쌓여도 지연이 악화되지 않게 하고, 연구자가 쓸 수 있는 추상화를 실행비용 거의 없이 제공하는 것이다. 복잡성을 빠른 경로 밖에 두고 연구·엔지니어링의 소유권을 나누지 않는 설계가 반복속도와 지연을 함께 다룬다. <!-- F2 -->",
+          "Optiver는 시뮬레이션이 생산에서 재현될 수 있어야 한다고 명시한다. 초기 배포에서 내부 성능지표가 개선됐지만 수치는 공개하지 않았고 스택도 계속 전환 중이다. 회사 설명이므로 독립 벤치마크나 P&L 증거가 아니며, 국내 적용에서는 같은 리플레이와 위험한도 아래 기존 구조와 새 구조를 비교해야 한다. <!-- F3 F4 -->"
+        ],
+        "idea": "국고채 자동집행의 연구·모의·실거래 경로를 단계별로 계측한다. 컴파일 전략모듈과 네이티브 종단모듈을 같은 리플레이에서 비교해 빌드시간·tick-to-order p99·처리량·재현성 차이를 보고, DV01·수량·일손실 한도와 kill switch는 모델 밖에서 동일하게 강제한다.",
+        "caveat": "Optiver 엔지니어가 APAC 거래스택의 진화를 설명한 공식 기술 글이다. 초기 개선 방향은 회사 설명이며 구체적 지연수치, 모델·라벨, 위험한도와 전략별 P&L은 공개되지 않았다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "두 번째 세대는 고수준 언어를 빠른 생산코드로 컴파일해 머신러닝의 연구·생산 적용을 열었다.",
+            "quote": "compiled to fast production code",
+            "location": "Optiver Technology Blog, Three generations, 20 July 2026, accessed 2026-10-16",
+            "url": "https://www.optiver.com/insights/technology-blog/designing-for-latency-and-iteration/",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "세 번째 세대는 시장자료에서 주문까지 네이티브 코드 종단구조를 택했다.",
+            "quote": "native code end-to-end",
+            "location": "Optiver Technology Blog, Three generations, 20 July 2026, accessed 2026-10-16",
+            "url": "https://www.optiver.com/insights/technology-blog/designing-for-latency-and-iteration/",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "연구결과가 생산에서 재현되도록 시뮬레이션 정합성을 설계요건으로 뒀다.",
+            "quote": "Keeping simulation honest relative to production",
+            "location": "Optiver Technology Blog, Three generations, 20 July 2026, accessed 2026-10-16",
+            "url": "https://www.optiver.com/insights/technology-blog/designing-for-latency-and-iteration/",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "초기 배포에서 개선이 있었지만 구체적 수치는 공개되지 않았다.",
+            "quote": "specifics subject to disclosure policy",
+            "location": "Optiver Technology Blog, Outcomes, 20 July 2026, accessed 2026-10-16",
+            "url": "https://www.optiver.com/insights/technology-blog/designing-for-latency-and-iteration/",
+            "verification": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "2026-10-17": {
+    "styleVersion": 2,
+    "editorialRevision": 3,
+    "title": "안전자산·유동성·특징 엔진을 다시 묻다",
+    "intro": "오늘의 다섯 자료는 채권 데스크가 단일 숫자를 믿기 전에 무엇을 분해해야 하는지 보여준다. 국채의 헤지력은 물가충격에 따라 바뀌고, 단기 조달과 펀드 환매는 유동성의 총량보다 분포와 충격의 성격에 반응한다. 퀀트사의 공개 글도 모델보다 특징이 만들어지는 경로와 설명의 범위를 먼저 점검한다.",
+    "closing": "한국 시장에서 공통된 과제는 상태를 고정값으로 두지 않는 것이다. 상관은 물가국면에 따라, 조달비용은 상대방에 따라, 환매취약성은 충격과 투자자에 따라 달라진다. 특징과 성과귀속까지 같은 시점 데이터로 재현할 때 모델의 개선과 시장환경의 우연을 구분할 수 있다.",
+    "headings": [
+      "Government Bonds’ Safe-Haven Property and Inflationary Pressures",
+      "Ripples in the Reserve Pool: Unveiling Liquidity Signals from the Federal Funds Market",
+      "Liquidity Transformation Risks in U.S. Bank Loan and High-Yield Mutual Funds: A 2026 Update",
+      "Flex Model: an event-driven feature engineering system",
+      "Shining Light into the Machine Learning Black Box"
+    ],
+    "notes": [
+      {
+        "id": "generated-2026-10-17-1",
+        "question": "국채는 언제 주식과 크레딧 위험을 헤지하지 못하는가?",
+        "summary": "연준은 미국·유로지역·영국의 일별 주가와 장기 국채금리를 1990년부터 2026년 중반까지 비교했다. 미국의 주식–금리 상관은 2000~2021년 0.40에서 이후 -0.09로 바뀌었고, 물가서프라이즈에 대한 금리반응은 약 세 배 커졌다. 안전자산 성격은 인플레이션 환경과 충격의 종류에 달렸다. <!-- F1 F2 F3 F4 -->",
+        "parts": [
+          "국채가 주식하락을 헤지하려면 주가가 내릴 때 금리도 내려 채권가격이 올라야 한다. 이 글은 일별 주가수익률과 장기금리 변화의 양의 상관을 안전자산 관계로 읽는다. 세 지역 모두 한동안 양의 상관이 뚜렷했지만 최근 구간에는 음수로 돌아섰다. <!-- F1 F2 F3 -->",
+          "미국에서는 주식–금리 상관이 2000~2021년 0.40에서 이후 -0.09로 변했다. 저자들은 성장서프라이즈를 통제한 물가 발표 사건연구도 병행했다. 최근 물가서프라이즈에 대한 미국 장기금리 반응은 이전 기간보다 약 세 배 커졌다. <!-- F2 F3 F4 -->",
+          "설명은 인플레이션 위험이 커지면 주식과 채권이 같은 충격에 함께 손실을 낼 수 있다는 것이다. 따라서 과거 평균상관으로 듀레이션 헤지를 정하면 전환국면에서 위험을 과소평가한다. 다만 상관과 사건반응은 관측관계이며, 모든 동조화가 물가 하나에서 비롯됐다는 인과추정은 아니다. <!-- F1 F4 -->"
+        ],
+        "idea": "KOSPI·신용스프레드와 국고채 3·10년 금리의 상관을 물가·성장서프라이즈와 정책국면별로 추정한다. 고정상관과 상태전환 헤지의 기대손실·최대낙폭·거래비용을 비교한다.",
+        "caveat": "세 지역의 일별 시장자료와 거시 발표 사건을 이용한 관측연구다. 상관관계의 부호는 표본과 국면에 민감하며 특정 충격의 인과효과를 완전히 식별하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "표본은 1990년 1월 1일부터 2026년 7월 31일까지 미국·유로지역·영국의 일별 주가수익률과 10년 국채금리 변화를 사용한다.",
+            "quote": "Sample: 1990-01-01 to 2026-07-31.",
+            "location": "Federal Reserve FEDS Note, Figure 1 note, 16 October 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/government-bonds-safe-haven-property-and-inflationary-pressures-20261016.html",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "미국의 주식–금리 상관은 2000~2021년 0.40이었다.",
+            "quote": "2000-2021 | 0.40 | 0.41 | 0.31",
+            "location": "Federal Reserve FEDS Note, Table 1, 16 October 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/government-bonds-safe-haven-property-and-inflationary-pressures-20261016.html",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "2021년 이후 미국의 주식–금리 상관은 -0.09였다.",
+            "quote": "2021-Present | -0.09 | -0.02 | -0.14",
+            "location": "Federal Reserve FEDS Note, Table 1, 16 October 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/government-bonds-safe-haven-property-and-inflationary-pressures-20261016.html",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "최근 미국 장기금리의 물가서프라이즈 반응은 이전 기간보다 약 세 배 컸다.",
+            "quote": "about three times as much as before",
+            "location": "Federal Reserve FEDS Note, discussion of Figure 3, 16 October 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/government-bonds-safe-haven-property-and-inflationary-pressures-20261016.html",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-17-2",
+        "question": "총준비금이 넉넉해 보여도 왜 일부 은행의 단기조달금리는 먼저 뛸 수 있는가?",
+        "summary": "연준은 연방기금 거래를 대출자 유형별로 분석했다. 같은 예금충격 뒤 비은행 조달금리는 거의 움직이지 않았지만 은행 대출자에게서 빌리는 금리는 16bp 올랐다. 준비금이 낮아질수록 은행 대출자에 대한 차입수요 탄력성은 0.15에서 약 0.30으로 커져 총량지표만으로 잡히지 않는 분포 마찰을 보였다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "연방기금시장의 주요 대출자는 FHLB 같은 비은행이고 주요 차입자는 외국은행 미국지점이지만, 국내은행도 일시적 예금유입을 운용하려고 이 시장을 쓴다. 연구는 소형 국내은행의 요구불예금 변화를 외생에 가까운 자금수요 충격으로 놓고 어느 상대방에게서 얼마나 빌리는지 본다. <!-- F1 -->",
+          "같은 예금충격 뒤 비은행 대출자에게서 빌리는 금리는 거의 움직이지 않았고 거래량이 조정됐다. 은행 대출자에게서는 거래량과 함께 금리가 16bp 상승했다. 같은 수요충격도 비은행 공급은 수량으로, 은행 공급은 가격으로 더 크게 조정된 셈이다. <!-- F2 -->",
+          "은행 대출자를 상대할 때 차입수요의 금리탄력성은 준비금 비율이 높은 구간 0.15에서 표본의 낮은 구간 약 0.30으로 커졌다. 비은행 대출자에서는 이 변화가 유의하지 않았다. 총준비금이 같아도 은행별 분포와 상대방 구성이 다르면 조달스트레스가 달라질 수 있지만, 표본의 제도와 참가자 구조를 한국 시장에 그대로 옮길 수는 없다. <!-- F3 -->"
+        ],
+        "idea": "콜·기관간 레포를 대출자 유형별로 분류해 은행별 예금·지준 변화와 조달량·스프레드를 연결한다. 지준 하위 분위의 금리충격 예측과 유동성 경보 오탐률을 상대방별로 비교한다.",
+        "caveat": "2015년 10월~2024년 1월 미국 연방기금시장 자료를 이용한 국내은행 중심 분석이다. FHLB 중심의 미국 공급구조와 규제환경이 한국과 다르다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "FHLB는 연방기금 대출의 90% 이상을 공급한다.",
+            "quote": "providing over 90% of total lending",
+            "location": "Federal Reserve FEDS Note, Federal Funds Market Structure section, 16 October 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ripples-in-the-reserve-pool-unveiling-liquidity-signals-from-the-federal-funds-market-20261016.html",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "소형은행의 요구불예금 100억달러 증가 때 은행 대출자 조달금리는 16bp 상승했다.",
+            "quote": "with a 16 basis point increase in rates",
+            "location": "Federal Reserve FEDS Note, Demand Deposit Shocks section, 16 October 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ripples-in-the-reserve-pool-unveiling-liquidity-signals-from-the-federal-funds-market-20261016.html",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "은행 대출자에 대한 차입수요 탄력성은 준비금이 높은 때 0.15에서 가장 낮은 관측 비율에서 약 0.30으로 커졌다.",
+            "quote": "from 0.15 at high reserve levels to about 0.30",
+            "location": "Federal Reserve FEDS Note, Reserve Scarcity section, 16 October 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ripples-in-the-reserve-pool-unveiling-liquidity-signals-from-the-federal-funds-market-20261016.html",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-17-3",
+        "question": "채권펀드의 현금비율만 보면 환매충격을 충분히 알 수 있는가?",
+        "summary": "연준은 Form N-PORT로 은행대출·하이일드펀드의 자산과 환매를 추적했다. 은행대출펀드 순자산은 표본기간 21% 줄었고, 중위 유동성비율은 2024년 이후 안정됐으나 비유동성비율은 높아졌다. April 2025 관세충격에서는 유동성이 높은 펀드의 순유출이 -4.2%, 낮은 펀드는 -2.7%여서 단일 현금지표의 한계를 보였다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "오픈엔드 펀드는 투자자에게 일일 환매를 약속하지만 은행대출과 하이일드채권은 즉시 매도하기 어렵다. 연구는 현금·국채 같은 유동자산 비율과 공정가치 관측이 매우 어려운 자산 비율을 함께 보고, 팬데믹과 관세충격의 환매를 비교한다. <!-- F1 -->",
+          "표본기간 은행대출펀드 순자산은 21% 감소했다. 중위 유동성비율은 2024년 이후 비교적 안정됐지만, 비유동성비율은 팬데믹기 수준에 접근했다. 하이일드펀드는 자산규모와 유동성 구성이 상대적으로 안정적이었다. <!-- F1 F2 -->",
+          "April 2025에는 유동성이 높은 은행대출펀드의 순유출이 -4.2%로 낮은 펀드의 -2.7%보다 컸고 차이는 유의하지 않았다. 다른 스트레스에서는 반대 패턴이 관찰됐다. 충격의 원인과 투자자 구성이 현금비율보다 중요할 수 있으며, 공정가치 분류만으로는 거래빈도가 낮은 자산의 유동성 전체를 포착하지 못한다. <!-- F3 -->"
+        ],
+        "idea": "국내 회사채·대출채권형 펀드의 설정환매, 현금·국채, 저빈도 채권, 만기와 투자자 유형을 연결한다. 평시와 스트레스별 5영업일 순유출·가격충격 예측력을 현금비율 단독모형과 비교한다.",
+        "caveat": "미국 Form N-PORT의 분기자료와 두 펀드군을 분석한 기술적 업데이트다. Level 3는 극단적 비유동성의 부분지표이며 2025년 유출차이는 통계적으로 유의하지 않았다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "2019년 4분기부터 2025년 4분기까지 은행대출펀드 순자산은 190억달러, 21% 감소해 710억달러가 됐다.",
+            "quote": "declined by $19 billion (21 percent) to $71 billion",
+            "location": "Federal Reserve FEDS Note, Market Size section, 19 August 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/liquidity-transformation-risks-in-u-s-bank-loan-and-high-yield-mutual-funds-a-2026-update-20260819.html",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "은행대출펀드의 중위 유동성비율은 2024년 이후 약 4.5%였다.",
+            "quote": "relatively stable at about four-and-a-half percent since 2024",
+            "location": "Federal Reserve FEDS Note, Liquidity Transformation section, 19 August 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/liquidity-transformation-risks-in-u-s-bank-loan-and-high-yield-mutual-funds-a-2026-update-20260819.html",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "2025년 4월 유동성이 높은 은행대출펀드의 순유출은 -4.2%, 낮은 펀드는 -2.7%였고 차이는 유의하지 않았다.",
+            "quote": "April 2025 | -4.2 | -2.7 | -1.4",
+            "location": "Federal Reserve FEDS Note, Table 1 Panel A, 19 August 2026, accessed 2026-10-17",
+            "url": "https://www.federalreserve.gov/econres/notes/feds-notes/liquidity-transformation-risks-in-u-s-bank-loan-and-high-yield-mutual-funds-a-2026-update-20260819.html",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-17-4",
+        "question": "시장 이벤트를 연구용 특징과 실시간 거래 입력으로 어떻게 똑같이 만들 수 있는가?",
+        "summary": "Jane Street의 Flex Model은 주문·취소·체결 이벤트를 조합 가능한 특징으로 바꾸고 같은 코드를 과거 재생과 실시간 거래에 사용한다. 시작 시 실행계획과 메모리를 준비해 핫패스 할당을 막고, 비박싱 부동소수를 적용한 한 테스트에서는 꼬리지연이 약 25% 줄었다. 전략별 라벨과 P&L은 공개되지 않았다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "원시 시장자료는 주문 추가·취소·체결이 이어지는 사건흐름이다. 신경망은 이를 그대로 먹지 못하므로 중간가격, 최근 체결과 중간가격의 차이 같은 수백·수천 개 특징이 필요하다. Flex Model은 특징을 작은 노드로 정의해 시장별로 조합하고, 거래실행 코드와 분리한다. <!-- F1 -->",
+          "상태가 필요한 특징에서는 같은 가격의 두 체결도 별개의 사건이다. 엔진은 이벤트마다 상태를 갱신하는 핸들러와 값이 필요할 때만 계산하는 eval을 나눈다. 시작 시 planner가 사건종류와 의존성을 보고 실행순서를 고정하므로, 사용하지 않는 특징이 다른 시장의 지연을 늘리지 않는다. <!-- F1 -->",
+          "같은 특징 코드는 과거모드와 실시간모드에서 돌아가 학습·생산 불일치를 줄인다. 핫패스는 사전 할당 메모리만 읽고 쓰며 컴파일러 검사가 할당을 막는다. 비박싱 부동소수를 쓴 한 테스트 재생에서 꼬리지연은 약 25% 줄었고, 현재 여러 거래시스템에서 사용된다. 이는 인프라 사례이지 전략수익 검증은 아니다. <!-- F2 F3 -->"
+        ],
+        "idea": "국채선물·전자채권 이벤트 원장과 조합식 특징 엔진을 만들고 과거 재생과 실시간 shadow의 출력 일치를 검사한다. p99.9 지연·할당·누락 이벤트·체결 후 mark-out을 기준 엔진과 비교한다.",
+        "caveat": "Jane Street가 공개한 자사 시스템 설계와 한 테스트 재생 결과다. 시장·전략별 모델, 라벨, 지연의 절대값, 실거래 손익과 위험통제는 공개되지 않았다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "Flex Model은 시장 이벤트를 수치 벡터로 바꾸며 실제 모델은 수백 또는 수천 개 특징을 쓸 수 있다.",
+            "quote": "hundreds, or even thousands, of these features",
+            "location": "Jane Street Blog, What is feature engineering?, 13 October 2026, accessed 2026-10-17",
+            "url": "https://blog.janestreet.com/flex-model-an-event-driven-feature-engineering-system/",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "같은 특징 코드는 실시간과 과거모드에서 실행된다.",
+            "quote": "same feature code ran live and in historical mode",
+            "location": "Jane Street Blog, The early engine and its problems, 13 October 2026, accessed 2026-10-17",
+            "url": "https://blog.janestreet.com/flex-model-an-event-driven-feature-engineering-system/",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "비박싱 부동소수를 적용한 한 테스트 재생에서 꼬리지연이 약 25% 감소했다.",
+            "quote": "Tail latency dropped about 25%",
+            "location": "Jane Street Blog, Improving performance, 13 October 2026, accessed 2026-10-17",
+            "url": "https://blog.janestreet.com/flex-model-an-event-driven-feature-engineering-system/",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-17-5",
+        "question": "비선형 모델이 만든 포트폴리오 비중과 실현수익을 요인별로 설명할 수 있는가?",
+        "summary": "Man Group은 종목 비중과 횡단면 수익률을 별도 모형으로 설명한 뒤 SHAP으로 성과를 귀속한다. 수백 종목의 예시에서 XGBoost 계열의 비중 설명 R²는 95%를 넘었고 선형모형은 약 60%였다. 이는 표본 내 설명력이며 미래수익 예측이나 실거래 성과가 아니고, 트리모형의 과적합 위험도 남는다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "기존 선형 성과귀속은 모든 종목에 하나의 글로벌 베타를 적용해 요인 상호작용을 놓친다. SHAP은 협력게임의 기여도 개념을 이용해 각 종목의 비중과 수익률을 요인기여의 합으로 나눈다. 연구는 비중결정 모형과 횡단면 수익률 모형을 따로 적합한 뒤 두 설명을 결합한다. <!-- F1 -->",
+          "트리모형에는 TreeSHAP을 사용한다. 수백 종목의 분산 글로벌 포트폴리오 사례에서 XGBoost 같은 트리모형은 비중 설명 R²가 95%를 넘었고 선형모형은 약 60%였다. 국소 상호작용을 잡은 결과지만 높은 R²는 모델이 이미 정해진 비중을 잘 재현했다는 뜻이지 다음달 수익을 맞혔다는 뜻은 아니다. <!-- F2 -->",
+          "SHAP 기여는 종목에서 포트폴리오로 합칠 수 있어 비중결정과 실현수익의 차이를 추적하기 쉽다. 동시에 트리모형은 선형회귀보다 과적합하기 쉬워 정규화가 필요하다. 공개 글은 방법과 예시를 설명할 뿐 Man의 비공개 생산모형·위험한도·P&L을 공개하지 않는다. <!-- F1 F3 -->"
+        ],
+        "idea": "국고채·은행채·회사채 포트폴리오에서 비중과 다음달 초과수익 설명모형을 분리한다. 선형귀속과 TreeSHAP의 시점 외 R²·귀속잔차·요인순위 안정성·스트레스 설명오차를 비교한다.",
+        "caveat": "Man Group의 방법론·사례 글이며 발표일은 페이지에서 확인되지 않았다. 제시된 R²는 수백 종목 포트폴리오의 설명모형 적합도이고 예측력이나 거래성과가 아니다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "프레임워크는 포트폴리오 비중의 의사결정과 횡단면 수익원을 설명하는 두 모형을 적합한다.",
+            "quote": "one to explain the decision-making process",
+            "location": "Man Group, Illustration of SHAP Attribution Framework, accessed 2026-10-17; publication date not stated",
+            "url": "https://www.man.com/insights/shining-light-machine-learning",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "수백 종목 사례에서 트리모형의 비중 설명 R²는 95%를 넘었고 선형모형은 약 60%였다.",
+            "quote": "R-squared of over 95% ... versus about 60%",
+            "location": "Man Group, Enhanced Explanatory Power with SHAP and XGBoost, accessed 2026-10-17; publication date not stated",
+            "url": "https://www.man.com/insights/shining-light-machine-learning",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "저자들은 트리모형이 선형회귀보다 과적합하는 경향이 있어 정규화가 중요하다고 적었다.",
+            "quote": "tree-based models have the tendency to “overfit”",
+            "location": "Man Group, Enhanced Explanatory Power with SHAP and XGBoost, accessed 2026-10-17; publication date not stated",
+            "url": "https://www.man.com/insights/shining-light-machine-learning",
+            "verification": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "2026-10-18": {
+    "styleVersion": 2,
+    "editorialRevision": 3,
+    "title": "AI 부채, 국채 담보, 실행 데이터의 한 고리",
+    "intro": "오늘 자료는 AI 기대를 채권 데스크가 어떻게 번역해야 하는지 세 층으로 나눈다. 거시에서는 성장·물가·재정의 조건을 분리하고, 시장구조에서는 담보와 레버리지의 전환점을 본다. 퀀트사의 공개 자료는 모델 개발보다 플랫폼 통제와 거래비용 피드백이 실제 운영에 가까운 질문임을 보여준다.",
+    "closing": "AI 기대가 흔들릴 때 채권 반응은 한 방향으로 고정되지 않는다. 성장충격과 물가·재정위험, 담보와 레버리지 경로를 따로 계산해야 한다. 연구 자동화와 실행분석도 같은 원장과 승인기록을 남겨야 개선인지 우연인지 판별할 수 있다.",
+    "headings": [
+      "Global Financial Markets Face Rising Risks From AI, Bond Yields, and Cyberattacks",
+      "Resilience Under Strain, Urgent Choices",
+      "Hedge Funds Improve Market Functioning, but Can Also Amplify Stress",
+      "Platform engineering, end to end: a conversation with Pat Cooney",
+      "Trading Analytics"
+    ],
+    "notes": [
+      {
+        "id": "generated-2026-10-18-1",
+        "question": "AI 투자망의 부채와 매출약정은 국채금리 충격을 어떻게 증폭할 수 있는가?",
+        "summary": "IMF는 2023년 이후 공개된 14개 AI 거래에서 $300 billion의 지분, $650 billion의 부채와 $1.4 trillion의 미래 매출약정을 확인했다. 투자·수익 기대가 꺾이고 국채금리가 오르면 자산가격, 담보가치와 누적 부채가 같은 연결망에서 약해질 수 있다는 취약성 시나리오다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "AI 설비투자는 데이터센터·반도체·전력뿐 아니라 지분투자, 대출과 장기 구매약정으로 조달된다. IMF가 본 공개 거래에서는 투자하는 회사와 매출을 약속받는 회사가 맞물려 있어, 한 회사의 투자축소가 다른 회사의 매출전망과 담보가치로 번질 수 있다. 표본은 2023년 이후 14개 거래다. <!-- F1 -->",
+          "집계된 규모는 지분투자 $300 billion과 부채 $650 billion이며, 그 대가로 묶인 미래 매출약정은 $1.4 trillion이다. 규모가 크다는 사실만으로 손실을 뜻하지는 않는다. 다만 같은 상대방이 투자자·고객·채권자로 여러 번 등장하면 신용분산이 겉보기보다 작을 수 있다. <!-- F2 F3 -->",
+          "국채금리 상승은 할인율을 높이고 채권담보 가치를 낮춘다. 여기에 AI 수익전망 하향이 겹치면 차환과 마진 요구가 동시에 빡빡해질 수 있다. IMF의 분석은 위험경로를 제시한 것이며 거래별 부도확률이나 발생시점을 추정한 모형은 아니다. <!-- F3 -->"
+        ],
+        "idea": "국내 AI·반도체·데이터센터 발행사의 회사채·프로젝트금융·매출약정 상대방을 그래프로 연결한다. 국고채 금리와 AI 매출을 동시에 충격해 스프레드·담보부족액·차환필요액을 단일충격과 비교한다.",
+        "caveat": "IMF가 공개거래를 모아 제시한 시스템 취약성 분석이다. 비공개 거래가 빠질 수 있고 약정액은 확정매출이나 손실액이 아니며, 개별 거래의 부도확률을 식별하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "IMF는 2023년 이후 14개 공개 AI 거래를 검토했다.",
+            "quote": "14 such transactions since 2023",
+            "location": "IMF Blog, Heavy reliance on AI, 13 October 2026, accessed 2026-10-18",
+            "url": "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "거래에는 약 3,000억달러의 지분투자와 6,500억달러의 부채가 포함됐다.",
+            "quote": "$300 billion in equity investments and $650 billion in debt",
+            "location": "IMF Blog, Heavy reliance on AI, 13 October 2026, accessed 2026-10-18",
+            "url": "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "이 거래들은 1조4,000억달러의 미래 매출약정과 연결됐다.",
+            "quote": "$1.4 trillion in future revenue commitments",
+            "location": "IMF Blog, Heavy reliance on AI, 13 October 2026, accessed 2026-10-18",
+            "url": "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-18-2",
+        "question": "AI 기대가 약해질 때 장기금리는 반드시 내려가는가?",
+        "summary": "IMF는 세계 성장률을 2026년 3.1%로 전망하고 같은 해 물가상승률은 4.7%로 본다. 하방에는 AI 기대 재평가와 재정 취약성, 상방에는 AI 투자·생산성 향상을 둔다. 성장둔화만 보면 금리하락 요인이지만 물가와 재정이 남으면 장기 기간프리미엄은 다른 경로를 탈 수 있다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "AI 기대의 재평가는 성장전망을 낮추는 충격처럼 보이지만 채권가격에는 성장만 들어가지 않는다. IMF는 2026년 세계 성장률을 3.1%로 둔화하는 기준경로를 제시한다. 이 전망은 보고서 작성 당시 이용 가능한 정보를 바탕으로 한 조건부 수치다. <!-- F1 -->",
+          "같은 기준경로에서 세계 물가상승률은 2026년 4.7%로 올라간 뒤 낮아지는 것으로 제시된다. AI 투자둔화가 수요를 낮춰도 공급제약·에너지·재정압력이 남으면 장기금리가 성장률과 같은 폭으로 내려가지 않을 수 있다. 그래서 듀레이션 포지션은 성장과 물가 충격을 분리해야 한다. <!-- F2 -->",
+          "IMF는 하방위험에 AI 기대 재평가를 명시하고, 반대편에는 AI 투자와 생산성 향상을 둔다. 어느 경로가 실현될지는 조건부이며 보고서는 AI 충격의 채권가격 인과효과를 직접 추정하지 않는다. 데스크에서는 성장·물가·재정 조합별 커브와 신용스프레드를 따로 계산하는 편이 맞다. <!-- F3 -->"
+        ],
+        "idea": "한국의 AI 설비투자·반도체 수출·물가·세수·국고채 발행을 결합한 조건부 시나리오를 만든다. AI 투자상향·기대조정·재정완충 약화에서 국고채 2·10년과 회사채 손익을 비교한다.",
+        "caveat": "IMF의 거시 전망과 위험 시나리오다. 수치는 전망이며 2026년 10월 1일 이후 정보는 반영하지 않고, AI 충격이 금리에 미치는 인과효과를 별도로 식별하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "세계 성장률은 2026년 3.1%로 둔화할 전망이다.",
+            "quote": "global growth to slow to 3.1 percent in 2026",
+            "location": "IMF World Economic Outlook, Global outlook, October 2026, accessed 2026-10-18",
+            "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "세계 물가상승률은 2026년 4.7%로 올라갈 전망이다.",
+            "quote": "rise to 4.7 percent in 2026",
+            "location": "IMF World Economic Outlook, Global outlook, October 2026, accessed 2026-10-18",
+            "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "하방위험에는 AI 기대의 재평가가 포함됐다.",
+            "quote": "a reassessment of expectations surrounding artificial intelligence",
+            "location": "IMF World Economic Outlook, Risks, October 2026, accessed 2026-10-18",
+            "url": "https://www.imf.org/en/publications/weo/issues/2026/10/13/world-economic-outlook-october-2026",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-18-3",
+        "question": "헤지펀드는 언제 국채 유동성 공급자에서 충격 증폭자로 바뀌는가?",
+        "summary": "IMF는 헤지펀드 총자산이 2013년 이후 세 배 늘어 13조달러, 명목 익스포저는 약 40조달러라고 집계한다. 이들은 2025년 미 국채의 약 9%를 보유했다. 평시 유동성을 공급하지만 레포·파생 레버리지, 마진콜과 동시환매가 겹치면 포지션 청산이 가격충격을 증폭할 수 있다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "헤지펀드는 상대가치 거래와 차익거래로 가격괴리를 줄이고 유동성을 공급한다. IMF 집계에서 총자산은 2013년 이후 세 배 늘어 13조달러가 됐다. 명목 익스포저가 자산보다 훨씬 큰 이유는 레포·프라임브로커 신용과 파생상품을 통해 포지션을 확대하기 때문이다. <!-- F1 F2 -->",
+          "명목 익스포저는 약 40조달러이며, 헤지펀드는 2025년 미 국채의 약 9%를 보유했다. 보유비중만으로 방향을 알 수는 없지만, 현물·선물·레포를 묶은 거래가 마진과 자금조달 조건에 민감하다는 점은 국채시장 스트레스에서 중요하다. <!-- F2 F3 -->",
+          "변동성이 오르거나 자금조달이 빡빡해지면 마진콜과 환매가 동시청산을 부를 수 있다. 이때 평시의 유동성 공급자는 같은 포지션을 한꺼번에 줄이는 충격 증폭자가 된다. 공개 분석은 집단 수준의 취약성을 다루므로 특정 펀드의 전략·레버리지나 손익을 추정하는 근거로 쓰면 안 된다. <!-- F3 -->"
+        ],
+        "idea": "외국인·증권사·헤지펀드 대리변수의 국채선물·현물·레포를 연결한다. 변동성·헤어컷·증거금 충격의 동시청산량을 추정하고 거래량 모형과 네트워크 모형의 가격충격 오차를 비교한다.",
+        "caveat": "IMF의 글로벌 집계와 시스템 분석이다. 총명목 익스포저는 방향성 위험과 동일하지 않고, 미 국채 보유비중만으로 개별 전략이나 강제매도 가능성을 식별할 수 없다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "헤지펀드 총자산은 2013년 이후 세 배 늘어 13조달러가 됐다.",
+            "quote": "Since 2013, gross assets under management have tripled, to $13 trillion",
+            "location": "IMF Blog, Role and growth of hedge funds, 6 October 2026, accessed 2026-10-18",
+            "url": "https://www.imf.org/en/blogs/articles/2026/10/06/hedge-funds-improve-market-functioning-but-can-also-amplify-stress",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "총명목 익스포저는 약 40조달러다.",
+            "quote": "about $40 trillion",
+            "location": "IMF Blog, Role and growth of hedge funds, 6 October 2026, accessed 2026-10-18",
+            "url": "https://www.imf.org/en/blogs/articles/2026/10/06/hedge-funds-improve-market-functioning-but-can-also-amplify-stress",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "헤지펀드는 2025년 미 국채의 약 9%를 보유했다.",
+            "quote": "about 9 percent of US Treasurys in 2025",
+            "location": "IMF Blog, Role and growth of hedge funds, 6 October 2026, accessed 2026-10-18",
+            "url": "https://www.imf.org/en/blogs/articles/2026/10/06/hedge-funds-improve-market-functioning-but-can-also-amplify-stress",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-18-4",
+        "question": "거래회사는 에이전트형 AI를 어떤 통제 가능한 운영문제로 바꾸는가?",
+        "summary": "Optiver는 공통 플랫폼을 머신러닝·데이터·거래시스템의 반복 기반으로 설명한다. 코딩 에이전트와 운영변경 봇을 쓰기 시작했지만, 에이전트가 사용할 문맥과 문서를 외부화하고 확률적 결과를 시험·감독해야 한다고 강조한다. 공개 글은 생산성 방향을 보여줄 뿐 전략별 P&L은 공개하지 않는다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "플랫폼 엔지니어링은 연구자와 트레이더가 같은 데이터·배포·관측 도구를 쓰게 만드는 기반이다. Optiver는 이를 사업 전체가 매일 사용하는 토대라고 설명한다. 지역별로 중복된 기술을 공통 플랫폼으로 옮겨 실험과 신규 사업의 마찰을 줄이는 방향이다. <!-- F1 -->",
+          "에이전트형 AI의 역할은 코드 작성에 그치지 않는다. 운영환경에서 사용자와 대화하며 변경을 수행하는 봇도 쓰기 시작했고, 앞으로는 사람이 작업을 분해해 여러 에이전트를 지시·조율하는 비중이 커질 것으로 본다. 이는 회사의 현재 방향과 기대를 설명한 것이지 성과수치를 검증한 연구는 아니다. <!-- F2 -->",
+          "에이전트가 일하려면 팀 지식·문서·인터페이스를 기계가 읽을 수 있게 외부화해야 한다. 동시에 결과가 확률적이므로 시험과 감독이 필요하다. 채권 연구에서는 데이터 권한, 변경범위, 재현시험과 롤백을 승격조건으로 두고 위험한도·킬스위치는 별도 통제선에 남겨야 한다. <!-- F3 -->"
+        ],
+        "idea": "에이전트에게 국채선물 특징 추가와 데이터 점검을 맡기는 격리 샌드박스를 만든다. 사람 단독 대비 소요시간·테스트 실패·재현률·롤백률을 비교하고 운영계 변경은 이중승인 뒤 허용한다.",
+        "caveat": "Optiver 플랫폼 책임자의 공식 인터뷰다. 구체적 전략·라벨·모델·배포건수·실패율·P&L은 공개하지 않았으며 생산성 향상은 회사 설명의 방향성이다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "Optiver는 플랫폼을 사업 전체가 사용하는 기반이라고 설명한다.",
+            "quote": "the foundation we build the business on",
+            "location": "Optiver Technology Blog, Platform engineering, 6 May 2026, accessed 2026-10-18",
+            "url": "https://www.optiver.com/insights/technology-blog/platform-engineering-end-to-end/",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "향후 개발은 에이전트를 정의하고 조율하는 방식의 비중이 커질 것으로 본다.",
+            "quote": "defining and orchestrating agents",
+            "location": "Optiver Technology Blog, Agentic AI section, 6 May 2026, accessed 2026-10-18",
+            "url": "https://www.optiver.com/insights/technology-blog/platform-engineering-end-to-end/",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "확률적으로 동작하는 에이전트에는 시험과 감독이 필요하다고 설명한다.",
+            "quote": "how you test and oversee those agents",
+            "location": "Optiver Technology Blog, Agentic AI section, 6 May 2026, accessed 2026-10-18",
+            "url": "https://www.optiver.com/insights/technology-blog/platform-engineering-end-to-end/",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-18-5",
+        "question": "예측·집행·사후분석은 어떻게 반복 가능한 수익화 경로가 되는가?",
+        "summary": "Virtu는 기관 주식거래 20% 이상을 담은 동종 데이터로 체결품질을 비교하고, 50개 이상 시장의 비용모형을 분기마다 보정한다고 설명한다. 대형 기관운용사의 75%가 다자산 TCA를 사용하며 표준 100개 이상·맞춤 200개 이상 벤치마크를 제공한다. 이는 서비스 범위이지 고객별 개선폭은 아니다. <!-- F1 F2 F3 F4 -->",
+        "parts": [
+          "집행모형은 가격방향보다 주문을 얼마나 나누고 어느 유동성에 보낼지 결정한다. Virtu의 Global Peer는 자산운용사의 기관 주식거래 20% 이상을 포괄해 같은 조건의 동종 거래와 체결품질을 비교한다. 고객 데이터의 범위가 사후평가와 다음 비용추정의 학습기반이 되는 구조다. <!-- F1 -->",
+          "Agency Cost Estimator는 과거 거래량·변동성·스프레드로 50개 이상 시장의 비용을 추정하고 분기마다 다시 보정한다. 대형 기관운용사의 75%가 다자산 거래비용분석을 이용한다고 회사는 밝힌다. 시장조성 경험을 분석 서비스로 연결하지만, 고객별 비용절감의 인과효과는 공개하지 않는다. <!-- F2 F3 -->",
+          "평가는 도착가격 하나로 끝나지 않는다. 표준 벤치마크 100개 이상과 맞춤 벤치마크 200개 이상을 제공해 자산·주문목적별 비교를 지원한다. 채권시장에서는 호가가 희박하므로 거래규모·만기·등급·시간대를 맞춘 비교군과 비용예측 오차를 함께 제시해야 과적합된 벤치마크를 피할 수 있다. <!-- F4 -->"
+        ],
+        "idea": "국고채·은행채·회사채 체결을 만기·등급·규모·시간대로 층화한다. 실행 전 비용모형을 도착가격·VWAP과 비교하고 체결 후 mark-out·미체결률·시장충격·예측오차를 월별 보정한다.",
+        "caveat": "Virtu의 공식 상품 설명이며 페이지 발표일은 확인되지 않았다. 수치들은 서비스 범위·고객 침투율로, 고객별 비용절감이나 Virtu 전체 매출·P&L 기여를 뜻하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "Global Peer 데이터는 전 세계 기관 주식거래의 20% 이상을 포괄한다.",
+            "quote": "more than 20% of all institutional equity trades globally",
+            "location": "Virtu Trading Analytics, Global Peer database, accessed 2026-10-18; publication date not stated",
+            "url": "https://www.virtu.com/solutions/analytics/",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "비용모형은 50개 이상 시장을 평가한다.",
+            "quote": "50+ markets",
+            "location": "Virtu Trading Analytics, Agency Cost Estimator, accessed 2026-10-18; publication date not stated",
+            "url": "https://www.virtu.com/solutions/analytics/",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "대형 기관자산운용사의 75%가 다자산 거래비용분석을 사용한다고 회사는 설명한다.",
+            "quote": "75% of the largest institutional asset managers",
+            "location": "Virtu Trading Analytics, Transaction Cost Analytics, accessed 2026-10-18; publication date not stated",
+            "url": "https://www.virtu.com/solutions/analytics/",
+            "verification": "primary"
+          },
+          {
+            "id": "F4",
+            "statement": "서비스는 표준 벤치마크 100개 이상과 맞춤 벤치마크 200개 이상을 제공한다.",
+            "quote": "100+ standard benchmarks and 200+ custom benchmarks",
+            "location": "Virtu Trading Analytics, Transaction Cost Analytics, accessed 2026-10-18; publication date not stated",
+            "url": "https://www.virtu.com/solutions/analytics/",
+            "verification": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "2026-10-19": {
+    "styleVersion": 2,
+    "editorialRevision": 3,
+    "title": "AI 부채의 가격에서 데이터·청산·집행의 연결까지",
+    "intro": "오늘 자료는 AI라는 이름보다 현금흐름과 데이터 시점을 먼저 보라고 요구한다. AI 인프라 채권의 재가격은 기대와 차입비용의 간격을 드러냈고, 국채 청산과 회사채 곡면 복원은 모델 밖의 결제·평가 구조를 보여준다. HRT와 Two Sigma의 공개자료는 연구 아이디어가 데이터 검증, 포지션, 집행을 지나야 비로소 거래 의사결정이 된다고 설명한다.",
+    "closing": "AI 크레딧의 위험은 모델 점수보다 차환과 가동시점에서 먼저 나타날 수 있다. 비유동 채권의 결측값은 학습으로 메울 수 있어도 시점 누수와 결제노출은 별도 통제가 필요하다. 한국 데스크의 다음 실험은 같은 데이터에서 예측 정확도만 보지 말고 평가오차, 제약 후 포지션, 체결비용과 결제노출까지 이어서 측정하는 일이다.",
+    "headings": [
+      "CoreWeave bond rout tests market's math on AI buildout",
+      "The Netting Efficiencies of Marketwide Central Clearing",
+      "Machine Learning for Yield Curve Feature Extraction: Application to Illiquid Corporate Bonds",
+      "How HRT Thinks About Data",
+      "Webinar: Deep Learning for Sequences in Quantitative Finance"
+    ],
+    "notes": [
+      {
+        "id": "generated-2026-10-19-1",
+        "question": "AI 인프라 채권은 성장 기대가 꺾일 때 무엇을 먼저 가격에 반영하는가?",
+        "summary": "CoreWeave가 발행한 채권의 수익률은 발행 때 9.675%에서 이번 주 15%로 뛰었다. AI 설비가 현금을 만들기 전에 부채비용이 오르면 장기 성장 기대보다 차환과 담보의 취약성이 먼저 가격에 드러난다. 다만 이는 한 발행사에 대한 시장 보도이지 AI 크레딧 전체의 손실확률 추정은 아니다. <!-- F1 -->",
+        "parts": [
+          "데이터센터는 전력·건설·GPU 비용을 먼저 지출하고 고객 매출은 가동 뒤에 받는다. 이 시차를 부채로 메우면 금리 상승과 준공 지연이 같은 현금흐름을 압박한다. CoreWeave 채권 수익률이 발행 당시 9.675%에서 이번 주 15%로 오른 움직임은 그 부담이 주식보다 계약상 지급의무가 앞선 채권에 어떻게 드러나는지 보여준다. <!-- F1 -->",
+          "채권 수익률 상승은 투자자가 같은 원리금을 받기 위해 더 낮은 가격을 요구했다는 뜻이다. 신용분석에서는 AI 수요 성장률만 올려 잡기보다 장비 교체주기, 전력비, 가동 전 이자와 차환만기를 함께 놓아야 한다. 같은 프로젝트라도 담보가 있는 특수목적기구와 무담보 회사채는 회수경로가 다르다. <!-- F1 -->",
+          "이 사례에서 확인되는 사실은 특정 채권의 재가격이다. 다른 AI 발행사의 부도율, 손실률이나 전염효과는 공개 기사만으로 정할 수 없다. 데스크는 발행사별 계약과 담보를 분해하고, 고객집중과 준공 지연이 차환시점에 겹치는 경우를 별도 시나리오로 다뤄야 한다. <!-- F1 -->"
+        ],
+        "idea": "국내 데이터센터·전력망·반도체 설비 발행사의 공시, 채권 거래와 담보를 연결한다. 가동 지연·차환금리 상승·주요 고객 매출하향을 함께 충격으로 주고 기존 등급모형 대비 스프레드와 하락위험 예측오차를 비교한다.",
+        "caveat": "Reuters의 최신 시장 보도와 인용된 참가자 평가에 근거한다. 한 발행사의 가격변동은 AI 인프라 채권 전체의 인과효과나 손실확률을 입증하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "CoreWeave가 6월 발행한 채권의 발행수익률은 9.675%였고 이번 주 시장수익률은 15%로 상승했다.",
+            "quote": "CoreWeave bonds issued in June at a yield of 9.675% have plunged in value, sending their yield to 15% this week.",
+            "location": "Reuters, ‘CoreWeave bond rout tests market's math on AI buildout’, lines 151–170, accessed 2026-10-19",
+            "url": "https://www.reuters.com/legal/transactional/coreweave-bond-rout-tests-markets-math-on-ai-buildout-2026-10-16/",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-19-2",
+        "question": "국채 중앙청산은 자동거래가 만든 결제 부담을 얼마나 줄일 수 있는가?",
+        "summary": "뉴욕 연은은 비공개 미 국채 TRACE로 중앙청산 확대를 모의했다. 시장혼란 전후 딜러의 일일 총결제의무는 60% 줄었을 것으로 추정됐고 결제 실패도 낮아졌다. 경매와 레포를 제외한 추정이라 실제 제도효과는 포함 범위와 증거금 설계에 달려 있다. <!-- F1 F2 -->",
+        "parts": [
+          "자동집행은 거래를 빠르게 만들지만 매수·매도 건마다 생기는 총결제의무를 스스로 상계하지 않는다. 뉴욕 연은은 비공개 미 국채 TRACE 거래를 이용해 모든 현물거래를 시장 전체 중앙청산으로 모았을 때 딜러 대차대조표가 얼마나 가벼워지는지 계산했다. <!-- F1 -->",
+          "시장혼란 전후에는 일일 총결제의무가 60% 감소했을 것으로 추정됐다. 같은 거래라도 중앙청산소가 양방향 의무를 상계하면 딜러가 결제일까지 들고 있어야 하는 총액이 줄어드는 구조다. 자동집행이 거래 건수를 늘릴수록 총액과 순액을 구분할 필요가 있다. <!-- F1 -->",
+          "연구는 중앙청산 확대가 결제 실패도 상당히 낮췄을 것으로 본다. 결제 부담이 줄면 딜러가 고객 흐름을 중개할 여지가 생길 수 있지만, 이는 가격충격이나 증거금 위험이 사라진다는 뜻은 아니다. 분석에는 경매 매입과 레포가 빠져 있어 실제 제도효과는 설계 범위에 달려 있다. <!-- F2 -->"
+        ],
+        "idea": "국고채 현물·장내외 거래의 양방향 의무를 참가자별로 재구성한다. 총액결제와 중앙상계에서 일별 총결제액, 증거금, 결제 실패와 딜러 순자본 사용량을 비교해 자동집행 용량 한도를 정한다.",
+        "caveat": "2020년 미 국채 거래를 이용한 모의 추정이며 한국 시장이나 현행 청산제도의 실제 효과가 아니다. 경매와 레포는 분석에 포함되지 않았다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "모든 현물거래 중앙청산 시 딜러 일일 총결제의무가 시장혼란 전후 약 3,300억달러, 60% 줄었을 것으로 추정됐다.",
+            "quote": "lowered dealers’ daily gross settlement obligations by roughly $330 billion (60 percent)",
+            "location": "Federal Reserve Bank of New York Staff Report 964, abstract, lines 197–198, accessed 2026-10-19",
+            "url": "https://www.newyorkfed.org/research/staff_reports/sr964",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "중앙청산 확대는 결제 실패도 상당히 낮췄을 것으로 추정됐다.",
+            "quote": "expanded central clearing would have substantially lowered settlement fails.",
+            "location": "Federal Reserve Bank of New York Staff Report 964, abstract, line 198, accessed 2026-10-19",
+            "url": "https://www.newyorkfed.org/research/staff_reports/sr964",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-19-3",
+        "question": "거래가 없는 회사채 등급·만기 구간을 과거 곡면 모양으로 복원할 수 있는가?",
+        "summary": "연구는 등급×만기 수익률 표를 결측 이미지로 보고 디노이징 오토인코더로 복원했다. 70개 시험 표면의 블록 결측에서 완전연결 모형 MAE는 10.01bp로 얇은판 스플라인 20.07bp보다 작았다. 짧은 표본과 가상 비유동 시장 설정이어서 실제 호가·체결 성과는 별도 검증이 필요하다. <!-- F1 F2 F3 -->",
+        "parts": [
+          "비유동 회사채는 등급과 만기 조합마다 최근 거래가 존재하지 않는다. 연구진은 이 표를 일부 픽셀이 사라진 이미지로 바꾸고, 과거의 완전한 수익률 곡면에 일부러 결측을 만든 뒤 원래 모양을 되살리도록 디노이징 오토인코더를 학습했다. 당일 앵커만 잇는 보간과 달리 과거 곡면의 반복 패턴을 기억한다. <!-- F3 -->",
+          "시험 표면은 70개였고, 점을 흩어 숨기는 균일 결측과 한 구역을 통째로 숨기는 블록 결측을 나눴다. 균일 결측에서는 방법 차이가 작았지만 블록 결측에서는 오토인코더 계열이 더 잘 일반화했다. 거래가 긴 구간 비는 회사채 시장에서는 블록 결측이 더 가까운 시험이다. <!-- F1 F3 -->",
+          "블록 결측에서 완전연결 오토인코더의 MAE는 10.01bp, 얇은판 스플라인은 20.07bp였다. 오차가 줄어도 등급별 단조성, 무차익과 실제 거래가능 가격은 자동으로 보장되지 않는다. 표본이 짧고 가상 비유동 시장을 가정했으므로 국내 적용에서는 실거래 셀을 숨긴 시점외 검증이 필요하다. <!-- F2 -->"
+        ],
+        "idea": "민평사별 등급×잔존만기 곡면에서 실제 거래가 있는 셀을 시점외로 숨긴다. 스플라인·행렬완성·완전연결·합성곱 오토인코더를 bp MAE, 등급 단조성 위반과 거래가격 대비 오차로 비교한다.",
+        "caveat": "2018년의 짧은 지수수익률 표본과 가상 비유동 시장 실험이다. 평가금리 복원 성능은 실거래 체결 가능성이나 수익성을 뜻하지 않는다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "시험 세트는 70개 수익률 표면으로 구성됐다.",
+            "quote": "Our test set consists of 70 examples.",
+            "location": "arXiv:1812.01102, section 4.6 Performance Testing, line 145, accessed 2026-10-19",
+            "url": "https://arxiv.org/abs/1812.01102",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "블록 결측 MAE는 TPS 20.07bp, FCNN 10.01bp였다.",
+            "quote": "20.07 | 10.01",
+            "location": "arXiv:1812.01102, Table 2, lines 156–162, accessed 2026-10-19",
+            "url": "https://arxiv.org/abs/1812.01102",
+            "verification": "primary"
+          },
+          {
+            "id": "F3",
+            "statement": "블록 결측에서는 디노이징 오토인코더 구조가 더 나은 일반화 성능을 보였다.",
+            "quote": "the DAE architectures perform noticeably better on the block masked sparse data.",
+            "location": "arXiv:1812.01102, section 4.6, line 163, accessed 2026-10-19",
+            "url": "https://arxiv.org/abs/1812.01102",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-19-4",
+        "question": "퀀트사가 새 데이터를 거래 아이디어로 쓰기 전에 무엇을 검증하는가?",
+        "summary": "HRT는 입력 데이터가 근본적으로 잘못되면 모든 거래 알고리즘이 실패한다고 설명한다. 새 데이터는 관련성·독창성·표본크기뿐 아니라 당시 알 수 있었던 값인지 검증해야 한다. 특히 과거 기사에 사후 태그를 붙인 자료는 미래정보가 섞여 백테스트를 무효화할 수 있다. 개별 신호와 P&L은 공개하지 않았다. <!-- F1 F2 -->",
+        "parts": [
+          "거래모형의 구조가 달라도 입력이 잘못되면 결과는 함께 무너진다. HRT는 데이터 품질과 출처를 전략에 성공 가능성을 주는 선행조건으로 놓는다. 새 데이터가 미래 가격과 연결될 이유가 있는지, 경쟁자가 이미 같은 방식으로 쓰는지, 표본의 잡음이 신호보다 큰지를 모델 학습 전에 살핀다는 공개 원칙이다. <!-- F1 -->",
+          "가장 위험한 실패는 시점 누수다. 과거 뉴스에 나중의 결과를 아는 분석가가 시장영향 태그를 붙이면 당시에는 없던 정보가 입력된다. 백테스트 점수는 좋아져도 실시간에는 재현되지 않는다. HRT는 lookahead가 미묘한 방식으로 나타날 수 있으므로 데이터가 언제·어떻게 만들어졌는지 추적해야 한다고 강조한다. <!-- F2 -->",
+          "수익화는 데이터 구입에서 끝나지 않는다. 원자료를 시장행동을 설명하는 대리변수로 바꾸고, 시점이 보존된 OOS에서 비용 후 개선을 확인한 뒤 생산 파이프라인에 넣어야 한다. 공개 글은 이 연구규율을 설명하지만 실제 HRT의 특징, 라벨, 위험한도와 성과는 공개하지 않는다. <!-- F1 F2 -->"
+        ],
+        "idea": "경제지표·평가금리·거래호가의 최초값과 수정값을 함께 보존한다. 최신 수정본과 당시 수신본 백테스트의 금리방향 정확도, 회전율과 비용 후 손익 차이를 비교해 누수에 민감한 특징을 퇴출한다.",
+        "caveat": "HRT가 공개한 일반 연구원칙과 예시다. 특정 데이터가 실제 전략에 쓰였는지, 생산 배포와 P&L에 얼마나 기여했는지는 공개되지 않았다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "HRT는 결함 있는 입력 데이터가 거래 알고리즘을 실패시킨다고 설명한다.",
+            "quote": "if the data they ingest is fundamentally flawed, they are destined to fail.",
+            "location": "HRT, How HRT Thinks About Data, introductory section, line 96, accessed 2026-10-19",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/how-hrt-thinks-about-data/",
+            "verification": "primary"
+          },
+          {
+            "id": "F2",
+            "statement": "미래정보 누수는 미묘한 방식으로 나타날 수 있어 데이터 출처와 생성시점 확인이 필요하다.",
+            "quote": "Lookahead can manifest in subtle ways.",
+            "location": "HRT, How HRT Thinks About Data, Avoiding lookahead, line 116, accessed 2026-10-19",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/how-hrt-thinks-about-data/",
+            "verification": "primary"
+          }
+        ]
+      },
+      {
+        "id": "generated-2026-10-19-5",
+        "question": "시계열 딥러닝의 예측값은 어떤 경로를 거쳐 실제 거래가 되는가?",
+        "summary": "Two Sigma는 퀀트 투자과정을 특징추출, 개별 자산 수익률 예측, 거래수량을 정하는 포트폴리오 배분, 집행으로 분해한다. 각 단계는 시계열 딥러닝 문제로 표현할 수 있지만 공개자료는 특정 모델·라벨·성과를 밝히지 않는다. 수익화는 예측을 제약된 포지션과 체결로 잇는 전체 경로에서 판단해야 한다. <!-- F1 -->",
+        "parts": [
+          "시계열 모델이 다음 수익률을 맞혀도 바로 주문이 되지는 않는다. Two Sigma의 공개 웨비나는 퀀트 투자과정을 특징추출, 개별 종목 수익률 예측, 거래수량을 정하는 포트폴리오 배분, 실제 집행으로 나눈다. 각 단계는 서로 다른 입력·목표·제약을 가진다. <!-- F1 -->",
+          "예측 단계의 출력은 기대수익이지만 배분 단계는 위험, 상관, 유동성과 포지션 한도를 반영해 수량으로 바꾼다. 집행 단계는 그 수량을 언제 어떤 주문으로 체결할지 결정한다. 앞 단계의 작은 개선이 뒤 단계 제약이나 거래비용 때문에 사라질 수 있으므로 전체 손익만 보면 실패 위치를 찾기 어렵다. <!-- F1 -->",
+          "공개자료가 보여주는 것은 연구문제의 연결 구조다. Two Sigma가 어떤 딥러닝 구조, 라벨, 종목별 한도나 집행정책을 사용하고 얼마를 벌었는지는 공개되지 않았다. 국내 채권 데스크도 예측·배분·집행을 분리해 기준모형을 두고, 각 출력이 다음 단계에서 얼마나 보존되는지 측정해야 한다. <!-- F1 -->"
+        ],
+        "idea": "국고채·국채선물에서 동일한 원자료로 예측만 교체한 실험과 배분·집행까지 함께 바꾼 실험을 나눈다. 예측 MAE, 제약 후 정보비율, 회전율, 슬리피지와 미체결률을 단계별로 기록한다.",
+        "caveat": "공식 웨비나 소개는 연구 프로세스를 설명하지만 구체적인 생산모델과 실거래 성과를 공개하지 않는다. P&L 연결은 공개된 단계 구조를 바탕으로 한 제한적 해석이다.",
+        "facts": [
+          {
+            "id": "F1",
+            "statement": "Two Sigma는 퀀트 투자과정을 특징추출, 수익률 예측, 포트폴리오 배분과 거래집행 단계로 분해한다.",
+            "quote": "the process naturally decomposes into steps of feature extraction, forecasting the returns of individual instruments, portfolio allocation to decide quantities to trade, and trading execution.",
+            "location": "Two Sigma, Deep Learning for Sequences in Quantitative Finance, lines 43–46, accessed 2026-10-19",
+            "url": "https://www.twosigma.com/articles/webinar-deep-learning-for-sequences-in-quantitative-finance/",
+            "verification": "primary"
+          }
+        ]
+      }
+    ]
   }
 }
